@@ -4,10 +4,10 @@ class grn
 {
 private:
 	//fields
-		//settings
+	//settings
 	int		i_number; //setted number or standard radom number 
 	int		i_count; // need count for gnerate
-		//results
+	//results
 	float	*f_rNumber; // generated namber
 
 	//methods
@@ -16,10 +16,6 @@ private:
 
 public:	
 	grn();
-	~grn();
-
-	
-
-
+	~grn();	
 };
 
