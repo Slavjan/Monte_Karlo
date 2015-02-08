@@ -1,4 +1,9 @@
 #pragma once
+struct rn
+{
+	float	*Numbers;
+	int		count;
+};
 
 class grn
 {
@@ -11,11 +16,18 @@ private:
 	float	*f_rNumber; // generated namber
 
 	//methods
+	//private settings
 	void setCount(int);
 	void setNumber(int);
+	
+	int random();
 
 public:	
 	grn();
-	~grn();	
+	~grn();
+	//settings
+	void set(int count, int number);
+	// retuning
+	int generate();
 };
 
