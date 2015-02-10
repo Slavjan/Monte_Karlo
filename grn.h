@@ -1,11 +1,7 @@
 #pragma once
-struct rn
-{
-	float	*Numbers;
-	int		count;
-};
 
-class grn
+
+class grn	//generator of random numbers
 {
 private:
 	//fields
@@ -19,15 +15,23 @@ private:
 	//private settings
 	void setCount(int);
 	void setNumber(int);
-	
-	int random();
+	//generation
+	//std
+public:	int random(int n1 = 0, int n2 = 0);
+	//algoritmic
+	int MMM();//Method of Middle Multiplications
+	int MMS();//Method of Middle Squares
 
+	int midExtract(unsigned long int);//extracting a middle of number,
+				 					  //for example: ddccccdd, 
+									  //the cccc has been extracted and returned
+		
 public:	
 	grn();
 	~grn();
 	//settings
 	void set(int count, int number);
 	// retuning
-	int generate();
+	float generate();
 };
 
