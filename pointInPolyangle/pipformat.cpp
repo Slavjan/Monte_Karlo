@@ -19,15 +19,15 @@ void PiPFormat::loadFromFile(std::string fileName)
         throw std::string("File is not open!");
         return;
     }
-    Point p;
+
     stream >> _count;
-    while( stream.eof() ){
-        stream >> p.x;
-        stream >> p.y;
-        _vertex.push_back(p);
+    while( ! stream.eof() ){
+        stream >> _cross.x;
+        stream >> _cross.y;
+        _vertex.push_back(_cross);
     }
     _vertex.pop_back();
-    _cross = p;
+    _vertex.pop_back(); // I d't understand - "WHAT?" ...
     stream.close();
 }
 
@@ -49,7 +49,9 @@ void PiPFormat::print()
     std::cout << "PiPFormat:" << std::endl;
     std::cout << "Count: " << _count << std::endl;
     std::cout << "Cross: "; _cross.print(); std::cout << std::endl;
-    std::cout << "Vetrex's:" << std::endl;
+    std::cout << "Vertex.Size: " << _vertex.size() << std::endl;
+    std::cout << "Vertices:" << std::endl;
+
     for(int i = 0; i < _vertex.size(); ++i ){
         std::cout << "[" << i << "]"; _vertex.at(i).print(); std::cout << std::endl;
     }
