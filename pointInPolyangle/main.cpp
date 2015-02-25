@@ -9,6 +9,9 @@ int main(int argc, char** argv)
     std::string outFile = "File.out";
     if( argc > 1 ){
         inFile = argv[1];
+        if(argc > 2){
+            outFile = argv[2];
+        }
     }
     PiPFormat file;
     file.loadFromFile(inFile);
