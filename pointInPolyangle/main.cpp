@@ -1,9 +1,17 @@
 #include "stdafx.h"
 #include "polyangle.h"
+#include "pipformat.h"
 
 using namespace std;
-int main()
+int main(int argc, char** argv)
 {
+    std::string inFile = "File.in";
+    if( argc > 1 ){
+        inFile = argv[1];
+    }
+    PiPFormat file;
+    file.loadFromFile(inFile);
+    file.print();
 	
 	// A, B, C, D;
 	Edge line[3];
@@ -27,7 +35,7 @@ int main()
 	
 	Polyangle a(line);
 
-	char s[1]; 
+	char s[1]; 
 	if (a.prenadleznost(C))
 	{
 		s[0] = 't';
@@ -40,7 +48,9 @@ int main()
 	cout << s[0] << endl;
 
 	
+#ifdef VS
 	system("pause");
+#endif
 
 	return 0;
 }

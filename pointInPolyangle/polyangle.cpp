@@ -1,4 +1,5 @@
 #include "polyangle.h"
+#include <stdafx.h>
 
 Polyangle::Polyangle(Edge* a, int count)
 {
@@ -87,5 +88,5 @@ bool Polyangle::prenadleznost(Point p)
 
 bool Polyangle::prenadleznost(int x, int y)
 {
-	return collisions(x, y) % 2 == 0 ? false : true;
+    return collisions(x, y) % 2 == 0 ? false : true;
 }

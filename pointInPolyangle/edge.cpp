@@ -1,5 +1,5 @@
 #include "edge.h"
-
+#include <stdafx.h>
 
 Edge::Edge()
 {
