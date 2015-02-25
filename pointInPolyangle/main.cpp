@@ -6,12 +6,14 @@ using namespace std;
 int main(int argc, char** argv)
 {
     std::string inFile = "File.in";
+    std::string outFile = "File.out";
     if( argc > 1 ){
         inFile = argv[1];
     }
     PiPFormat file;
     file.loadFromFile(inFile);
     file.print();
+    file.saveToFile(outFile);
 	
 	// A, B, C, D;
 	Edge line[3];

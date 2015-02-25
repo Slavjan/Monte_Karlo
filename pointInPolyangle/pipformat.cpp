@@ -38,9 +38,11 @@ void PiPFormat::saveToFile(std::string fileName)
         throw std::string("File is not open!");
         return;
     }
-    while( false ){
-
+    stream << _count << std::endl;
+    for(int i = 0; i < _vertex.size(); ++i ){
+        stream << _vertex.at(i).x << " " << _vertex.at(i).y << std::endl;
     }
+    stream << _cross.x << " " << _cross.y;
     stream.close();
 }
 
