@@ -23,6 +23,6 @@ public:
 	~Polyangle();
 	// calculations
 	
-	bool	prenadleznost(Point);
-	bool	prenadleznost(int, int);
+	bool	inside(Point);
+	bool	inside(int, int);
 };

@@ -1,4 +1,3 @@
-#pragma once
 #include "point.h"
 
 class Edge
@@ -34,4 +33,3 @@ public:
 	bool	getHorizont();
 	bool	getVertical();
 };
-

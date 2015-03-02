@@ -12,6 +12,5 @@ public:
 	~Point();
 
     void print();
-//	int vector();
 };
 #endif // POINT_H

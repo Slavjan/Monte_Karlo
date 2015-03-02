@@ -57,3 +57,20 @@ void PiPFormat::print()
     }
     std::cout << std::endl;
 }
+
+
+//getting data
+int PiPFormat::getVerticesCount()
+{				  
+	return _count;
+}
+
+std::vector<Point> PiPFormat::getVector()
+{
+	return _vertex;
+}
+
+Point PiPFormat::getCrossPoint()
+{
+	return _cross;
+}
