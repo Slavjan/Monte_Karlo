@@ -29,41 +29,6 @@ float grn::generate()
 	return f_rNumber;
 }
 
-//private ------------------------------------------------
-
-int grn::setNumber()
-{
-	return 	clock()*10+clock();	 	
-}
-
-int grn::midExtract(unsigned long int n)
-{
-	unsigned long int c = n,
-					  divider = 10;
-	int				  middle = 0,
-					  count = 0 ;
-	
-	do
-	{
-		c /= 10;
-		count++;
-	} while (c > 0);
-
-
-	if ((((count - 4) / 2) - 1) < 0)
-		count = (((count - 4) / 2) - 1) * -1;
-	else
-		count = ((count - 4) / 2) - 1 ;
-
-	for (int i = 0; i < count; i++)
-	{
-		divider *= 10;
-	}
-	middle = (n / divider) % 10000;
-
-	return middle;	
-}
-
 int grn::random(int n1, int n2)
 {
 	int i = 0;
@@ -117,4 +82,39 @@ int grn::MMS(int n) // set dddd, sqr(dddd) = ddmmmmdd, mmmm is middle of square
 	}
 
 	return i_ms;
+}						 
+
+//private ------------------------------------------------
+
+int grn::setNumber()
+{
+	return 	clock() * 10 + clock();
+}
+
+int grn::midExtract(unsigned long int n)
+{
+	unsigned long int c = n,
+		divider = 10;
+	int				  middle = 0,
+		count = 0;
+
+	do
+	{
+		c /= 10;
+		count++;
+	} while (c > 0);
+
+
+	if ((((count - 4) / 2) - 1) < 0)
+		count = (((count - 4) / 2) - 1) * -1;
+	else
+		count = ((count - 4) / 2) - 1;
+
+	for (int i = 0; i < count; i++)
+	{
+		divider *= 10;
+	}
+	middle = (n / divider) % 10000;
+
+	return middle;
 }
