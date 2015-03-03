@@ -24,12 +24,15 @@ int main(int argc, char** argv)
 			string  opt = string(argv[i]);
 			if (opt == "--f")
 			{
-				//string path = string(argv[i + 1]);
-				cout << "reading from file : "/* << path.data()*/ << endl;
+				string path = string(argv[i + 1]);
+				cout << "reading from file : " << path.data() << endl;
+				i++;
 			}
+			else{
 
-			k.push_back(atoi(argv[i]));
-			k.push_back(atoi(argv[i + 1]));				
+				k.push_back(atoi(argv[i]));
+				k.push_back(atoi(argv[i + 1]));
+			}
 		}
 		for (int i = 0; i < k.size(); i += 2)
 		{
