@@ -1,51 +1,39 @@
 #include "grn.h"
-//#include <stdio.h>
 #include <stdlib.h>
-//#include <time.h>
-//#include <cmath>
+#include <time.h>
 
 //public
 
 grn::grn()
 {
-	this->f_rNumber = nullptr;
-	this->i_number = 0;
 }
 
 grn::~grn()
 {
-	delete[] this->f_rNumber;
 }
 
-void grn::set(int count = 1, int number = 0)
+float grn::generate()
 {
-	if (number == 0)
-		this->i_number = random();
-	else if (number >= 1000)
-		this->i_number = number;
+	float f_rNumber;
+	int i_ms = random(), i_mm = MMS();
 
-	this->i_count = count;
+	for (int i = 0; i < clock(); i++)
+	{
+		i_ms = MMS(i_mm);
+		i_mm = MMM(i_ms);
+	}
+
+	f_rNumber = i_mm;
+	f_rNumber /= 10000;
+
+	return f_rNumber;
 }
 
-//float grn::generate()
-//{
-//	float f_rNumber;
-//
-//	for (int i = 0; i < i_count > 1 ? i_count + 10:(int)(random()/100); i++)
-//	{
-//
-//	}
-//		  
-//}
-//private
-void grn::setCount(int c)
-{
-	this->i_count = c;
-}
+//private ------------------------------------------------
 
-void grn::setNumber(int n)
+int grn::setNumber()
 {
-	this->i_number = n;
+	return 	clock()*10+clock();	 	
 }
 
 int grn::midExtract(unsigned long int n)
@@ -72,6 +60,7 @@ int grn::midExtract(unsigned long int n)
 		divider *= 10;
 	}
 	middle = (n / divider) % 10000;
+
 	return middle;	
 }
 
@@ -90,13 +79,13 @@ int grn::random(int n1, int n2)
 	return i;
 }
 
-int grn::MMM() // set dddd, dddd*cccc = ddmmmmdd, mmmm is middle of multiplication 
+int grn::MMM(int n) // set dddd, dddd*cccc = ddmmmmdd, mmmm is middle of multiplication 
 {
 	int i_fnumber,//first number dddd
 		i_snumber,//second number cccc
 		i_mm = 0; //mid of multiplication
 	
-	i_fnumber = this->i_number;	//dddd
+	i_fnumber = n | setNumber();	//dddd
 	i_snumber = random();		//cccc
 
 	for (int i = 0; i < 20; i++)// for mutcher range
@@ -105,7 +94,7 @@ int grn::MMM() // set dddd, dddd*cccc = ddmmmmdd, mmmm is middle of multiplicati
 		i_fnumber = i_mm;
 		if (i_mm == 0)
 		{
-			i_fnumber = random();
+			i_fnumber = setNumber();
 			i--;
 		}
 
@@ -114,12 +103,12 @@ int grn::MMM() // set dddd, dddd*cccc = ddmmmmdd, mmmm is middle of multiplicati
 	return i_mm;
 }
 
-int grn::MMS() // set dddd, sqr(dddd) = ddmmmmdd, mmmm is middle of square
+int grn::MMS(int n) // set dddd, sqr(dddd) = ddmmmmdd, mmmm is middle of square
 {
 	int i_fnumber,//first number dddd
 		i_ms = 0; //mid of square
 
-	i_fnumber = this->i_number;	//dddd
+	i_fnumber = n | setNumber();	//dddd
 
 	for (int i = 0; i < 25; i++)
 	{
