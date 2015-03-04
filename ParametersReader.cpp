@@ -11,12 +11,12 @@ void ParametersReader::parsing(int argc, char** argv)
 {
 	if (argc == 1)
 	{
-		throw "parameters wasn`t entering";
+		throw Empty();
 		return;
 	}
 	else if (argc % 2 == 0)	 
 	{
-		throw "invalid parameters count";
+		throw Invalid();
 		return;
 	}	
 	else
@@ -38,7 +38,7 @@ void ParametersReader::parsing(int argc, char** argv)
 	}
 }
 
-std::vector <int> ParametersReader::getVector()
+std::vector<int> ParametersReader::getVector()
 {
 	return k;
 }
