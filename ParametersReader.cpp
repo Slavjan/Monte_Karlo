@@ -27,14 +27,12 @@ void ParametersReader::parsing(int argc, char** argv)
 			if (opt == "-f")
 			{
 				path = std::string(argv[i + 1]);
-				from = LOAD;
 				i++;
 			}
 			else if (opt == "-p")
 			{
 				k.push_back(atoi(argv[i]));
 				k.push_back(atoi(argv[i + 1]));
-				from = PARAMS;
 			}
 		}
 	}

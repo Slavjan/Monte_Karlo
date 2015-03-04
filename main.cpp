@@ -3,11 +3,15 @@
 #include <time.h>	
 #include <iostream>
 #include <vector>
+#include "ParametersReader.h"
 
 using namespace std;
 							  
 int main(int argc, char** argv)
 {
+	ParametersReader r;
+	r.parsing(argc, argv);/*
+	r.getPath();*/
 
 
 #ifdef _MSC_VER	

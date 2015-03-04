@@ -2,9 +2,7 @@
 #include <vector>
 #include <iostream>
 
-#define LOAD 0;
-#define PARAMS 1;
-bool from;
+
 
 class ParametersReader
 {
