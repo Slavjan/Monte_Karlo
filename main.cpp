@@ -11,7 +11,13 @@ int main(int argc, char** argv)
         inFile = argv[1];
     }
 	PiPFormat file;
-    file.loadFromFile(inFile); 
+	try{
+		file.loadFromFile(inFile);
+	}
+	catch (PiPFormat::notFound)
+	{
+		std::cout << "file is not found" << std::endl;
+	}
 
 	Polyangle *shape = new Polyangle(file.getVector().data(), file.getVector().size());
 	Point *dot = new Point(file.getCrossPoint());
