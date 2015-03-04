@@ -16,7 +16,7 @@ void PiPFormat::loadFromFile(std::string fileName)
 {
     std::ifstream stream( fileName.data() );
     if( ! stream.is_open() ){
-        throw std::string("File is not open!");
+		throw notFound();
         return;
     }
 
@@ -39,7 +39,7 @@ void PiPFormat::saveToFile(std::string fileName)
         return;
     }
     while( false ){
-
+														
     }
     stream.close();
 }

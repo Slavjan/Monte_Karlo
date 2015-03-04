@@ -24,6 +24,10 @@ public:
 	Point 		getCrossPoint();
 
     void print();
+
+	// exceptions
+	class notFound{};
+	class wasntSave{};
 };
 
 #endif // FILESTRUCT_H
