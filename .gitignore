@@ -191,6 +191,6 @@ ModelManifest.xml
 
 # MSVS project config fils
 
-*.vcxproj*
-*.sln
+#*.vcxproj*
+#*.sln
 Debug
