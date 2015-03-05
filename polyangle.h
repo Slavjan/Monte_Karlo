@@ -15,6 +15,8 @@ private:
 	int		collisions(Point);
 	int		collisions(int, int);
 
+	void	isntShape();// if the points belongs to line, she shalln`t goting area
+
 public:
 	// publuc methods
 	Polyangle(Edge* a, int count = 3);
