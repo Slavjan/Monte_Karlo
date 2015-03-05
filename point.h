@@ -1,3 +1,6 @@
+#ifndef POINT_H
+#define POINT_H
+#include <iostream>
 #include "stdafx.h"
 
 class Point
@@ -9,5 +12,8 @@ public:
 	Point(int x = 0, int y = 0);
 	~Point();
 
+	void print();
+
 //	int vector();
 };
+#endif
