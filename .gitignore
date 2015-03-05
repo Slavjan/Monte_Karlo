@@ -198,4 +198,4 @@ ModelManifest.xml
 
 #*.vcxproj*
 #*.sln
-Debug
+Debug/*
