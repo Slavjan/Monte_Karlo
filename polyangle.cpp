@@ -23,7 +23,7 @@ Polyangle::Polyangle(Point* points, int count)
 	{
 		E_line[i].setPoints(points[i], points[i + 1]);
 		E_line[i].calculateAngle();
-		if (E_line[i-1].getB() == E_line[i].getB && E_line[i-1].getK() == E_line[i].getK())
+		if (E_line[i-1].getB() == E_line[i].getB() && E_line[i-1].getK() == E_line[i].getK())
 		{
 			j++;
 		}
