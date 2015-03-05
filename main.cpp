@@ -14,9 +14,19 @@ int main(int argc, char** argv)
         }
     }
     PiPFormat file;
-    file.loadFromFile(inFile);
-    file.print();
-    file.saveToFile(outFile);
+	try{
+		file.loadFromFile(inFile);
+		file.print();
+		file.saveToFile(outFile);
+	}
+	catch (PiPFormat::notFound)
+	{
+		cout << "File is not found!" << endl << "//-----------------------------" << endl;
+	}
+	catch (PiPFormat::wasntSave)
+	{
+		cout << "File wasn`t save!" << endl << "//-----------------------------" << endl;
+	}
 	
 	// A, B, C, D;
 	Edge line[3];
@@ -41,7 +51,7 @@ int main(int argc, char** argv)
 	Polyangle a(line);
 
 	char s[1]; 
-	if (a.prenadleznost(C))
+	if (a.inside(C))
 	{
 		s[0] = 't';
 	}
@@ -53,7 +63,7 @@ int main(int argc, char** argv)
 	cout << s[0] << endl;
 
 	
-#ifdef VS
+#ifdef _MSC_VER
 	system("pause");
 #endif
 
