@@ -14,10 +14,12 @@ int main(int argc, char** argv)
         }
     }
     PiPFormat file;
+	Polyangle *shape;
 	try{
 		file.loadFromFile(inFile);
 		file.print();
 		file.saveToFile(outFile);
+		shape = new Polyangle(file.getVector().data(), file.getVector().size());
 	}
 	catch (PiPFormat::notFound)
 	{
@@ -27,7 +29,10 @@ int main(int argc, char** argv)
 	{
 		cout << "File wasn`t save!" << endl << "//-----------------------------" << endl;
 	}
-	
+	catch (Polyangle::isLine)
+	{
+		cout << "Shape is been line" << endl << "//-----------------------------" << endl;
+	}
 	// A, B, C, D;
 	Edge line[3];
 	
