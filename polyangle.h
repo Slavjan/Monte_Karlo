@@ -22,7 +22,10 @@ public:
 
 	~Polyangle();
 	// calculations
-	
+				  	
 	bool	inside(Point);
 	bool	inside(int, int);
+
+	// exceptions
+	class isLine{};
 };
