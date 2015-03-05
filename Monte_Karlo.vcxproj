@@ -66,12 +66,14 @@
   <ItemGroup>
     <ClCompile Include="edge.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ParametersReader.cpp" />
     <ClCompile Include="pipformat.cpp" />
     <ClCompile Include="point.cpp" />
     <ClCompile Include="polyangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="edge.h" />
+    <ClInclude Include="ParametersReader.h" />
     <ClInclude Include="pipformat.h" />
     <ClInclude Include="point.h" />
     <ClInclude Include="polyangle.h" />
