@@ -11,7 +11,7 @@ Polyangle::Polyangle(Edge* a, int count)
 		E_line[i].setPoints(a[i].getDot(0), a[i].getDot(1));
 		E_line[i].calculateAngle();
 	}
-	this->isntShape();
+	isntShape();
 
 	i_verticesCount = count * 2;
 } 
