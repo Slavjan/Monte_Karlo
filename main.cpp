@@ -33,42 +33,10 @@ int main(int argc, char** argv)
 	{
 		cout << "Shape is been line" << endl << "//-----------------------------" << endl;
 	}
-	//// A, B, C, D;
-	//Edge line[3];
-	//
-	///*A.x = 1;
-	//A.y = 2;
-	//B.x = 4;
-	//B.y = 2;*/
-
-	//Point C;
-	//	  C.x = 2;
-	//	  C.y = 3;
-
-	//line[0].setPoints(2, 4, 1, 4);
-	//line[0].calculateAngle();
-	//line[1].setPoints(4, 4, 4, 3);
-	//line[1].calculateAngle();
-	//line[2].setPoints(4, 2, 3, 1);
-	//line[2].calculateAngle();
-	//
-	//
-	//Polyangle a(line);
-
-	//char s[1]; 
-	//if (a.inside(C))
-	//{
-	//	s[0] = 't';
-	//}
-	//else
-	//{
-	//	s[0] = 'f';
-	//}
-
-	//cout << s[0] << endl;
+	
 
 	
-#ifdef _MSC_VER
+#ifdef _MSC_VER // if compiling in the MS Visual Studio
 	system("pause");
 #endif
 
