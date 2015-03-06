@@ -11,6 +11,7 @@ Polyangle::Polyangle(Edge* a, int count)
 		E_line[i].setPoints(a[i].getDot(0), a[i].getDot(1));
 		E_line[i].calculateAngle();
 	}
+	this->isntShape();
 
 	i_verticesCount = count * 2;
 } 
@@ -25,6 +26,7 @@ Polyangle::Polyangle(Point* points, int count)
 		E_line[i].setPoints(points[i], points[i + 1]);
 		E_line[i].calculateAngle();
 	}
+	this->isntShape();
 
 	i_verticesCount = count * 2;
 }
@@ -94,3 +96,50 @@ int Polyangle::collisions(int x, int y)
 
 	return collisions_count;
 }
+
+void Polyangle::print(){
+	std::cout << "Polyangle. Edges:" << std::endl;
+	for (size_t i = 0; i < i_verticesCount; i++)
+	{
+		std::cout << E_line[i].getB() << ", " << E_line[i].getK() << std::endl;
+	}
+	std::cout << std::endl;
+}
+
+void Polyangle::isntShape()
+{
+	/*
+		Take three point and calculate the space, if it equal 0 - this isn`t shape, it is line.
+
+		x1 - x3		y1 - y3
+		________ = ___________
+		x2 - x3 	y2 - y3
+	*/
+	int zeros = 0;
+	int x1, x2, x3,
+		y1, y2, y3;
+	float dx, dy;
+
+	for (int i = 0; i < i_verticesCount; i++)
+	{
+		x1 = E_line[i].getDotX(0);
+		x2 = E_line[i].getDotX(1);
+		x3 = E_line[i + 1].getDotX(0);
+
+		y1 = E_line[i].getDotY(0);
+		y2 = E_line[i].getDotY(1);
+		y3 = E_line[i+1].getDotY(0);
+
+		dx = (x1 - x3) / (x2 - x3);
+		dy = (y1 - y3) / (y2 - y3);
+		if (dx == dy)
+			zeros++;
+	}
+	if (zeros == i_verticesCount)
+	{
+		throw isLine();
+		return;
+	}
+}
+
+// /private

@@ -28,6 +28,8 @@ public:
 	bool	inside(Point);
 	bool	inside(int, int);
 
+	void print();
+
 	// exceptions
 	class isLine{};
 };
