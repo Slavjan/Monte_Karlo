@@ -27,7 +27,6 @@ void PiPFormat::loadFromFile(std::string fileName)
         _vertex.push_back(_cross);
     }
     _vertex.pop_back();
-    _vertex.pop_back(); // I d't understand - "WHAT?" ...
     stream.close();
 }
 
