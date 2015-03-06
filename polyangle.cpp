@@ -26,7 +26,7 @@ Polyangle::Polyangle(Point* points, int count)
 		E_line[i].setPoints(points[i], points[i + 1]);
 		E_line[i].calculateAngle();
 	}
-	this->isntShape();
+	isntShape();
 
 	i_verticesCount = count * 2;
 }
@@ -47,6 +47,15 @@ bool Polyangle::inside(Point p)
 bool Polyangle::inside(int x, int y)
 {
     return collisions(x, y) % 2 == 0 ? false : true;
+}
+
+void Polyangle::print(){
+	std::cout << "Polyangle. Edges:" << std::endl;
+	for (size_t i = 0; i < i_verticesCount; i++)
+	{
+		std::cout << E_line[i].getB() << ", " << E_line[i].getK() << std::endl;
+	}
+	std::cout << std::endl;
 }
 // /public
 
@@ -95,16 +104,7 @@ int Polyangle::collisions(int x, int y)
 	}
 
 	return collisions_count;
-}
-
-void Polyangle::print(){
-	std::cout << "Polyangle. Edges:" << std::endl;
-	for (size_t i = 0; i < i_verticesCount; i++)
-	{
-		std::cout << E_line[i].getB() << ", " << E_line[i].getK() << std::endl;
-	}
-	std::cout << std::endl;
-}
+}	
 
 void Polyangle::isntShape()
 {
