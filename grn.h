@@ -23,7 +23,7 @@ public:
 	int MMM(int firstNumber = 0);//Method of Middle Multiplications
 	int MMS(int n = 0);//Method of Middle Squares 
 	float generate();
-	template<class N>
-	float genInRange(N from, N to);
+	
+	float genInRange(int from, int to);
 };
 

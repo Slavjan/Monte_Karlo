@@ -28,8 +28,8 @@ float grn::generate()
 
 	return f_rNumber;
 }
-template<class N>
-float grn::genInRange(N from, N to)
+
+float grn::genInRange(int from, int to)
 {
 	return (float)(from + generate() * (to - from));
 }
