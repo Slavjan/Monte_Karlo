@@ -66,4 +66,17 @@ void Application::generatePontsSet()
 	}
 	pointSet.pop_back();
 }
+
+int Application::calculateAmountPointsInShape(Polyangle *polygon)
+{
+	int count = 0;
+
+	for (int i = 0; i < pointSet.size(); i++)
+	{
+		if (polygon->inside(pointSet.data()[i]))
+			count++;
+	}
+
+	return count;
+}
 // /private
