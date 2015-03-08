@@ -39,7 +39,7 @@ int grn::random(int n1, int n2)
 		n2 = 9999;
 	}
 	
-	i = n1 + rand() % (n2 - n1 + 1);
+	i = n1 + rand() * (n2 - n1 + 1);
 	
 	return i;
 }
