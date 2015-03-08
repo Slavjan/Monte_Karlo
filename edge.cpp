@@ -120,8 +120,8 @@ bool Edge::collision(Point p)
 	if (b_horizontal)
 	{
 		if (
-			p.x <= maxNamber(P_dot[0].x, P_dot[1].x) && 
-			p.x >= minNamber(P_dot[0].x, P_dot[1].x)
+			p.x <= maxNumber(P_dot[0].x, P_dot[1].x) && 
+			p.x >= minNumber(P_dot[0].x, P_dot[1].x)
 		   )
 		{
 			int y0 = i_k * p.x + i_b;
@@ -132,8 +132,8 @@ bool Edge::collision(Point p)
 	else if (b_vertical)
 	{
 		if (
-			p.y <= maxNamber(P_dot[0].y, P_dot[1].y) &&
-			p.y >= minNamber(P_dot[0].y, P_dot[1].y)
+			p.y <= maxNumber(P_dot[0].y, P_dot[1].y) &&
+			p.y >= minNumber(P_dot[0].y, P_dot[1].y)
 		   )
 		{
 			return P_dot[0].x >= p.x ? true : false;
@@ -147,14 +147,14 @@ bool Edge::collision(Point p)
 
 		if (
 			(
-			 p.y <= maxNamber(P_dot[0].y, P_dot[1].y)  &&
-			 p.y >= minNamber(P_dot[0].y, P_dot[1].y)
+			 p.y <= maxNumber(P_dot[0].y, P_dot[1].y)  &&
+			 p.y >= minNumber(P_dot[0].y, P_dot[1].y)
 			) 
 			||
 			(
 			 (
-			  p.x <= maxNamber(P_dot[0].x, P_dot[1].x) &&
-			  p.x >= minNamber(P_dot[0].x, P_dot[1].x)
+			  p.x <= maxNumber(P_dot[0].x, P_dot[1].x) &&
+			  p.x >= minNumber(P_dot[0].x, P_dot[1].x)
 			 )
 		    )
 		   )

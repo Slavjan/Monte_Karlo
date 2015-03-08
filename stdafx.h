@@ -5,12 +5,12 @@
 
 // maxNamber int 
 template <class N>
-N maxNamber(N a, N b)
+N maxNumber(N a, N b)
 {
 	return a > b ? a : b;
 }
 template <class N>
-N minNamber(N a, N b)
+N minNumber(N a, N b)
 {
 	return a < b ? a : b;
 }

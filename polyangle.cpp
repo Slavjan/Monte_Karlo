@@ -79,8 +79,8 @@ void Polyangle::maxCoord()
 	{
 		for (int j = 0; j < 2; j++)
 		{
-			i_maxX = maxNamber(E_line[i].getDotX(j), i_maxX);
-			i_maxY = maxNamber(E_line[i].getDotY(j), i_maxY);
+			i_maxX = maxNumber(E_line[i].getDotX(j), i_maxX);
+			i_maxY = maxNumber(E_line[i].getDotY(j), i_maxY);
 		}
 	}
 }
