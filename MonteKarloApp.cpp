@@ -15,6 +15,20 @@ MonteKarloApp::~MonteKarloApp()
 	delete[] control;
 }
 
+void MonteKarloApp::setShape(std::vector<Point> dots)
+{
+	testing = new Polyangle(dots.data(), dots.size());
+}
+
+void MonteKarloApp::setShape(Polyangle *shape)
+{
+	testing = new Polyangle(*shape);
+}
+
+void MonteKarloApp::setShape(Polyangle shape)
+{
+	testing = new Polyangle(shape);
+}
 
 
 // /public

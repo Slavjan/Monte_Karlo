@@ -33,8 +33,10 @@ public:
 
 	//methods
 		// settings
-	void setShape(std::string path);				// take a shape for 
-	void setShape(std::vector<int> coordinates);		// calculate her spase
+	virtual void loadShape(std::string path) {};	// take a shape for 	 // from file
+	void setShape(std::vector<Point> dots);	// calculate her spase
+	void setShape(Polyangle *shape);
+	void setShape(Polyangle shape);
 		// returning
 	int getSpace();
 };
