@@ -8,8 +8,9 @@ class Application
 {
 private:
 	// fields
-	int	i_Space;
-	Polyangle Shape;
+	int	Space;
+	Polyangle* testing;
+	Polyangle* control;
 	std::vector<Point> pointSet;
 
 	//methods
@@ -28,8 +29,8 @@ public:
 	//methods
 		// settings
 	void setShape(std::string path);				// take a shape for 
-	void setShape(std::vector<int> coordinates)		// calculate her spase
+	void setShape(std::vector<int> coordinates);		// calculate her spase
 		// returning
-	
+	int getSpace();
 };
 
