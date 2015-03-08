@@ -19,23 +19,41 @@ Application::~Application()
 
 // /public
 
-// private
-void Application::generateControlShape()
-{	// calcelate the coordinates for control Shape
+// protected
+std::vector<int> Application::calculateExtremumCoords(Polyangle *shape)
+{
 	int maxX = 0, maxY = 0;
 	int minX = 0, minY = 0;
 
-	for (int i = 0; i < testing->getVerticesCount(); i++)
+	std::vector<int> Extremum;
+
+	for (int i = 0; i < shape->getVerticesCount()/2; i++)
 	{
 		for (int j = 0; j < 2; j++)
 		{
-			maxX = maxNumber(testing->getEdges()[i].getDotX(j), maxX);
-			maxY = maxNumber(testing->getEdges()[i].getDotY(j), maxY);
-
-			minX = minNumber(testing->getEdges()[i].getDotX(j), maxX);
-			minY = minNumber(testing->getEdges()[i].getDotY(j), maxY);
+			maxX = maxNumber(shape->getEdges()[i].getDotX(j), maxX);
+			maxY = maxNumber(shape->getEdges()[i].getDotY(j), maxY);
+							 
+			minX = minNumber(shape->getEdges()[i].getDotX(j), maxX);
+			minY = minNumber(shape->getEdges()[i].getDotY(j), maxY);
 		}
 	}
+
+	Extremum.push_back(maxX);
+	Extremum.push_back(maxY);
+	Extremum.push_back(minX);
+	Extremum.push_back(minY);
+	Extremum.pop_back();
+
+	return Extremum;
+}
+
+void Application::generateControlShape()
+{	// calcelate the coordinates for control Shape
+	std::vector<int> tExtremum = calculateExtremumCoords(testing);
+	int maxX = tExtremum.at(0), maxY = tExtremum.at(1);
+	int minX = tExtremum.at(2), minY = tExtremum.at(3);
+	
 	// creating a new shape - the control shape
 		// create an edges for polygon
 	Edge* edge = new Edge [4];
@@ -78,5 +96,16 @@ int Application::calculateAmountPointsInShape(Polyangle *polygon)
 	}
 
 	return count;
+}				
+
+int Application::calculateSpase()
+{
+	int p_i_cShape, // amount of points in control Shape
+		p_i_tShape;	// amount of Points In testing Shape
+
+	p_i_cShape = calculateAmountPointsInShape(control);
+	p_i_tShape = calculateAmountPointsInShape(testing);
+
+
 }
-// /private
+// /protected

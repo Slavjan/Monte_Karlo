@@ -7,7 +7,7 @@
 
 class Application
 {
-private:
+protected:
 	// fields
 	int	Space;
 	int controlSpace;
@@ -23,7 +23,9 @@ private:
 
 		// calculations
 	int calculateAmountPointsInShape(Polyangle *polygon); // in dependence an amount of the points in a shape,
-	void calculateSpase();								  // calculating the space of this shape
+	int calculateSpase();								  // calculating the space of this shape
+	std::vector<int> calculateExtremumCoords(Polyangle *shape);
+	
 
 public:
 	Application();
