@@ -47,7 +47,23 @@ void Application::generateControlShape()
 											  
 		// create the polygle
 	control = new Polyangle(edge, 4);
+	
+	// calculate the conrolSpace
+	int dx = maxX - minX;
+	int dy = maxY - minY;
+
+	controlSpace = dx * dy;
 }
 
+void Application::generatePontsSet()
+{
+	Point p;
+	for (int i = 0; i < controlSpace * 2 / 3; i++)
+	{
+		p.x = m_rundom->generate();
+		p.y = m_rundom->generate();
+		pointSet.push_back(p);
+	}
+	pointSet.pop_back();
+}
 // /private
-

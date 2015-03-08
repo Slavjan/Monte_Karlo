@@ -10,6 +10,7 @@ class Application
 private:
 	// fields
 	int	Space;
+	int controlSpace;
 	Polyangle* testing;
 	Polyangle* control;
 	std::vector<Point> pointSet;
