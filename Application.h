@@ -3,6 +3,7 @@
 #include <vector>
 #include "point.h"
 #include "polyangle.h"
+#include "grn.h"
 
 class Application
 {
@@ -12,6 +13,7 @@ private:
 	Polyangle* testing;
 	Polyangle* control;
 	std::vector<Point> pointSet;
+	grn* m_rundom;
 
 	//methods
 		// generations
