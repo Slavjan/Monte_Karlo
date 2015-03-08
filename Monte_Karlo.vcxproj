@@ -64,7 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="MonteKarloApp.cpp" />
     <ClCompile Include="edge.cpp" />
     <ClCompile Include="grn.cpp" />
     <ClCompile Include="main.cpp" />
@@ -74,7 +74,7 @@
     <ClCompile Include="polyangle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Application.h" />
+    <ClInclude Include="MonteKarloApp.h" />
     <ClInclude Include="edge.h" />
     <ClInclude Include="grn.h" />
     <ClInclude Include="ParametersReader.h" />
@@ -82,6 +82,9 @@
     <ClInclude Include="point.h" />
     <ClInclude Include="polyangle.h" />
     <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
