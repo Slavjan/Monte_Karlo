@@ -20,7 +20,7 @@ Application::~Application()
 // /public
 
 // private
-void Application::generateShape()
+void Application::generateControlShape()
 {	// calcelate the coordinates for control Shape
 	int maxX = 0, maxY = 0;
 	int minX = 0, minY = 0;

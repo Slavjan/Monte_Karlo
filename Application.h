@@ -18,7 +18,7 @@ private:
 	//methods
 		// generations
 	void generatePontsSet();   // genereate set of points for calculations
-	void generateShape();	   // generate the shape with known space for calculations
+	void generateControlShape();	   // generate the shape with known space for calculations
 
 		// calculations
 	int calculateAmountPointsInShape(Polyangle *polygon); // in dependence an amount of the points in a shape,
