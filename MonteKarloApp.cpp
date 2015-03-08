@@ -1,7 +1,7 @@
-#include "Application.h"
+#include "MonteKarloApp.h"
 
 // publice
-Application::Application()
+MonteKarloApp::MonteKarloApp()
 {
 	Space = 0;
 	testing = nullptr;
@@ -9,7 +9,7 @@ Application::Application()
 }
 
 
-Application::~Application()
+MonteKarloApp::~MonteKarloApp()
 {
 	delete[] testing;
 	delete[] control;
@@ -20,7 +20,7 @@ Application::~Application()
 // /public
 
 // protected
-std::vector<int> Application::calculateExtremumCoords(Polyangle *shape)
+std::vector<int> MonteKarloApp::calculateExtremumCoords(Polyangle *shape)
 {
 	int maxX = 0, maxY = 0;
 	int minX = 0, minY = 0;
@@ -48,7 +48,7 @@ std::vector<int> Application::calculateExtremumCoords(Polyangle *shape)
 	return Extremum;
 }
 
-void Application::generateControlShape()
+void MonteKarloApp::generateControlShape()
 {	// calcelate the coordinates for control Shape
 	std::vector<int> tExtremum = calculateExtremumCoords(testing);
 	int maxX = tExtremum.at(0), 
@@ -75,7 +75,7 @@ void Application::generateControlShape()
 	controlSpace = dx * dy;
 }
 
-void Application::generatePontsSet()
+void MonteKarloApp::generatePontsSet()
 {
 	Point p;
 	std::vector<int> tExtremum = calculateExtremumCoords(testing);
@@ -94,7 +94,7 @@ void Application::generatePontsSet()
 	pointSet.pop_back();
 }
 
-int Application::calculateAmountPointsInShape(Polyangle *polygon)
+int MonteKarloApp::calculateAmountPointsInShape(Polyangle *polygon)
 {
 	int count = 0;
 
@@ -107,7 +107,7 @@ int Application::calculateAmountPointsInShape(Polyangle *polygon)
 	return count;
 }				
 
-int Application::calculateSpase()
+int MonteKarloApp::calculateSpase()
 {
 	int p_i_cShape, // amount of points in control Shape
 		p_i_tShape;	// amount of Points In testing Shape

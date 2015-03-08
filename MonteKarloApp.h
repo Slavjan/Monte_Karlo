@@ -5,7 +5,7 @@
 #include "polyangle.h"
 #include "grn.h"
 
-class Application
+class MonteKarloApp
 {
 protected:
 	// fields
@@ -28,8 +28,8 @@ protected:
 	
 
 public:
-	Application();
-	~Application();
+	MonteKarloApp();
+	~MonteKarloApp();
 
 	//methods
 		// settings
