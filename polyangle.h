@@ -28,7 +28,8 @@ public:
 	bool	inside(int, int);
 
 	// returning
-	Edge* getEdges();
+	Edge*	getEdges();
+	int		getVerticesCount();
 
 	void print();
 

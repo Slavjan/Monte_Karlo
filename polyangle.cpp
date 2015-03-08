@@ -62,6 +62,11 @@ Edge* Polyangle::getEdges()
 {
 	return E_line;
 }
+
+int Polyangle::getVerticesCount()
+{
+	return i_verticesCount;
+}
 // /public
 
 // private 
