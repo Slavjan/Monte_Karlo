@@ -24,22 +24,20 @@ float grn::generate()
 	}
 
 	f_rNumber = i_mm;
-	f_rNumber /= 10000;
+	f_rNumber /= 10000;								
 
 	return f_rNumber;
+}
+template<class N>
+float grn::genInRange(N from, N to)
+{
+	return (float)(from + generate() * (to - from));
 }
 
 int grn::random(int n1, int n2)
 {
-	int i = 0;
-
-	if (n1 == 0 && n2 == 0)// if a range isn`t setted 
-	{					   // calculate the four-digit numbers
-		n1 = 1111;
-		n2 = 9999;
-	}
-	
-	i = n1 + rand() * (n2 - n1 + 1);
+	int i = 0; 		
+	i = n1 + rand() * (n2 - n1);
 	
 	return i;
 }
@@ -51,7 +49,7 @@ int grn::MMM(int n) // set dddd, dddd*cccc = ddmmmmdd, mmmm is middle of multipl
 		i_mm = 0; //mid of multiplication
 	
 	i_fnumber = n | setNumber();	//dddd
-	i_snumber = random();		//cccc
+	i_snumber = random();			//cccc
 
 	for (int i = 0; i < 20; i++)// for mutcher range
 	{
@@ -94,8 +92,8 @@ int grn::setNumber()
 int grn::midExtract(unsigned long int n)
 {
 	unsigned long int c = n,
-		divider = 10;
-	int				  middle = 0,
+					  divider = 10;
+	int	middle = 0,
 		count = 0;
 
 	do

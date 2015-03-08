@@ -17,11 +17,13 @@ public:
 	~grn();
 
 	//generation
-	//std
-	int random(int n1 = 0, int n2 = 0);
-	//algoritmic
+		//std	
+	int random(int n1 = 1111, int n2 = 9999);
+		//algoritmic
 	int MMM(int firstNumber = 0);//Method of Middle Multiplications
-	int MMS(int n = 0);//Method of Middle Squares 	
+	int MMS(int n = 0);//Method of Middle Squares 
 	float generate();
+	template<class N>
+	float genInRange(N from, N to);
 };
 
