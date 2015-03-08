@@ -51,8 +51,10 @@ std::vector<int> Application::calculateExtremumCoords(Polyangle *shape)
 void Application::generateControlShape()
 {	// calcelate the coordinates for control Shape
 	std::vector<int> tExtremum = calculateExtremumCoords(testing);
-	int maxX = tExtremum.at(0), maxY = tExtremum.at(1);
-	int minX = tExtremum.at(2), minY = tExtremum.at(3);
+	int maxX = tExtremum.at(0), 
+		maxY = tExtremum.at(1);
+	int minX = tExtremum.at(2), 
+		minY = tExtremum.at(3);
 	
 	// creating a new shape - the control shape
 		// create an edges for polygon
@@ -76,10 +78,17 @@ void Application::generateControlShape()
 void Application::generatePontsSet()
 {
 	Point p;
+	std::vector<int> tExtremum = calculateExtremumCoords(testing);
+	int maxX = tExtremum.at(0),
+		maxY = tExtremum.at(1);
+	int minX = tExtremum.at(2),
+		minY = tExtremum.at(3);
+
+
 	for (int i = 0; i < controlSpace * 2 / 3; i++)
 	{
-		p.x = m_rundom->generate();
-		p.y = m_rundom->generate();
+		p.x = m_rundom->genInRange(minX, maxX);
+		p.y = m_rundom->genInRange(minY, maxY); 
 		pointSet.push_back(p);
 	}
 	pointSet.pop_back();
@@ -106,6 +115,9 @@ int Application::calculateSpase()
 	p_i_cShape = calculateAmountPointsInShape(control);
 	p_i_tShape = calculateAmountPointsInShape(testing);
 
+//	float ratio = p_i_tShape / p_i_cShape;
+	int space = 0;//ratio * controlSpace;
 
+	return space;
 }
 // /protected
