@@ -115,8 +115,8 @@ int Application::calculateSpase()
 	p_i_cShape = calculateAmountPointsInShape(control);
 	p_i_tShape = calculateAmountPointsInShape(testing);
 
-//	float ratio = p_i_tShape / p_i_cShape;
-	int space = 0;//ratio * controlSpace;
+	float ratio = p_i_tShape / p_i_cShape;
+	int space = ratio * controlSpace;
 
 	return space;
 }
