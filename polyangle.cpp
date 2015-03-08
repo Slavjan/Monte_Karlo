@@ -57,6 +57,11 @@ void Polyangle::print(){
 	}
 	std::cout << std::endl;
 }
+
+Edge* Polyangle::getEdges()
+{
+	return E_line;
+}
 // /public
 
 // private 

@@ -23,10 +23,12 @@ public:
 	Polyangle(Point* points, int count = 3);  
 
 	~Polyangle();
-	// calculations
-				  	
+		// calculations						  	
 	bool	inside(Point);
 	bool	inside(int, int);
+
+	// returning
+	Edge* getEdges();
 
 	void print();
 
