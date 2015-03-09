@@ -33,11 +33,15 @@ public:
 
 	//methods
 		// settings
-	virtual void loadShape(std::string path) {};	// take a shape for 	 // from file
 	void setShape(std::vector<Point> dots);	// calculate her spase
 	void setShape(Polyangle *shape);
 	void setShape(Polyangle shape);
 		// returning
 	float getSpace();
+
+		// for derivativ class
+	virtual void loadShape() {};	// take a shape for 	 // from file or parameters
+	virtual void readFile() {};
+	virtual void readParams() {};
 };
 
