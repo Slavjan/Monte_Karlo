@@ -15,7 +15,8 @@ grn::~grn()
 float grn::generate()
 {
 	float rNumber;
-	int midSquare = random(), midMultipl = MMS();
+	int midSquare = random(), 
+		midMultipl = MMS();
 
 	for (int i = 0; i < clock(); i++)
 	{
