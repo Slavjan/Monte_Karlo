@@ -27,7 +27,7 @@ protected:
 	std::vector<int> calculateExtremumCoords(Polyangle *shape);
 	
 
-public:
+public:															
 	MonteKarloApp();
 	~MonteKarloApp();
 
@@ -41,7 +41,7 @@ public:
 
 		// for derivative class
 	virtual void loadShape() {};	// take a shape for 	 // from file or parameters
-	virtual void readFile() {};
-	virtual void readParams() {};
+	virtual void readFile(std::string) {};
+	virtual void readParams(int, char**) {};
 };
 
