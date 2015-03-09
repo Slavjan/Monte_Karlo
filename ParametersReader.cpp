@@ -79,7 +79,8 @@ std::string ParametersReader::findInputPath(int argc, char** argv)
 		}
 	}
 	
-	return '\0';
+	return pathFrom;
 }
+
 	// /finding
 // /private
