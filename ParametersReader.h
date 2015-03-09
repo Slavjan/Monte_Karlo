@@ -11,6 +11,12 @@ private:
 	std::vector<int> k;
 	std::string pathFrom;
 	std::string pathTo;
+
+	//find options
+	std::string findInputPath();
+	std::string findOutputPath();
+	std::string findEnteredCoords();
+
 public:
 	// methods
 	ParametersReader();
@@ -19,7 +25,8 @@ public:
 	void parsing(int argc, char** argv);
 	// returning
 	std::vector<int> getVector();
-	std::string getPath();
+	std::string getPathFrom();
+	std::string getPathTo();
 
 	// exceptions
 	class Invalid{};
