@@ -1,86 +1,88 @@
 #include "edge.h"
 #include "stdafx.h"
-
+// public
 Edge::Edge()
 {
-	P_dot = NULL;
+	dot = NULL;
 				  
-	b_horizontal = 0;
-	b_vertical = 0;
+	horizontal = 0;
+	vertical = 0;
 }
 
 
 Edge::~Edge()
 {
-	if (P_dot)
+	if (dot)
 	{
-		delete[] P_dot;
+		delete[] dot;
 	}
 }
 
-// initing 
+	// settings 
 
 void Edge::setPoints(Point A, Point B)
 {
-	P_dot = new Point[2];
+	dot = new Point[2];
 
-	P_dot[0].x = A.x; P_dot[0].y = A.y;
-	P_dot[1].x = B.x; P_dot[1].y = B.y;
+	dot[0].x = A.x; dot[0].y = A.y;
+	dot[1].x = B.x; dot[1].y = B.y;
 }
 
 void Edge::setPoints(Point* A, Point* B)
 {
-	P_dot = new Point[2];
+	dot = new Point[2];
 	
-	P_dot[0].x = A[0].x; P_dot[0].y = A[0].y;
-	P_dot[1].x = B[0].x; P_dot[1].y = B[0].y;
+	dot[0].x = A[0].x; dot[0].y = A[0].y;
+	dot[1].x = B[0].x; dot[1].y = B[0].y;
 }
 
 void Edge::setPoints(int x1, int x2, int y1, int y2)
 {
-	P_dot = new Point[2];
+	dot = new Point[2];
 	
-	P_dot[0].x = x1; P_dot[0].y = y1;
-	P_dot[1].x = x2; P_dot[1].y = y2;
+	dot[0].x = x1; dot[0].y = y1;
+	dot[1].x = x2; dot[1].y = y2;
 }
 
-// getting fields
+	// /settings
+	// getting
 
 Point Edge::getDot(int n)
 {
-	return P_dot[n];
+	return dot[n];
 }
 
-int Edge::getDotX(int dot)
+int Edge::getDotX(int _dot)
 {
-	return P_dot[dot].x;
+	return dot[_dot].x;
 }
 
-int Edge::getDotY(int dot)
+int Edge::getDotY(int _dot)
 {
-	return P_dot[dot].y;
+	return dot[_dot].y;
 }
 
 int Edge::getK()
 {
-	return i_k;
+	return k;
 }
 int Edge::getB()
 {
-	return i_b;
+	return b;
 }
 
 bool Edge::getHorizont()
 {
-	return b_horizontal;
+	return horizontal;
 }
 
 bool Edge::getVertical()
 {
-	return b_vertical;
+	return vertical;
 }
 
-// calculations
+	// /getting
+	// calculations
 void Edge::calculateAngle()
 {
 	/*
@@ -92,51 +94,51 @@ void Edge::calculateAngle()
 
 	int dx, dy;
 
-	dx = P_dot[1].x - P_dot[0].x;
-	dy = P_dot[1].y - P_dot[0].y;
+	dx = dot[1].x - dot[0].x;
+	dy = dot[1].y - dot[0].y;
 
 	if (dx == 0)
 	{
-		b_vertical = true;
-		b_horizontal = false;
-		i_b = 0;
+		vertical = true;
+		horizontal = false;
+		b = 0;
 	}
 	else if (dy == 0)
 	{
-		b_horizontal = true;
-		b_vertical = false;
-		i_k = 0;
-		i_b = P_dot[0].y;
+		horizontal = true;
+		vertical = false;
+		k = 0;
+		b = dot[0].y;
 	}
 	else
 	{
-		i_k = dy / dx;
-		i_b = P_dot[0].y - i_k*P_dot[0].x;
+		k = dy / dx;
+		b = dot[0].y - k*dot[0].x;
 	}
 }
 
 bool Edge::collision(Point p)
 {
-	if (b_horizontal)
+	if (horizontal)
 	{
 		if (
-			p.x <= maxNumber(P_dot[0].x, P_dot[1].x) && 
-			p.x >= minNumber(P_dot[0].x, P_dot[1].x)
+			p.x <= maxNumber(dot[0].x, dot[1].x) && 
+			p.x >= minNumber(dot[0].x, dot[1].x)
 		   )
 		{
-			int y0 = i_k * p.x + i_b;
+			int y0 = k * p.x + b;
 			return y0 >= p.y ? true : false;
 		}
 		else return false;
 	}
-	else if (b_vertical)
+	else if (vertical)
 	{
 		if (
-			p.y <= maxNumber(P_dot[0].y, P_dot[1].y) &&
-			p.y >= minNumber(P_dot[0].y, P_dot[1].y)
+			p.y <= maxNumber(dot[0].y, dot[1].y) &&
+			p.y >= minNumber(dot[0].y, dot[1].y)
 		   )
 		{
-			return P_dot[0].x >= p.x ? true : false;
+			return dot[0].x >= p.x ? true : false;
 		}
 		else return false;
 	}
@@ -147,21 +149,21 @@ bool Edge::collision(Point p)
 
 		if (
 			(
-			 p.y <= maxNumber(P_dot[0].y, P_dot[1].y)  &&
-			 p.y >= minNumber(P_dot[0].y, P_dot[1].y)
+			 p.y <= maxNumber(dot[0].y, dot[1].y)  &&
+			 p.y >= minNumber(dot[0].y, dot[1].y)
 			) 
 			||
 			(
 			 (
-			  p.x <= maxNumber(P_dot[0].x, P_dot[1].x) &&
-			  p.x >= minNumber(P_dot[0].x, P_dot[1].x)
+			  p.x <= maxNumber(dot[0].x, dot[1].x) &&
+			  p.x >= minNumber(dot[0].x, dot[1].x)
 			 )
 		    )
 		   )
 		{ 
 		
-			x0 = (p.y - i_b) / i_k;
-			y0 = i_k * p.x + i_b;
+			x0 = (p.y - b) / k;
+			y0 = k * p.x + b;
 			
 			return x0 >= p.x || y0 >= p.y ? true : false;
 		}
@@ -171,7 +173,5 @@ bool Edge::collision(Point p)
 	return false;
 }
 
-bool Edge::collision(Point* p)
-{
-	return false;
-}
+	// /calculations
+// /public

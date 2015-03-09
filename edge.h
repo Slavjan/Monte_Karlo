@@ -4,11 +4,11 @@ class Edge
 {
 private:
 	//private fields
-	Point*	P_dot;
-	int		i_k;
-	int		i_b;
-	bool	b_horizontal;
-	bool	b_vertical;
+	Point*	dot;
+	int		k;
+	int		b;
+	bool	horizontal;
+	bool	vertical;
 
 public:
 	// public methods
@@ -22,8 +22,6 @@ public:
 
 	//calculatins
 	void	calculateAngle();
-	bool	collision(Point  p);
-	bool	collision(Point* p);
 	// getting fields
 	Point	getDot(int);
 	int		getDotX(int);   

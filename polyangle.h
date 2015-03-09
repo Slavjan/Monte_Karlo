@@ -5,10 +5,10 @@ class Polyangle
 {
 private:
 	// private fields
-	Edge*	E_line;
-	int		i_verticesCount;
-	int		i_maxX;
-	int		i_maxY;
+	Edge*	edge;
+	int		verticesCount;
+	int		maxX;
+	int		maxY;
 
 	// private mathods
 	void	maxCoord();
