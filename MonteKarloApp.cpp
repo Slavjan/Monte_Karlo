@@ -30,7 +30,10 @@ void MonteKarloApp::setShape(Polyangle shape)
 	testing = new Polyangle(shape);
 }
 
-
+float MonteKarloApp::getSpace()
+{
+	return calculateSpase();
+}
 // /public
 
 // protected
@@ -121,7 +124,7 @@ int MonteKarloApp::calculateAmountPointsInShape(Polyangle *polygon)
 	return count;
 }				
 
-int MonteKarloApp::calculateSpase()
+float MonteKarloApp::calculateSpase()
 {
 	int p_i_cShape, // amount of points in control Shape
 		p_i_tShape;	// amount of Points In testing Shape
@@ -130,7 +133,7 @@ int MonteKarloApp::calculateSpase()
 	p_i_tShape = calculateAmountPointsInShape(testing);
 
 	float ratio = p_i_tShape / p_i_cShape;
-	int space = ratio * controlSpace;
+	float space = ratio * controlSpace;
 
 	return space;
 }
