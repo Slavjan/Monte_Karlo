@@ -23,7 +23,7 @@ protected:
 
 		// calculations
 	int calculateAmountPointsInShape(Polyangle *polygon); // in dependence an amount of the points in a shape,
-	int calculateSpase();								  // calculating the space of this shape
+	float calculateSpase();								  // calculating the space of this shape
 	std::vector<int> calculateExtremumCoords(Polyangle *shape);
 	
 
@@ -38,6 +38,6 @@ public:
 	void setShape(Polyangle *shape);
 	void setShape(Polyangle shape);
 		// returning
-	int getSpace();
+	float getSpace();
 };
 
