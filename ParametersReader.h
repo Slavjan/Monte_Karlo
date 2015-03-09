@@ -9,7 +9,8 @@ class ParametersReader
 private:  
 	// fields
 	std::vector<int> k;
-	std::string path;
+	std::string pathFrom;
+	std::string pathTo;
 public:
 	// methods
 	ParametersReader();

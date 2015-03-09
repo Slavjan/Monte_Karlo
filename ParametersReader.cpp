@@ -24,15 +24,20 @@ void ParametersReader::parsing(int argc, char** argv)
 		for (int i = 1; i < argc; i += 2)
 		{
 			std::string  opt = std::string(argv[i]);
-			if (opt == "-f")
+			if (opt == "-ff") // from file
 			{
-				path = std::string(argv[i + 1]);
+				pathFrom = std::string(argv[i + 1]);
 				i++;
 			}
-			else if (opt == "-p")
+			else if (opt == "-p") // points
 			{
 				k.push_back(atoi(argv[i]));
 				k.push_back(atoi(argv[i + 1]));
+			}
+			else if (opt == "-tf") // to file
+			{
+				pathTo = std::string(argv[i + 1]);
+				i++;
 			}
 		}
 	}
