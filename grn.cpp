@@ -14,19 +14,19 @@ grn::~grn()
 
 float grn::generate()
 {
-	float f_rNumber;
-	int i_ms = random(), i_mm = MMS();
+	float rNumber;
+	int midSquare = random(), midMultipl = MMS();
 
 	for (int i = 0; i < clock(); i++)
 	{
-		i_ms = MMS(i_mm);
-		i_mm = MMM(i_ms);
+		midSquare = MMS(midMultipl);
+		midMultipl = MMM(midSquare);
 	}
 
-	f_rNumber = i_mm;
-	f_rNumber /= 10000;								
+	rNumber = midMultipl;
+	rNumber /= 10000;								
 
-	return f_rNumber;
+	return rNumber;
 }
 
 float grn::genInRange(int from, int to)
@@ -46,16 +46,16 @@ int grn::MMM(int n) // set dddd, dddd*cccc = ddmmmmdd, mmmm is middle of multipl
 {
 	int i_fnumber,//first number dddd
 		i_snumber,//second number cccc
-		i_mm = 0; //mid of multiplication
+		midMultipl = 0; //mid of multiplication
 	
 	i_fnumber = n | setNumber();	//dddd
 	i_snumber = random();			//cccc
 
 	for (int i = 0; i < 20; i++)// for mutcher range
 	{
-		i_mm = midExtract(i_fnumber * i_snumber);
-		i_fnumber = i_mm;
-		if (i_mm == 0)
+		midMultipl = midExtract(i_fnumber * i_snumber);
+		i_fnumber = midMultipl;
+		if (midMultipl == 0)
 		{
 			i_fnumber = setNumber();
 			i--;
@@ -63,23 +63,23 @@ int grn::MMM(int n) // set dddd, dddd*cccc = ddmmmmdd, mmmm is middle of multipl
 
 	}
 
-	return i_mm;
+	return midMultipl;
 }
 
 int grn::MMS(int n) // set dddd, sqr(dddd) = ddmmmmdd, mmmm is middle of square
 {
 	int i_fnumber,//first number dddd
-		i_ms = 0; //mid of square
+		midSquare = 0; //mid of square
 
 	i_fnumber = n | setNumber();	//dddd
 
 	for (int i = 0; i < 25; i++)
 	{
-		i_ms = midExtract(i_fnumber*i_fnumber);
-		i_fnumber = i_ms;
+		midSquare = midExtract(i_fnumber*i_fnumber);
+		i_fnumber = midSquare;
 	}
 
-	return i_ms;
+	return midSquare;
 }						 
 
 //private ------------------------------------------------

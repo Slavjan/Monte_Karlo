@@ -3,19 +3,16 @@
 
 class grn	//generator of random numbers
 {
-private:
-
+private: 
 	//methods
 	//private settings
-	int setNumber();
-
+	int setNumber(); 
 	int midExtract(unsigned long int);//extracting a middle of number,
 				 					  //for example: ddccccdd, 
 									  //the cccc has been extracted and returned
 public:
     grn();
-	~grn();
-
+	~grn();	
 	//generation
 		//std	
 	int random(int n1 = 1111, int n2 = 9999);
