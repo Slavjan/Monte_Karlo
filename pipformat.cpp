@@ -20,13 +20,15 @@ void PiPFormat::loadFromFile(std::string fileName)
         return;
     }
 
-    stream >> _count;
+    //stream >> _count;
     while( ! stream.eof() ){
         stream >> _cross.x;
         stream >> _cross.y;
         _vertex.push_back(_cross);
     }
-    _vertex.pop_back();
+    //_vertex.pop_back();
+	_count = _vertex.size();
+
     stream.close();
 }
 
