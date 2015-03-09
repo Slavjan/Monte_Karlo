@@ -1,11 +1,28 @@
 #include "stdafx.h"
 #include "polyangle.h"
 #include "pipformat.h"
+#include "ParametersReader.h"
+#include "MonteKarloApp.h"
 
-using namespace std;
+
+class myApp : MonteKarloApp
+{
+protected:
+	// fields
+	PiPFormat*	source;
+	ParametersReader* argument;
+	int			argc;
+	char**		argv;
+public:
+	// methods
+	void loadShape() override;
+	void readFile(std::string path) override;
+	void readParams(int _argc, char** _argv) override;
+};
+
 int main(int argc, char** argv)
 {
-    std::string inFile = "File.in";
+   /* std::string inFile = "File.in";
     std::string outFile = "File.out";
     if( argc > 1 ){
         inFile = argv[1];
@@ -18,7 +35,7 @@ int main(int argc, char** argv)
 	try{
 		file.loadFromFile(inFile);
 		file.print();
-	//	file.saveToFile(outFile);
+		file.saveToFile(outFile);
 		shape = new Polyangle(file.getVector().data(), file.getVector().size());
 	}
 	catch (PiPFormat::notFound)
@@ -33,7 +50,7 @@ int main(int argc, char** argv)
 	{
 		cout << "Shape is been line" << endl << "//-----------------------------" << endl;
 	}
-	
+	*/
 
 	
 #ifdef _MSC_VER // if compiling in the MS Visual Studio
