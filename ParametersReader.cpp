@@ -69,18 +69,30 @@ std::string ParametersReader::getPathTo()
 	// finding params
 std::string ParametersReader::findInputPath(int argc, char** argv)
 {
-	for (int i = 1; i < argc; i += 2)
+	for (int i = 1; i < argc; i++)
 	{
 		std::string  opt = std::string(argv[i]);
 		if (opt == "-i") // from file - input
 		{
 			pathFrom = std::string(argv[i + 1]);
-			i++;
 		}
 	}
 	
 	return pathFrom;
 }
 
+std::string ParametersReader::findOutputPath(int argc, char** argv)
+{
+	for (int i = 1; i < argc; i++)
+	{
+		std::string  opt = std::string(argv[i]);
+		if (opt == "-o") // to file - output
+		{
+			pathTo = std::string(argv[i + 1]);
+		}
+	}
+	
+	return pathTo;
+}
 	// /finding
 // /private
