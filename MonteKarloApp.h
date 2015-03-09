@@ -39,7 +39,7 @@ public:
 		// returning
 	float getSpace();
 
-		// for derivativ class
+		// for derivative class
 	virtual void loadShape() {};	// take a shape for 	 // from file or parameters
 	virtual void readFile() {};
 	virtual void readParams() {};
