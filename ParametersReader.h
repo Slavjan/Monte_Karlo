@@ -8,14 +8,14 @@ class ParametersReader
 {
 private:  
 	// fields
-	std::vector<int> k;
+	std::vector<int> coords;
 	std::string pathFrom;
 	std::string pathTo;
 
 	//find options
-	std::string findInputPath();
-	std::string findOutputPath();
-	std::string findEnteredCoords();
+	std::string findInputPath(int argc, char** argv);
+	std::string findOutputPath(int argc, char** argv);
+	std::string findEnteredCoords(int argc, char** argv);
 
 public:
 	// methods
