@@ -94,5 +94,21 @@ std::string ParametersReader::findOutputPath(int argc, char** argv)
 	
 	return pathTo;
 }
+
+std::string ParametersReader::findEnteredCoords(int argc, char** argv)
+{
+	std::string str;
+	
+	for (int i = 1; i < argc; i++)
+	{
+		std::string  opt = std::string(argv[i]);
+		if (opt == "-p") // point
+		{
+			str = std::string(argv[i + 1]);
+		}
+	}
+	
+	return str;
+}
 	// /finding
 // /private
