@@ -1,5 +1,5 @@
 #include "ParametersReader.h"
-
+// public
 ParametersReader::ParametersReader()
 {
 	pathFrom = '\0';
@@ -47,10 +47,10 @@ void ParametersReader::parsing(int argc, char** argv)
 		}
 	}
 }
-
+	// getting
 std::vector<int> ParametersReader::getVector()
 {
-	return k;
+	return coords;
 }
 
 std::string ParametersReader::getPathFrom()
@@ -62,3 +62,24 @@ std::string ParametersReader::getPathTo()
 {
 	return pathTo;
 }
+	// /getting
+// /public
+
+// private
+	// finding params
+std::string ParametersReader::findInputPath(int argc, char** argv)
+{
+	for (int i = 1; i < argc; i += 2)
+	{
+		std::string  opt = std::string(argv[i]);
+		if (opt == "-i") // from file - input
+		{
+			pathFrom = std::string(argv[i + 1]);
+			i++;
+		}
+	}
+	
+	return '\0';
+}
+	// /finding
+// /private
