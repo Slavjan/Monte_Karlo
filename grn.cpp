@@ -45,20 +45,20 @@ int grn::random(int n1, int n2)
 
 int grn::MMM(int n) // set dddd, dddd*cccc = ddmmmmdd, mmmm is middle of multiplication 
 {
-	int i_fnumber,//first number dddd
-		i_snumber,//second number cccc
+	int fNumber,//first number dddd
+		sNumber,//second number cccc
 		midMultipl = 0; //mid of multiplication
 	
-	i_fnumber = n | setNumber();	//dddd
-	i_snumber = random();			//cccc
+	fNumber = n | setNumber();	//dddd
+	sNumber = random();			//cccc
 
 	for (int i = 0; i < 20; i++)// for mutcher range
 	{
-		midMultipl = midExtract(i_fnumber * i_snumber);
-		i_fnumber = midMultipl;
+		midMultipl = midExtract(fNumber * sNumber);
+		fNumber = midMultipl;
 		if (midMultipl == 0)
 		{
-			i_fnumber = setNumber();
+			fNumber = setNumber();
 			i--;
 		}
 
@@ -69,15 +69,15 @@ int grn::MMM(int n) // set dddd, dddd*cccc = ddmmmmdd, mmmm is middle of multipl
 
 int grn::MMS(int n) // set dddd, sqr(dddd) = ddmmmmdd, mmmm is middle of square
 {
-	int i_fnumber,//first number dddd
+	int fNumber,//first number dddd
 		midSquare = 0; //mid of square
 
-	i_fnumber = n | setNumber();	//dddd
+	fNumber = n | setNumber();	//dddd
 
 	for (int i = 0; i < 25; i++)
 	{
-		midSquare = midExtract(i_fnumber*i_fnumber);
-		i_fnumber = midSquare;
+		midSquare = midExtract(fNumber*fNumber);
+		fNumber = midSquare;
 	}
 
 	return midSquare;
