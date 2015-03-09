@@ -14,7 +14,7 @@ protected:
 	Polyangle* testing;
 	Polyangle* control;
 	std::vector<Point> pointSet;
-	grn* m_rundom;
+	grn* m_rundom;	 // my _ random
 
 	//methods
 		// generations
