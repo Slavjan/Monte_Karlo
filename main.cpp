@@ -11,13 +11,20 @@ protected:
 	// fields
 	PiPFormat*	source;
 	ParametersReader* argument;
-	int			argc;
-	char**		argv;
+	bool readFlag;
+	bool writeFlag;
+	int	argc;
+	char**	argv;
 public:
+	myApp(int _argc, char** _argv);
+	~myApp();
+
 	// methods
-	void loadShape() override;
-	void readFile(std::string path) override;
-	void readParams(int _argc, char** _argv) override;
+	bool loadShape() override;
+	bool readFile(std::string path) override;
+	bool readParams() override;
+
+	void saveToFile();
 };
 
 int main(int argc, char** argv)
@@ -58,4 +65,56 @@ int main(int argc, char** argv)
 #endif
 
 	return 0;
+}
+
+
+// Imlement of the class myApp
+myApp::myApp(int _argc, char** _argv)
+{
+	source = nullptr;
+	argument = nullptr;
+}
+
+myApp::~myApp()
+{
+	delete[] source;
+	delete[] argument;
+}
+
+bool myApp::readFile(std::string path)
+{ 
+	source = new PiPFormat();
+	try
+	{
+		source->loadFromFile(path);
+	}
+	catch (PiPFormat::notFound)
+	{
+		std::cout << "The file is not found";
+		return false;
+	}
+}
+
+bool myApp::readParams()
+{
+	argument = new ParametersReader(argc, argv);
+
+	try
+	{
+		std::string pathOut = argument->findString("-o");
+	}	
+	catch (ParametersReader::Empty)
+	{
+		writeFlag = false;
+	}
+	
+	try
+	{
+
+	}
+	catch ()
+	{
+
+	}
+	
 }
