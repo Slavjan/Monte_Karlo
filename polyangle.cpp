@@ -103,7 +103,7 @@ int Polyangle::collisions(Point p)
 int Polyangle::collisions(int x, int y)
 {
 	int collisions_count = 0;
-	Point *p = new Point(x, y);
+	Point p = Point(x, y);
 
 	for (int i = 0; i < verticesCount / 2; i++)
 	{
