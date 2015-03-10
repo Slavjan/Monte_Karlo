@@ -13,7 +13,41 @@ ParametersReader::ParametersReader(int _argc, char** _argv)
 ParametersReader::~ParametersReader()
 {}
 
+std::string ParametersReader::findString(std::string opt)
+{
+	if (argc > 1)
+		for (int i = 0; i < argc; i++)
+		{
+			std::string arg = std::string(argv[i]);
+			if (arg == opt)
+				return  std::string(argv[i + 1]);
+		}
+	else throw Empty();	
+}
 
+std::vector<int> ParametersReader::findVector(std::string opt)
+{
+	std::vector<int> v;
+
+	if (argc > 1)
+		for (int i = 0; i < argc; i++)
+		{
+			std::string arg = std::string(argv[i]);
+			if (arg == opt)
+			{
+				while (atoi(argv[i + 1]))
+				{
+					v.push_back(atoi(argv[i+1]));
+					i++;
+				}
+				if (v.size() % 2 != 0)
+					throw Invalid();
+
+				return v;
+			}
+		}
+	else throw Empty();
+}
 
 //void ParametersReader::parsing(int argc, char** argv)
 //{
