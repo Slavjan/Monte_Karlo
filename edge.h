@@ -10,6 +10,8 @@ private:
 	bool	horizontal;
 	bool	vertical;
 
+
+
 public:
 	// public methods
 	Edge();
@@ -22,6 +24,7 @@ public:
 
 	//calculatins
 	void	calculateAngle();
+	bool Edge::collision(Point p);
 	// getting fields
 	Point	getDot(int);
 	int		getDotX(int);   
