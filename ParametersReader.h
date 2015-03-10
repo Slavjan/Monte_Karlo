@@ -1,8 +1,9 @@
 #pragma once
 #include <vector>
 #include <iostream>
+#include <string>
 
-
+using std::string;
 
 class ParametersReader
 {
@@ -17,8 +18,8 @@ public:
 	~ParametersReader();
 	
 		// finding 
-	std::string findString(std::string opt);
-	std::vector<int> findVector(std::string opt);
+	string findString(string opt);
+	std::vector<int> findVector(string opt);
 
 	// exceptions
 	class Invalid{};
