@@ -40,8 +40,8 @@ public:
 	float getSpace();
 
 		// for derivative class
-	virtual void loadShape() {};	// take a shape for 	 // from file or parameters
-	virtual void readFile(std::string) {};
-	virtual void readParams(int, char**) {};
+	virtual bool loadShape() {};	// take a shape for 	 // from file or parameters
+	virtual bool readFile(std::string path) {};
+	virtual bool readParams() {};
 };
 
