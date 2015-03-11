@@ -11,6 +11,8 @@ protected:
 	// fields
 	PiPFormat*	source;
 	ParametersReader* argument;
+	std::string pathOut;
+	std::string pathIn;
 	bool readFlag;
 	bool writeFlag;
 	int	argc;
@@ -101,7 +103,8 @@ bool myApp::readParams()
 
 	try
 	{
-		std::string pathOut = argument->findString("-o");
+		pathOut = argument->findString("-o");
+		writeFlag = true;
 	}	
 	catch (ParametersReader::Empty)
 	{
@@ -110,11 +113,23 @@ bool myApp::readParams()
 	
 	try
 	{
-
+		pathIn = argument->findString("-i");
+		readFlag = true;
 	}
-	catch ()
+	catch (ParametersReader::Empty)
 	{
-
-	}
-	
+		readFlag = false;
+		try
+		{
+			setShape(argument->findVector("-p").data);
+		}
+		catch (ParametersReader::Empty)
+		{
+			std::cout << "-p is empty";
+		}
+		catch (ParametersReader::Invalid)
+		{
+			std::cout << "-p is invailid";
+		}
+	}			
 }
