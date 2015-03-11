@@ -42,9 +42,9 @@ std::vector<int> ParametersReader::findVector(string opt)
 		for (int i = 0; i < argc; i++)
 		{
 			string arg = string(argv[i]);
-			if (arg == opt)
+			if (arg == opt && i + 1 <= argc)
 			{
-				while (atoi(argv[i + 1]))
+				while (atoi(argv[i + 1]) && i + 1 <= argc)
 				{
 					v.push_back(atoi(argv[i+1]));
 					i++;
@@ -56,6 +56,10 @@ std::vector<int> ParametersReader::findVector(string opt)
 				}
 
 				return v;
+			}
+			else
+			{
+				throw Empty();
 			}
 		}
 	else
