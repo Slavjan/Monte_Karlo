@@ -17,7 +17,7 @@ public:
     PiPFormat(int count, std::vector<Point> &vertex, Point& cross);
 
     void	loadFromFile(std::string fileName);
-    void	saveToFile(std::string fileName);
+    void	saveToFile(std::string fileName, std::string format);
 
 	int			getVerticesCount();
 	std::vector<Point>	getVector();

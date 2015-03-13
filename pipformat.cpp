@@ -32,18 +32,14 @@ void PiPFormat::loadFromFile(std::string fileName)
     stream.close();
 }
 
-void PiPFormat::saveToFile(std::string fileName)
+void PiPFormat::saveToFile(std::string fileName, std::string format)
 {
     std::ofstream stream( fileName.data() );
     if( ! stream.is_open() ){
 		throw wasntSave();
         return;
     } 
-    stream << _count << std::endl;
-    for(int i = 0; i < _vertex.size(); ++i ){
-        stream << _vertex.at(i).x << " " << _vertex.at(i).y << std::endl;
-    }
-    stream << _cross.x << " " << _cross.y;
+    stream << format << std::endl;
     stream.close();
 }
 
