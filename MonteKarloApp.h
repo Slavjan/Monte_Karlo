@@ -22,10 +22,9 @@ protected:
 	void generateControlShape();	   // generate the shape with known space for calculations
 
 		// calculations
-	int calculateAmountPointsInShape(Polyangle *polygon); // in dependence an amount of the points in a shape,
-	float calculateSpase();								  // calculating the space of this shape
 	std::vector<int> calculateExtremumCoords(Polyangle *shape);
-	
+	int calculateAmountPointsInShape(Polyangle *polygon); // in dependence an amount of the points in a shape,
+	float calculateSpase();								  // calculating the space of this shape 	
 
 public:															
 	MonteKarloApp();
