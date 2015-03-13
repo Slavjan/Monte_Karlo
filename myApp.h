@@ -18,15 +18,16 @@ protected:
 	bool writeFlag;
 	int	argc;
 	char**	argv;
-
+	//method
 	bool readFile(std::string path) override;
 	bool readParams() override;
+	bool loadShape() override;
 public:
 	myApp(int _argc, char** _argv);
 	~myApp();
 
 	// methods
-	bool loadShape() override;
+	
 
 	void saveToFile();
 };

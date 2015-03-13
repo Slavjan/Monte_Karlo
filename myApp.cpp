@@ -12,6 +12,23 @@ myApp::~myApp()
 	delete[] argument;
 }
 
+bool myApp::loadShape()
+{
+	bool ex;
+
+	ex = readParams();
+
+	if (readFlag)
+	{
+		ex = readFile(pathIn);
+		if (!ex) return	ex;
+		setShape(source->getVector().data());		
+	}
+	else return ex;
+
+	return true;
+}
+
 // /public
 // proeced
 
