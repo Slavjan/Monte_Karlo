@@ -68,6 +68,7 @@
     <ClCompile Include="edge.cpp" />
     <ClCompile Include="grn.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="myApp.cpp" />
     <ClCompile Include="ParametersReader.cpp" />
     <ClCompile Include="pipformat.cpp" />
     <ClCompile Include="point.cpp" />
@@ -77,6 +78,7 @@
     <ClInclude Include="MonteKarloApp.h" />
     <ClInclude Include="edge.h" />
     <ClInclude Include="grn.h" />
+    <ClInclude Include="myApp.h" />
     <ClInclude Include="ParametersReader.h" />
     <ClInclude Include="pipformat.h" />
     <ClInclude Include="point.h" />
