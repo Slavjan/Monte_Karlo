@@ -39,7 +39,7 @@ void PiPFormat::saveToFile(std::string fileName, std::string format)
 		throw wasntSave();
         return;
     } 
-    stream << format << std::endl;
+    stream << format.data() << std::endl;
     stream.close();
 }
 
