@@ -22,6 +22,10 @@ protected:
 	bool readFile(std::string path) override;
 	bool readParams() override;
 	bool loadShape() override;
+
+	void saveToFile(std::string format);
+	void printToConsole(std::string format);
+
 public:
 	myApp(int _argc, char** _argv);
 	~myApp();
@@ -29,8 +33,7 @@ public:
 	// methods
 	bool init();
 	bool calculate();
-	bool returning();
+	void returning();
 
-	void saveToFile();
-	void printToConsole();
+	
 };

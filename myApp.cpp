@@ -26,9 +26,31 @@ bool myApp::init()
 	return true;
 }
 
+bool myApp::calculate()
+{
+	float mSpace; // middle space
+	int traces;
+	grn r; 
+	traces = r.genInRange(10, controlSpace);
+	for (int i = 0; i < r.genInRange(10, controlSpace); i++)
+	{
+		mSpace += getSpace();
+	}
+	Space = mSpace / traces;
+
+	return true;
+}
+
+void myApp::returning()
+{
+	if (writeFlag)
+		saveToFile();
+	else printToConsole();
+}
+
 // /public
 // proeced
-/*
+
 bool myApp::loadShape()
 {
 	bool ex;
@@ -45,7 +67,7 @@ bool myApp::loadShape()
 
 	return true;
 }
-*/
+
 bool myApp::readFile(std::string path)
 {
 	source = new PiPFormat();
