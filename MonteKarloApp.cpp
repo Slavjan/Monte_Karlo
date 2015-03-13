@@ -17,17 +17,42 @@ MonteKarloApp::~MonteKarloApp()
 
 void MonteKarloApp::setShape(std::vector<Point> dots)
 {
-	testing = new Polyangle(dots.data(), dots.size());
+	try
+	{
+		testing = new Polyangle(dots.data(), dots.size());
+	}
+	catch (Polyangle::isLine)
+	{
+		std::cout << "You entered coordinates of line, she haven`t space!" << std::endl;
+		testing->print();
+	}
 }
 
 void MonteKarloApp::setShape(Polyangle *shape)
 {
-	testing = new Polyangle(*shape);
+	try
+	{
+		testing = new Polyangle(*shape);
+	}
+	catch (Polyangle::isLine)
+	{
+		std::cout << "You entered coordinates of line, she haven`t space!" << std::endl;
+		testing->print();
+	}
+	
 }
 
 void MonteKarloApp::setShape(Polyangle shape)
 {
-	testing = new Polyangle(shape);
+	try
+	{
+		testing = new Polyangle(shape);
+	}
+	catch (Polyangle::isLine)
+	{
+		std::cout << "You entered coordinates of line, she haven`t space!" << std::endl;
+		testing->print();
+	}
 }
 
 float MonteKarloApp::getSpace()
