@@ -23,8 +23,8 @@ protected:
 	bool readParams() override;
 	bool loadShape() override;
 
-	void saveToFile(std::string format);
-	void printToConsole(std::string format);
+	void saveToFile();
+	void printToConsole();
 
 public:
 	myApp(int _argc, char** _argv);

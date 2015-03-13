@@ -48,6 +48,23 @@ void myApp::returning()
 	else printToConsole();
 }
 
+void myApp::saveToFile()
+{
+	try
+	{					   
+		source->saveToFile("Space.out", ""+ Space);		   
+	}
+	catch (PiPFormat::wasntSave)
+	{
+		std::cout << "Saving fail!" << std::endl;
+	}
+}
+
+void myApp::printToConsole()
+{
+	std::cout << Space << std::endl;
+}
+
 // /public
 // proeced
 
