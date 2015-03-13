@@ -27,7 +27,10 @@ public:
 	~myApp();
 
 	// methods
-	
+	bool init();
+	bool calculate();
+	bool returning();
 
 	void saveToFile();
+	void printToConsole();
 };

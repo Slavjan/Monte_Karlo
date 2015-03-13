@@ -12,6 +12,23 @@ myApp::~myApp()
 	delete[] argument;
 }
 
+bool myApp::init()
+{
+	bool ex;
+	ex = loadShape();
+
+	if (!ex)
+		return ex;
+
+	generateControlShape();
+	generatePontsSet();
+
+	return true;
+}
+
+// /public
+// proeced
+/*
 bool myApp::loadShape()
 {
 	bool ex;
@@ -22,16 +39,13 @@ bool myApp::loadShape()
 	{
 		ex = readFile(pathIn);
 		if (!ex) return	ex;
-		setShape(source->getVector().data());		
+		setShape(source->getVector().data());
 	}
 	else return ex;
 
 	return true;
 }
-
-// /public
-// proeced
-
+*/
 bool myApp::readFile(std::string path)
 {
 	source = new PiPFormat();
