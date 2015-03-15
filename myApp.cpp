@@ -28,7 +28,7 @@ bool myApp::init()
 
 bool myApp::calculate()
 {
-	float mSpace; // middle space
+	float mSpace = 0; // middle space
 	int traces;
 	grn r; 
 	traces = r.genInRange(10, controlSpace);
@@ -94,7 +94,7 @@ bool myApp::readFile(std::string path)
 	}
 	catch (PiPFormat::notFound)
 	{
-		std::cout << "The file is not found";
+		std::cout << "The file is not found" << std::endl;
 		return false;
 	}
 	return true;
@@ -124,16 +124,22 @@ bool myApp::readParams()
 		readFlag = false;
 		try
 		{
-			setShape(argument->findVector("-p").data);
+			std::vector<Point> p;
+			for (int i = 0; i < argument->findVector("-p").size(); i += 2)
+			{
+				p.at(i).x = argument->findVector("-p").data()[i];
+				p.at(i).y= argument->findVector("-p").data()[i+1];
+			}
+			setShape(p);
 		}
 		catch (ParametersReader::Empty)
 		{
-			std::cout << "-p is empty";
+			std::cout << "-p is empty" << std::endl;
 			return false;
 		}
 		catch (ParametersReader::Invalid)
 		{
-			std::cout << "-p is invailid";
+			std::cout << "-p is invailid" << std::endl;
 			return false;
 		}
 	}
