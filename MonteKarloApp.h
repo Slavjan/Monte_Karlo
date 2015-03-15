@@ -26,6 +26,11 @@ protected:
 	int calculateAmountPointsInShape(Polyangle *polygon); // in dependence an amount of the points in a shape,
 	float calculateSpase();								  // calculating the space of this shape 	
 
+	// for derivative class
+	virtual bool loadShape() { return true; };	// take a shape for 	 // from file or parameters
+	virtual bool readFile(std::string path) { return true; };
+	virtual bool readParams() { return true;  };
+
 public:															
 	MonteKarloApp();
 	~MonteKarloApp();
@@ -38,9 +43,6 @@ public:
 		// returning
 	float getSpace();
 
-		// for derivative class
-	virtual bool loadShape() {};	// take a shape for 	 // from file or parameters
-	virtual bool readFile(std::string path) {};
-	virtual bool readParams() {};
+	
 };
 

@@ -24,7 +24,8 @@ void MonteKarloApp::setShape(std::vector<Point> dots)
 	catch (Polyangle::isLine)
 	{
 		std::cout << "You entered coordinates of line, she haven`t space!" << std::endl;
-		testing->print();
+		testing->print(); 
+		return;
 	}
 }
 
@@ -38,6 +39,7 @@ void MonteKarloApp::setShape(Polyangle *shape)
 	{
 		std::cout << "You entered coordinates of line, she haven`t space!" << std::endl;
 		testing->print();
+		return;
 	}
 	
 }
@@ -52,6 +54,7 @@ void MonteKarloApp::setShape(Polyangle shape)
 	{
 		std::cout << "You entered coordinates of line, she haven`t space!" << std::endl;
 		testing->print();
+		return;
 	}
 }
 
