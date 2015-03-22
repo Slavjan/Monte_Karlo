@@ -16,19 +16,20 @@ string ParametersReader::findString(string opt)
 		for (int i = 0; i < argc; i++)
 		{
 			string arg = string(argv[i]);
-			if (
-				arg == opt && 
-				!(string(argv[i + 1])[0] == '-') && 
-				i + 1 <= argc
-			   )
-				return string(argv[i+1]);
-			else throw Empty();
+			if (arg == opt)
+			{	
+				if (
+					!(string(argv[i + 1])[0] == '-') &&
+					i + 1 <= argc
+					)
+					return string(argv[i + 1]);
+				else throw Empty();
+			}
 		}
 	else
 	{
 		throw Empty();
 	}
-	return " ";
 }
 
 std::vector<int> ParametersReader::findVector(string opt)
