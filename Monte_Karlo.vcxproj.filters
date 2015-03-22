@@ -39,6 +39,9 @@
     <ClCompile Include="MonteKarloApp.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+    <ClCompile Include="myApp.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="edge.h">
@@ -63,6 +66,9 @@
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="MonteKarloApp.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="myApp.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>
