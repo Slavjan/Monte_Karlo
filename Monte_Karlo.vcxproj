@@ -39,7 +39,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IntDir>$(ProjectName)\</IntDir>
+    <IntDir>$(Configuration)\</IntDir>
     <TargetName>test</TargetName>
     <OutDir>$(SolutionDir)$(Configuration)\test</OutDir>
   </PropertyGroup>
