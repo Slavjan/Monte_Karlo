@@ -1,7 +1,5 @@
-#pragma once
 #include <stdlib.h>
-#include <iostream>
-#include <stdio.h>
+#include <time.h>
 
 // maxNamber int 
 template <class N>
@@ -14,3 +12,20 @@ N minNumber(N a, N b)
 {
 	return a < b ? a : b;
 }
+
+
+int clockInThisSecond()
+{
+
+	int c = clock(), _c = c;
+	if (c > 1000)
+	{
+		_c /= 1000;
+		_c *= 1000;
+		c -= _c;
+	}
+	return c;
+}
+
+
+
