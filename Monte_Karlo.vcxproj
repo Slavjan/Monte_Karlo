@@ -40,7 +40,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IntDir>$(Configuration)\</IntDir>
+    <IntDir>$(Configuration)\test</IntDir>
     <TargetName>test</TargetName>
     <OutDir>$(SolutionDir)$(Configuration)\test</OutDir>
   </PropertyGroup>
@@ -69,11 +69,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="p_test.cpp" />
-    <ClCompile Include="ParametersReader.cpp" />
+    <ClCompile Include="grn.cpp" />
+    <ClCompile Include="grn_test.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ParametersReader.h" />
+    <ClInclude Include="grn.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
