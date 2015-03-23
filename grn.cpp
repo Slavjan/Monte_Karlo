@@ -18,7 +18,8 @@ float grn::generate()
 	int midSquare = random(), 
 		midMultipl = MMS();
 
-	for (int i = 0; i < clock(); i++)
+	int end = clock();
+	for (int i = 0; i < end; i++)
 	{
 		midSquare = MMS(midMultipl);
 		midMultipl = MMM(midSquare);
