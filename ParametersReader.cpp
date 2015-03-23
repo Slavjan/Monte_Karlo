@@ -59,12 +59,10 @@ std::vector<int> ParametersReader::findVector(string opt)
 					{	
 						v.push_back(atoi(argv[i + 1]));
 						i++;
-					}/*
-					if (v.size() % 2 != 0)
-					{
-						throw Invalid();
-					}*/
-					return v;
+					}
+					if (!v.empty())
+						return v;
+					else throw Empty();
 				}
 				else throw Empty();
 			}
