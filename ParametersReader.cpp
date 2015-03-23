@@ -16,13 +16,15 @@ string ParametersReader::findString(string opt)
 		for (int i = 0; i < argc; i++)
 		{
 			string arg = string(argv[i]);
-			if (
-				arg == opt && 
-				!(string(argv[i + 1])[0] == '-') && 
-				i + 1 <= argc
-			   )
-				return string(argv[i+1]);
-			else throw Empty();
+			if (arg == opt)
+			{	
+				if (
+					!(string(argv[i + 1])[0] == '-') &&
+					i + 1 <= argc
+					)
+					return string(argv[i + 1]);
+				else throw Empty();
+			}
 		}
 	else
 	{
@@ -33,31 +35,41 @@ string ParametersReader::findString(string opt)
 std::vector<int> ParametersReader::findVector(string opt)
 {
 	std::vector<int> v;
+	int sizeInt = sizeof(int)*8,
+		_sizeInt = -1 * sizeInt;
 
 	if (argc > 1)
 		for (int i = 0; i < argc; i++)
 		{
 			string arg = string(argv[i]);
-			if (arg == opt && i + 1 <= argc)
+			if (arg == opt)
 			{
-				while (atoi(argv[i + 1]) && i + 1 <= argc)
+				if (
+					atoi(argv[i + 1]) >= _sizeInt && 
+					atoi(argv[i + 1]) <= sizeInt
+				   )
 				{
-					v.push_back(atoi(argv[i+1]));
-					i++;
+					while (	
+							(i + 1 >= argc) ? false :
+							(
+								atoi(argv[i + 1]) >= _sizeInt &&
+								atoi(argv[i + 1]) <= sizeInt
+							)  							
+						  )
+					{	
+						v.push_back(atoi(argv[i + 1]));
+						i++;
+					}
+					if (!v.empty())
+						return v;
+					else throw Empty();
 				}
-				if (v.size() % 2 != 0)
-				{
-					throw Invalid();
-				}		  
-				return v;
-			}
-			else
-			{
-				throw Empty();
+				else throw Empty();
 			}
 		}
 	else
 	{
 		throw Empty();
 	}
+	return v;
 }
