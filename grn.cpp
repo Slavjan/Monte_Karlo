@@ -1,5 +1,5 @@
 #include "grn.h"
-
+#include "stdafx.h"
 //public
 grn::grn()
 {
