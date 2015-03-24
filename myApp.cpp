@@ -34,8 +34,8 @@ bool myApp::calculate()
 	float mSpace = 0; // middle space
 	int traces;
 	grn r; 
-	traces = r.genInRange(10, controlSpace);
-	for (int i = 0; i < r.genInRange(10, controlSpace); i++)
+	traces = r.getInRange(10, controlSpace);
+	for (int i = 0; i < traces; i++)
 	{
 		mSpace += getSpace();
 	}
