@@ -3,6 +3,8 @@
 // public
 myApp::myApp(int _argc, char** _argv)
 {
+	argc = _argc;
+	argv = _argv;
 	source = nullptr;
 	argument = nullptr;
 }
@@ -126,10 +128,11 @@ bool myApp::readParams()
 		try
 		{
 			std::vector<Point> p;
-			for (int i = 0; i < argument->findVector("-p").size(); i += 2)
+			std::vector<int> _p;
+			_p = argument->findVector("-p");
+			for (int i = 0; i < _p.size(); i += 2)
 			{
-				p.at(i).x = argument->findVector("-p").data()[i];
-				p.at(i).y= argument->findVector("-p").data()[i+1];
+				p.push_back(Point(_p.at(i), _p.at(i + 1)));
 			}
 			setShape(p);
 		}
