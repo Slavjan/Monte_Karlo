@@ -1,3 +1,4 @@
+#pragma once
 #ifndef FILESTRUCT_H
 #define FILESTRUCT_H
 

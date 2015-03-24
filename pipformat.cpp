@@ -1,3 +1,4 @@
+#pragma once
 #include "pipformat.h"
 
 PiPFormat::PiPFormat()

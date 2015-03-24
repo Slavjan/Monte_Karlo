@@ -1,5 +1,5 @@
 #pragma once
-
+//#include "stdafx.h"
 
 class grn	//generator of random numbers
 {
@@ -23,4 +23,3 @@ public:
 	
 	float genInRange(int from, int to);
 };
-

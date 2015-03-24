@@ -1,9 +1,8 @@
 #include "grn.h"
-#include <stdlib.h>
-#include <time.h>
 
+#define _MY_TIME // for defining block if defined
+#include "stdafx.h"
 //public
-
 grn::grn()
 {
 }
@@ -14,11 +13,13 @@ grn::~grn()
 
 float grn::generate()
 {
-	float rNumber;
+	float rNumber = 0.0;
 	int midSquare = random(), 
 		midMultipl = MMS();
 
-	for (int i = 0; i < clock(); i++)
+	int end;
+		end = clockInThisSecond();
+	for (int i = 0; i < end ; i++)
 	{
 		midSquare = MMS(midMultipl);
 		midMultipl = MMM(midSquare);
@@ -51,7 +52,8 @@ int grn::MMM(int n) // set dddd, dddd*cccc = ddmmmmdd, mmmm is middle of multipl
 	
 	fNumber = n | setNumber();	//dddd
 	sNumber = random();			//cccc
-
+	int end;
+		end = clockInThisSecond();
 	for (int i = 0; i < 20; i++)// for mutcher range
 	{
 		midMultipl = midExtract(fNumber * sNumber);
@@ -72,12 +74,13 @@ int grn::MMS(int n) // set dddd, sqr(dddd) = ddmmmmdd, mmmm is middle of square
 	int fNumber,//first number dddd
 		midSquare = 0; //mid of square
 
-	fNumber = n | setNumber();	//dddd
-
-	for (int i = 0; i < 25; i++)
+	fNumber = n == 0 ? setNumber() : n;	//dddd
+	int end;
+		end = clockInThisSecond();
+	for (int i = 0; i < end; i++)
 	{
 		midSquare = midExtract(fNumber*fNumber);
-		fNumber = midSquare;
+		fNumber = midSquare == 0 ? midExtract(random()) : midSquare; 
 	}
 
 	return midSquare;
@@ -87,7 +90,7 @@ int grn::MMS(int n) // set dddd, sqr(dddd) = ddmmmmdd, mmmm is middle of square
 
 int grn::setNumber()
 {
-	return 	clock() * 10 + clock();
+	return 	clockInThisSecond() * 10 + clockInThisSecond();
 }
 
 int grn::midExtract(unsigned long int n)

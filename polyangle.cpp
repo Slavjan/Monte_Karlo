@@ -1,3 +1,4 @@
+#pragma once
 #include "polyangle.h"
 #include "stdafx.h"
 // pablic

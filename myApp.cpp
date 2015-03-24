@@ -1,3 +1,4 @@
+#pragma once
 #include "myApp.h"
 // public
 myApp::myApp(int _argc, char** _argv)

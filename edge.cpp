@@ -1,3 +1,4 @@
+#pragma once
 #include "edge.h"
 #include "stdafx.h"
 // public
