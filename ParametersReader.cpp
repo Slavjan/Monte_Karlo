@@ -13,6 +13,8 @@ ParametersReader::~ParametersReader()
 
 string ParametersReader::findString(string opt)
 {
+	std::string str;
+
 	if (argc > 1)
 		for (int i = 0; i < argc; i++)
 		{
@@ -23,7 +25,9 @@ string ParametersReader::findString(string opt)
 					!(string(argv[i + 1])[0] == '-') &&
 					i + 1 <= argc
 					)
-					return string(argv[i + 1]);
+				{
+				   str = string(argv[i + 1]);
+				} 					
 				else throw Empty();
 			}
 		}
@@ -31,6 +35,10 @@ string ParametersReader::findString(string opt)
 	{
 		throw Empty();
 	}
+	if (str.empty())
+		throw Empty();
+
+	return " ";
 }
 
 std::vector<int> ParametersReader::findVector(string opt)
