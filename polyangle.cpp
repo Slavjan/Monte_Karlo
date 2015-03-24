@@ -12,7 +12,6 @@ Polyangle::Polyangle(Edge* a, int count)
 		edge[i].setPoints(a[i].getDot(0), a[i].getDot(1));
 		edge[i].calculateAngle();
 	}
-	isntShape();
 
 	verticesCount = count * 2;
 } 
@@ -34,14 +33,12 @@ Polyangle::Polyangle(Point* points, int count)
 
 Polyangle::~Polyangle()
 {
-	if (edge)
-	{
-		delete[] edge;
-	}
+	delete[] edge;
 }  
 
 bool Polyangle::inside(Point p)
-{
+{					  
+	isntShape();
 	return collisions(p) % 2 == 0 ? false : true;
 }
 
