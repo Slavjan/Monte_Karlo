@@ -23,8 +23,7 @@ void MonteKarloApp::setShape(std::vector<Point> dots)
 
 void MonteKarloApp::setShape(Polyangle *shape)
 {
-	testing = new Polyangle(*shape);
-	
+	testing = new Polyangle(*shape);		
 }
 
 void MonteKarloApp::setShape(Polyangle shape)
@@ -106,8 +105,8 @@ void MonteKarloApp::generatePontsSet()
 
 	for (int i = 0; i < controlSpace * 2 / 3; i++)
 	{
-		p.x = m_rundom->genInRange(minX, maxX);
-		p.y = m_rundom->genInRange(minY, maxY); 
+		p.x = m_rundom->getInRange(minX, maxX);
+		p.y = m_rundom->getInRange(minY, maxY); 
 		pointSet.push_back(p);
 	}
 	pointSet.pop_back();
@@ -119,8 +118,15 @@ int MonteKarloApp::calculateAmountPointsInShape(Polyangle *polygon)
 
 	for (int i = 0; i < pointSet.size(); i++)
 	{
-		if (polygon->inside(pointSet.data()[i]))
-			count++;
+		try
+		{
+			if (polygon->inside(pointSet.data()[i]))
+				count++;
+		}
+		catch (Polyangle::isLine())
+		{
+			std::cout << "Enteret isn`t Shape, this is line, she can`t have a space!" << std::endl;
+		}
 	}
 
 	return count;
