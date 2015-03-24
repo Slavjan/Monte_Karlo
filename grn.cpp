@@ -31,7 +31,7 @@ float grn::generate()
 	return rNumber;
 }
 
-float grn::genInRange(int from, int to)
+float grn::getInRange(int from, int to)
 {
 	return (float)(from + generate() * (to - from));
 }

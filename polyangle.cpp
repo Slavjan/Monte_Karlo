@@ -26,7 +26,6 @@ Polyangle::Polyangle(Point* points, int count)
 		edge[i].setPoints(points[i], points[i + 1]);
 		edge[i].calculateAngle();
 	}
-	isntShape();
 
 	verticesCount = count * 2;
 }

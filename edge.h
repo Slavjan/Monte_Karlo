@@ -9,9 +9,7 @@ private:
 	int		k;
 	int		b;
 	bool	horizontal;
-	bool	vertical;
-
-
+	bool	vertical;	 
 
 public:
 	// public methods

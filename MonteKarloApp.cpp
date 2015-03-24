@@ -52,8 +52,8 @@ std::vector<int> MonteKarloApp::calculateExtremumCoords(Polyangle *shape)
 			maxX = maxNumber(shape->getEdges()[i].getDotX(j), maxX);
 			maxY = maxNumber(shape->getEdges()[i].getDotY(j), maxY);
 							 
-			minX = minNumber(shape->getEdges()[i].getDotX(j), maxX);
-			minY = minNumber(shape->getEdges()[i].getDotY(j), maxY);
+			minX = minNumber(shape->getEdges()[i].getDotX(j), minX);
+			minY = minNumber(shape->getEdges()[i].getDotY(j), minY);
 		}
 	}
 
@@ -61,7 +61,6 @@ std::vector<int> MonteKarloApp::calculateExtremumCoords(Polyangle *shape)
 	Extremum.push_back(maxY);
 	Extremum.push_back(minX);
 	Extremum.push_back(minY);
-	Extremum.pop_back();
 
 	return Extremum;
 }
@@ -102,8 +101,8 @@ void MonteKarloApp::generatePontsSet()
 	int minX = tExtremum.at(2),
 		minY = tExtremum.at(3);
 
-
-	for (int i = 0; i < controlSpace * 2 / 3; i++)
+	int end = controlSpace * 2 / 3;
+	for (int i = 0; i < end; i++)
 	{
 		p.x = m_rundom->getInRange(minX, maxX);
 		p.y = m_rundom->getInRange(minY, maxY); 

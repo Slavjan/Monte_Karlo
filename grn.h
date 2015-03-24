@@ -21,5 +21,5 @@ public:
 	int MMS(int n = 0);//Method of Middle Squares 
 	float generate();
 	
-	float genInRange(int from, int to);
+	float getInRange(int from, int to);
 };
