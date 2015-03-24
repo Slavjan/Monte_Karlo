@@ -44,7 +44,8 @@ bool Polyangle::inside(Point p)
 
 bool Polyangle::inside(int x, int y)
 {
-    return collisions(x, y) % 2 == 0 ? false : true;
+	isntShape();
+	return collisions(x, y) % 2 == 0 ? false : true;
 }
 
 void Polyangle::print(){
