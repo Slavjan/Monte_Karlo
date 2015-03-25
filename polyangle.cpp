@@ -1,6 +1,8 @@
 #pragma once
 #include "polyangle.h"
 #include "stdafx.h"
+#include "status.h"
+
 // pablic
 Polyangle::Polyangle(Edge* a, int count)
 {
@@ -9,6 +11,7 @@ Polyangle::Polyangle(Edge* a, int count)
 	int j = 0;
 	for (int i = 0; i < count; i++)
 	{
+		status(i, count, "polyangle::Polyangle()");
 		edge[i].setPoints(a[i].getDot(0), a[i].getDot(1));
 		edge[i].calculateAngle();
 	}
@@ -23,6 +26,7 @@ Polyangle::Polyangle(Point* points, int count)
 	int j = 0;
 	for (int i = 0; i < count; i++)
 	{
+		status(i, count, "polyangle::Polyangle()");
 		edge[i].setPoints(points[i], points[i + 1]);
 		edge[i].calculateAngle();
 	}
@@ -73,12 +77,15 @@ void Polyangle::maxCoord()
 	maxX = 0;
 	maxY = 0;
 
-	for (int i = 0; i < verticesCount; i++)
+	for (int i = 0; i < verticesCount/2; i++)
 	{
 		for (int j = 0; j < 2; j++)
 		{
+			status(i+1*j, verticesCount, "polyangle::Polyangle()");
 			maxX = maxNumber(edge[i].getDotX(j), maxX);
 			maxY = maxNumber(edge[i].getDotY(j), maxY);
+
+
 		}
 	}
 }
@@ -93,6 +100,7 @@ int Polyangle::collisions(Point p)
 		{
 			collisions_count++;
 		}
+		status(i, verticesCount/2, "polyangle::collisions");
 	}
 
 	return collisions_count;
@@ -109,6 +117,7 @@ int Polyangle::collisions(int x, int y)
 		{
 			collisions_count++;
 		}
+		status(i, verticesCount / 2, "polyangle::collisions");
 	}
 
 	return collisions_count;
@@ -142,6 +151,8 @@ void Polyangle::isntShape()
 		dy = (y1 - y3) / (y2 - y3);
 		if (dx == dy)
 			zeros++;
+
+		status(i, verticesCount, "polyangle::isntShape");
 	}
 	if (zeros == verticesCount)
 	{
