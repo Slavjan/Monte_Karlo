@@ -20,10 +20,10 @@ float grn::generate()
 	int end;
 		end = clockInThisSecond();
 	for (int i = 0; i < end ; i++)
-	{
-		status(i, end, "drn::generate");
+	{  		
 		midSquare = MMS(midMultipl);
 		midMultipl = MMM(midSquare);
+		status(i, end, "drn::generate");
 	}
 
 	rNumber = midMultipl;
