@@ -69,13 +69,33 @@ int Polyangle::getVerticesCount()
 {
 	return verticesCount;
 }
+
+int Polyangle::getMaxX()
+{
+	return maxX;
+}
+int Polyangle::getMaxY()
+{
+	return maxY;
+}
+int Polyangle::getMinX()
+{
+	return minX;
+}
+int Polyangle::getMinY()
+{
+	return minY;
+}
+
 // /public
 
 // private 
-void Polyangle::maxCoord()
+void Polyangle::extremumCoord()
 {
 	maxX = 0;
 	maxY = 0;
+	minX = 0;
+	minY = 0;
 
 	for (int i = 0; i < verticesCount/2; i++)
 	{
@@ -85,7 +105,8 @@ void Polyangle::maxCoord()
 			maxX = maxNumber(edge[i].getDotX(j), maxX);
 			maxY = maxNumber(edge[i].getDotY(j), maxY);
 
-
+			minX = minNumber(edge[i].getDotX(j), minX);
+			minY = minNumber(edge[i].getDotY(j), minY);
 		}
 	}
 }

@@ -9,9 +9,11 @@ private:
 	int		verticesCount;
 	int		maxX;
 	int		maxY;
+	int		minX;
+	int		minY;
 
 	// private mathods
-	void	maxCoord();
+	void	extremumCoord();
 	int		collisions(Point);
 	int		collisions(int, int);
 
@@ -30,6 +32,11 @@ public:
 	// returning
 	Edge*	getEdges();
 	int		getVerticesCount();
+
+	int		getMaxX();
+	int		getMaxY();
+	int		getMinX();
+	int		getMinY();
 
 	void print();
 
