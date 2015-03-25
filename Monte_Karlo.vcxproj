@@ -44,6 +44,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <ShowIncludes>true</ShowIncludes>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -73,6 +74,7 @@
     <ClCompile Include="pipformat.cpp" />
     <ClCompile Include="point.cpp" />
     <ClCompile Include="polyangle.cpp" />
+    <ClCompile Include="status.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MonteKarloApp.h" />
@@ -83,6 +85,7 @@
     <ClInclude Include="pipformat.h" />
     <ClInclude Include="point.h" />
     <ClInclude Include="polyangle.h" />
+    <ClInclude Include="status.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

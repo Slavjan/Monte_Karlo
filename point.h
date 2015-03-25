@@ -1,6 +1,10 @@
 #pragma once
+
+
+
 #ifndef POINT_H
 #define POINT_H
+
 #include <iostream>
 #include "stdafx.h"
 

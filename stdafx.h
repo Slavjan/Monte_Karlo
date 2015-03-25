@@ -21,14 +21,12 @@ N minNumber(N a, N b)
 int clockInThisSecond()
 {
 	int c = clock(), _c = c;
-	if (c > 1000)
+	if (c > 100)
 	{
-		_c /= 1000;
-		_c *= 1000;
+		_c /= 100;
+		_c *= 100;
 		c -= _c;
 	}
 	return c;
 }
 #endif
-
-

@@ -1,5 +1,8 @@
 #pragma once
 #include "myApp.h"
+#include "status.h"
+
+
 // public
 myApp::myApp(int _argc, char** _argv)
 {
@@ -37,6 +40,7 @@ bool myApp::calculate()
 	traces = r.getInRange(10, controlSpace);
 	for (int i = 0; i < traces; i++)
 	{
+		status(i, traces, "myApp::calculate");
 		mSpace += getSpace();
 	}
 	Space = mSpace / traces;
@@ -132,6 +136,7 @@ bool myApp::readParams()
 			_p = argument->findVector("-p");
 			for (int i = 0; i < _p.size(); i += 2)
 			{
+				status(i, _p.size(), "vector to Point");
 				p.push_back(Point(_p.at(i), _p.at(i + 1)));
 			}
 			setShape(p);
