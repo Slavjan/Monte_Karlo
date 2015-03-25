@@ -15,8 +15,9 @@ Polyangle::Polyangle(Edge* a, int count)
 		edge[i].setPoints(a[i].getDot(0), a[i].getDot(1));
 		edge[i].calculateAngle();
 	}
-
+	
 	verticesCount = count * 2;
+	extremumCoord();
 } 
 
 Polyangle::Polyangle(Point* points, int count)
@@ -31,7 +32,8 @@ Polyangle::Polyangle(Point* points, int count)
 		edge[i].calculateAngle();
 	}
 
-	verticesCount = count * 2;
+	verticesCount = count;
+	extremumCoord();
 }
 
 Polyangle::~Polyangle()
@@ -101,12 +103,13 @@ void Polyangle::extremumCoord()
 	{
 		for (int j = 0; j < 2; j++)
 		{
-			status(i+1*j, verticesCount, "polyangle::Polyangle()");
+			
 			maxX = maxNumber(edge[i].getDotX(j), maxX);
 			maxY = maxNumber(edge[i].getDotY(j), maxY);
 
 			minX = minNumber(edge[i].getDotX(j), minX);
 			minY = minNumber(edge[i].getDotY(j), minY);
+			status(i + 1 * j, verticesCount, "polyangle::Polyangle()");
 		}
 	}
 }

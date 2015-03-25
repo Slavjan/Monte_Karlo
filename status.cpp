@@ -13,5 +13,5 @@ void status(int now, int end, std::string ProcedureName)
 	}
 	str += '|';
 
-	std::cout << ProcedureName.data() << " | " << str.data() << ">" << procent << "%" << std::endl;
+	std::cout << ProcedureName.data() << " | " << str.data() << ">" << procent << "%" << std::endl << std::endl;
 }

@@ -41,28 +41,14 @@ float MonteKarloApp::getSpace()
 // protected
 std::vector<int> MonteKarloApp::calculateExtremumCoords(Polyangle *shape)
 {
-	int maxX = 0, maxY = 0;
-	int minX = 0, minY = 0;
-
 	std::vector<int> Extremum;
-
-	for (int i = 0; i < shape->getVerticesCount()/2; i++)
-	{
-		for (int j = 0; j < 2; j++)
-		{
-			maxX = maxNumber(shape->getEdges()[i].getDotX(j), maxX);
-			maxY = maxNumber(shape->getEdges()[i].getDotY(j), maxY);
-							 
-			minX = minNumber(shape->getEdges()[i].getDotX(j), minX);
-			minY = minNumber(shape->getEdges()[i].getDotY(j), minY);
-		}
-	}
-
-	Extremum.push_back(maxX);
-	Extremum.push_back(maxY);
-	Extremum.push_back(minX);
-	Extremum.push_back(minY);
-
+	Extremum.push_back(shape->getMaxX());
+	Extremum.push_back(shape->getMaxY());
+	Extremum.push_back(shape->getMinX());
+	Extremum.push_back(shape->getMinY());
+	
+	status(1, 1, "MonteKarloApp::calculateExtremumCoords");
+		
 	return Extremum;
 }
 
@@ -91,6 +77,8 @@ void MonteKarloApp::generateControlShape()
 	int dy = maxY - minY;
 
 	controlSpace = dx * dy;
+
+	status(1, 1, "MonteKarloApp::generateControlShape");
 }
 
 void MonteKarloApp::generatePontsSet()
@@ -109,8 +97,10 @@ void MonteKarloApp::generatePontsSet()
 		p.x = m_rundom->getInRange(minX, maxX);
 		p.y = m_rundom->getInRange(minY, maxY); 
 		pointSet.push_back(p);
+		status(i-1, (end < 0 ? -end : end), "MonteKarloApp::generateControlShape");
 	}
-	pointSet.pop_back();
+	pointSet.pop_back(); 
+	status((end < 0 ? -end : end), (end < 0 ? -end : end), "MonteKarloApp::generateControlShape");
 }
 
 int MonteKarloApp::calculateAmountPointsInShape(Polyangle *polygon)
@@ -138,11 +128,17 @@ float MonteKarloApp::calculateSpase()
 	int p_i_cShape, // amount of points in control Shape
 		p_i_tShape;	// amount of Points In testing Shape
 
+	status(1, 3, "MonteKarloApp::calculateSpase");
+
 	p_i_cShape = calculateAmountPointsInShape(control);
 	p_i_tShape = calculateAmountPointsInShape(testing);
 
+	status(2, 3, "MonteKarloApp::calculateSpase");
+
 	float ratio = p_i_tShape / p_i_cShape;
 	float space = ratio * controlSpace;
+
+	status(3, 3, "MonteKarloApp::calculateSpase");
 
 	return space;
 }

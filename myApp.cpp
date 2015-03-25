@@ -40,10 +40,11 @@ bool myApp::calculate()
 	traces = r.getInRange(10, controlSpace);
 	for (int i = 0; i < traces; i++)
 	{
-		status(i, traces, "myApp::calculate");
 		mSpace += getSpace();
+		status(i-1, traces, "myApp::calculate");
 	}
 	Space = mSpace / traces;
+	status(traces, traces, "myApp::calculate");
 
 	return true;
 }
