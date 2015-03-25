@@ -5,6 +5,7 @@
 MonteKarloApp::MonteKarloApp()
 {
 	Space = 0;
+	controlSpace = 0;
 	testing = nullptr;
 	control = nullptr;
 }
@@ -102,7 +103,8 @@ void MonteKarloApp::generatePontsSet()
 		minY = tExtremum.at(3);
 
 	int end = controlSpace * 2 / 3;
-	for (int i = 0; i < end; i++)
+	
+	for (int i = 0; i < (end < 0 ? -end : end); i++)
 	{
 		p.x = m_rundom->getInRange(minX, maxX);
 		p.y = m_rundom->getInRange(minY, maxY); 
