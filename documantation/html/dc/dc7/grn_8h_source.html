@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Monte_Karlo: Исходный файл E:/учеба/моделирование/курсовой/Monte_Karlo/Monte_Karlo/grn.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Monte_Karlo
+   &#160;<span id="projectnumber">1.0b</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="../../annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>Файлы</span></a></li>
+      <li><a href="../../globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_885cc87fac2d91e269af0a5a959fa5f6.html">E:</a></li><li class="navelem"><a class="el" href="../../dir_92a0ef57f0bcda3442a4b47410825e63.html">учеба</a></li><li class="navelem"><a class="el" href="../../dir_977102925c4facb2fb1b7bf23d1961e1.html">моделирование</a></li><li class="navelem"><a class="el" href="../../dir_5155a16a380515b4f85e5a66b445c80e.html">курсовой</a></li><li class="navelem"><a class="el" href="../../dir_f2eabe021ae83ee45ad31ba2411de108.html">Monte_Karlo</a></li><li class="navelem"><a class="el" href="../../dir_2c833eca38ea3aeb28f95ba1026fae90.html">Monte_Karlo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">grn.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/dc7/grn_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d13/status_8h.html">status.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../dd/db1/classgrn.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/db1/classgrn.html">grn</a>   <span class="comment">//generator of random numbers</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">private</span>: </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="comment">//methods</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment">//private settings</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../dd/db1/classgrn.html#a1fbc93f0cd9787751c7a722c69efbdc0">setNumber</a>(); </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../dd/db1/classgrn.html#ae394bcc17d038d4e2a621abb6926a671">midExtract</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span>);<span class="comment">//extracting a middle of number,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                      <span class="comment">//for example: ddccccdd, </span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                                      <span class="comment">//the cccc has been extracted and returned</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="../../dd/db1/classgrn.html#aadb07e2feb79bc19769a7275a086b9c5">grn</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="../../dd/db1/classgrn.html#a0ee9c29af89cd3e848cf654e2cf6fcae">~grn</a>(); </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">//generation</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">//std   </span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../dd/db1/classgrn.html#adeecb819435010f1f8e97b01dddc907b">random</a>(<span class="keywordtype">int</span> n1 = 1111, <span class="keywordtype">int</span> n2 = 9999);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">//algoritmic</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../dd/db1/classgrn.html#a486b4140be106c155b2840d8f4e520d3">MMM</a>(<span class="keywordtype">int</span> firstNumber = 0);<span class="comment">//Method of Middle Multiplications</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../dd/db1/classgrn.html#aa8468610fc52f30303668b9d840c9bf2">MMS</a>(<span class="keywordtype">int</span> n = 0);<span class="comment">//Method of Middle Squares </span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="../../dd/db1/classgrn.html#a369eef95ea0ae9074373db34bb01a785">generate</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="../../dd/db1/classgrn.html#a19733e94f629dbb1feca1512f4e752ff">getInRange</a>(<span class="keywordtype">int</span> from, <span class="keywordtype">int</span> to);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="ttc" id="classgrn_html_ae394bcc17d038d4e2a621abb6926a671"><div class="ttname"><a href="../../dd/db1/classgrn.html#ae394bcc17d038d4e2a621abb6926a671">grn::midExtract</a></div><div class="ttdeci">int midExtract(unsigned long int)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d88/grn_8cpp_source.html#l00099">grn.cpp:99</a></div></div>
+<div class="ttc" id="classgrn_html_adeecb819435010f1f8e97b01dddc907b"><div class="ttname"><a href="../../dd/db1/classgrn.html#adeecb819435010f1f8e97b01dddc907b">grn::random</a></div><div class="ttdeci">int random(int n1=1111, int n2=9999)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d88/grn_8cpp_source.html#l00040">grn.cpp:40</a></div></div>
+<div class="ttc" id="classgrn_html_aadb07e2feb79bc19769a7275a086b9c5"><div class="ttname"><a href="../../dd/db1/classgrn.html#aadb07e2feb79bc19769a7275a086b9c5">grn::grn</a></div><div class="ttdeci">grn()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d88/grn_8cpp_source.html#l00006">grn.cpp:6</a></div></div>
+<div class="ttc" id="classgrn_html_a369eef95ea0ae9074373db34bb01a785"><div class="ttname"><a href="../../dd/db1/classgrn.html#a369eef95ea0ae9074373db34bb01a785">grn::generate</a></div><div class="ttdeci">float generate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d88/grn_8cpp_source.html#l00014">grn.cpp:14</a></div></div>
+<div class="ttc" id="classgrn_html_a0ee9c29af89cd3e848cf654e2cf6fcae"><div class="ttname"><a href="../../dd/db1/classgrn.html#a0ee9c29af89cd3e848cf654e2cf6fcae">grn::~grn</a></div><div class="ttdeci">~grn()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d88/grn_8cpp_source.html#l00010">grn.cpp:10</a></div></div>
+<div class="ttc" id="classgrn_html_a19733e94f629dbb1feca1512f4e752ff"><div class="ttname"><a href="../../dd/db1/classgrn.html#a19733e94f629dbb1feca1512f4e752ff">grn::getInRange</a></div><div class="ttdeci">float getInRange(int from, int to)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d88/grn_8cpp_source.html#l00035">grn.cpp:35</a></div></div>
+<div class="ttc" id="classgrn_html"><div class="ttname"><a href="../../dd/db1/classgrn.html">grn</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc7/grn_8h_source.html#l00005">grn.h:5</a></div></div>
+<div class="ttc" id="classgrn_html_a1fbc93f0cd9787751c7a722c69efbdc0"><div class="ttname"><a href="../../dd/db1/classgrn.html#a1fbc93f0cd9787751c7a722c69efbdc0">grn::setNumber</a></div><div class="ttdeci">int setNumber()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d88/grn_8cpp_source.html#l00094">grn.cpp:94</a></div></div>
+<div class="ttc" id="status_8h_html"><div class="ttname"><a href="../../d1/d13/status_8h.html">status.h</a></div></div>
+<div class="ttc" id="classgrn_html_a486b4140be106c155b2840d8f4e520d3"><div class="ttname"><a href="../../dd/db1/classgrn.html#a486b4140be106c155b2840d8f4e520d3">grn::MMM</a></div><div class="ttdeci">int MMM(int firstNumber=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d88/grn_8cpp_source.html#l00048">grn.cpp:48</a></div></div>
+<div class="ttc" id="classgrn_html_aa8468610fc52f30303668b9d840c9bf2"><div class="ttname"><a href="../../dd/db1/classgrn.html#aa8468610fc52f30303668b9d840c9bf2">grn::MMS</a></div><div class="ttdeci">int MMS(int n=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d88/grn_8cpp_source.html#l00074">grn.cpp:74</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Monte_Karlo. Последние изменения: Чт 26 Мар 2015 23:09:33. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

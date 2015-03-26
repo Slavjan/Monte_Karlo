@@ -1,0 +1,9 @@
+<map id="MonteKarloApp::generateControlShape" name="MonteKarloApp::generateControlShape">
+<area shape="rect" id="node2" href="$d1/dcc/class_monte_karlo_app.html#af3df4f8fbe2eb2f0e6aee959b06ed4e7" title="MonteKarloApp::calculate\lExtremumCoords" alt="" coords="264,110,435,151"/>
+<area shape="rect" id="node7" href="$d1/d13/status_8h.html#a7d6c7d1a8381c3b9b2d81e339945f424" title="status" alt="" coords="523,208,581,235"/>
+<area shape="rect" id="node8" href="$d7/d77/class_edge.html#a82797e131c2755e4bb8eed2210f5b97a" title="Edge::setPoints" alt="" coords="292,237,407,264"/>
+<area shape="rect" id="node3" href="$d1/d25/class_polyangle.html#a24947e32e8cd281e948e885ac5372318" title="Polyangle::getMaxX" alt="" coords="483,5,621,32"/>
+<area shape="rect" id="node4" href="$d1/d25/class_polyangle.html#a60535fbf9e865ae39b27e3d98e143708" title="Polyangle::getMaxY" alt="" coords="483,56,621,83"/>
+<area shape="rect" id="node5" href="$d1/d25/class_polyangle.html#a78ccc184e0ec4f60d1efe2d21023ae89" title="Polyangle::getMinX" alt="" coords="485,107,619,133"/>
+<area shape="rect" id="node6" href="$d1/d25/class_polyangle.html#a91d18b12fdf282effa90caeba91a60ea" title="Polyangle::getMinY" alt="" coords="485,157,619,184"/>
+</map>

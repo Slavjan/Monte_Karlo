@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Monte_Karlo: Исходный файл E:/учеба/моделирование/курсовой/Monte_Karlo/Monte_Karlo/ParametersReader.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Monte_Karlo
+   &#160;<span id="projectnumber">1.0b</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="../../annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>Файлы</span></a></li>
+      <li><a href="../../globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_885cc87fac2d91e269af0a5a959fa5f6.html">E:</a></li><li class="navelem"><a class="el" href="../../dir_92a0ef57f0bcda3442a4b47410825e63.html">учеба</a></li><li class="navelem"><a class="el" href="../../dir_977102925c4facb2fb1b7bf23d1961e1.html">моделирование</a></li><li class="navelem"><a class="el" href="../../dir_5155a16a380515b4f85e5a66b445c80e.html">курсовой</a></li><li class="navelem"><a class="el" href="../../dir_f2eabe021ae83ee45ad31ba2411de108.html">Monte_Karlo</a></li><li class="navelem"><a class="el" href="../../dir_2c833eca38ea3aeb28f95ba1026fae90.html">Monte_Karlo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ParametersReader.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/d5f/_parameters_reader_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d2/db6/class_parameters_reader.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/db6/class_parameters_reader.html">ParametersReader</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">private</span>:  </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">// fields</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d2/db6/class_parameters_reader.html#a6be057d66592bd687c5df485bc4cccf5">   12</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d2/db6/class_parameters_reader.html#a6be057d66592bd687c5df485bc4cccf5">argc</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d2/db6/class_parameters_reader.html#a405ec128966f539c662c6b0ef151c240">   13</a></span>&#160;    <span class="keywordtype">char</span>** <a class="code" href="../../d2/db6/class_parameters_reader.html#a405ec128966f539c662c6b0ef151c240">argv</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">// methods</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="../../d2/db6/class_parameters_reader.html#ab9e3be90bb49d60ef30c9ed766dde5f8">ParametersReader</a>(<span class="keywordtype">int</span> _argc, <span class="keywordtype">char</span>** _argv);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../d2/db6/class_parameters_reader.html#a9b439ab9d4aa39ae17e41d760abba152">~ParametersReader</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">// finding </span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="../../d2/db6/class_parameters_reader.html#a4be50cc01783b0b99c0a16aee3bdddef">findString</a>(<span class="keywordtype">string</span> opt);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::vector&lt;int&gt; <a class="code" href="../../d2/db6/class_parameters_reader.html#ad58e2c6029dfe2bd984331ae91c6c9e7">findVector</a>(<span class="keywordtype">string</span> opt);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// exceptions</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d3/d9b/class_parameters_reader_1_1_invalid.html">   25</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d3/d9b/class_parameters_reader_1_1_invalid.html">Invalid</a>{};</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../dc/d8c/class_parameters_reader_1_1_empty.html">   26</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../dc/d8c/class_parameters_reader_1_1_empty.html">Empty</a>{};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="ttc" id="class_parameters_reader_html"><div class="ttname"><a href="../../d2/db6/class_parameters_reader.html">ParametersReader</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5f/_parameters_reader_8h_source.html#l00008">ParametersReader.h:8</a></div></div>
+<div class="ttc" id="class_parameters_reader_html_ab9e3be90bb49d60ef30c9ed766dde5f8"><div class="ttname"><a href="../../d2/db6/class_parameters_reader.html#ab9e3be90bb49d60ef30c9ed766dde5f8">ParametersReader::ParametersReader</a></div><div class="ttdeci">ParametersReader(int _argc, char **_argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d3b/_parameters_reader_8cpp_source.html#l00005">ParametersReader.cpp:5</a></div></div>
+<div class="ttc" id="class_parameters_reader_1_1_invalid_html"><div class="ttname"><a href="../../d3/d9b/class_parameters_reader_1_1_invalid.html">ParametersReader::Invalid</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5f/_parameters_reader_8h_source.html#l00025">ParametersReader.h:25</a></div></div>
+<div class="ttc" id="class_parameters_reader_1_1_empty_html"><div class="ttname"><a href="../../dc/d8c/class_parameters_reader_1_1_empty.html">ParametersReader::Empty</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5f/_parameters_reader_8h_source.html#l00026">ParametersReader.h:26</a></div></div>
+<div class="ttc" id="class_parameters_reader_html_a9b439ab9d4aa39ae17e41d760abba152"><div class="ttname"><a href="../../d2/db6/class_parameters_reader.html#a9b439ab9d4aa39ae17e41d760abba152">ParametersReader::~ParametersReader</a></div><div class="ttdeci">~ParametersReader()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d3b/_parameters_reader_8cpp_source.html#l00011">ParametersReader.cpp:11</a></div></div>
+<div class="ttc" id="class_parameters_reader_html_ad58e2c6029dfe2bd984331ae91c6c9e7"><div class="ttname"><a href="../../d2/db6/class_parameters_reader.html#ad58e2c6029dfe2bd984331ae91c6c9e7">ParametersReader::findVector</a></div><div class="ttdeci">std::vector&lt; int &gt; findVector(string opt)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d3b/_parameters_reader_8cpp_source.html#l00044">ParametersReader.cpp:44</a></div></div>
+<div class="ttc" id="class_parameters_reader_html_a6be057d66592bd687c5df485bc4cccf5"><div class="ttname"><a href="../../d2/db6/class_parameters_reader.html#a6be057d66592bd687c5df485bc4cccf5">ParametersReader::argc</a></div><div class="ttdeci">int argc</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5f/_parameters_reader_8h_source.html#l00012">ParametersReader.h:12</a></div></div>
+<div class="ttc" id="class_parameters_reader_html_a405ec128966f539c662c6b0ef151c240"><div class="ttname"><a href="../../d2/db6/class_parameters_reader.html#a405ec128966f539c662c6b0ef151c240">ParametersReader::argv</a></div><div class="ttdeci">char ** argv</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5f/_parameters_reader_8h_source.html#l00013">ParametersReader.h:13</a></div></div>
+<div class="ttc" id="class_parameters_reader_html_a4be50cc01783b0b99c0a16aee3bdddef"><div class="ttname"><a href="../../d2/db6/class_parameters_reader.html#a4be50cc01783b0b99c0a16aee3bdddef">ParametersReader::findString</a></div><div class="ttdeci">string findString(string opt)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d3b/_parameters_reader_8cpp_source.html#l00014">ParametersReader.cpp:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Monte_Karlo. Последние изменения: Чт 26 Мар 2015 23:09:33. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

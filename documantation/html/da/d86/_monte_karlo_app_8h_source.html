@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Monte_Karlo: Исходный файл E:/учеба/моделирование/курсовой/Monte_Karlo/Monte_Karlo/MonteKarloApp.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Monte_Karlo
+   &#160;<span id="projectnumber">1.0b</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="../../annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>Файлы</span></a></li>
+      <li><a href="../../globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_885cc87fac2d91e269af0a5a959fa5f6.html">E:</a></li><li class="navelem"><a class="el" href="../../dir_92a0ef57f0bcda3442a4b47410825e63.html">учеба</a></li><li class="navelem"><a class="el" href="../../dir_977102925c4facb2fb1b7bf23d1961e1.html">моделирование</a></li><li class="navelem"><a class="el" href="../../dir_5155a16a380515b4f85e5a66b445c80e.html">курсовой</a></li><li class="navelem"><a class="el" href="../../dir_f2eabe021ae83ee45ad31ba2411de108.html">Monte_Karlo</a></li><li class="navelem"><a class="el" href="../../dir_2c833eca38ea3aeb28f95ba1026fae90.html">Monte_Karlo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">MonteKarloApp.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/d86/_monte_karlo_app_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d91/point_8h.html">point.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d6b/polyangle_8h.html">polyangle.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/dc7/grn_8h.html">grn.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d1/dcc/class_monte_karlo_app.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/dcc/class_monte_karlo_app.html">MonteKarloApp</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">// fields</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d1/dcc/class_monte_karlo_app.html#ad42ca1c856a5e9027161296d5fb01fd9">   12</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#ad42ca1c856a5e9027161296d5fb01fd9">Space</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d1/dcc/class_monte_karlo_app.html#a8cf740621941db0bfa0057c9a876c099">   13</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#a8cf740621941db0bfa0057c9a876c099">controlSpace</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d1/dcc/class_monte_karlo_app.html#ad94269d3fa2f7780e3cd86fa92193084">   14</a></span>&#160;    <a class="code" href="../../d1/d25/class_polyangle.html">Polyangle</a>* <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#ad94269d3fa2f7780e3cd86fa92193084">testing</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d1/dcc/class_monte_karlo_app.html#a0e0e1d60ea8bcabfd6f3c3d224262506">   15</a></span>&#160;    <a class="code" href="../../d1/d25/class_polyangle.html">Polyangle</a>* <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#a0e0e1d60ea8bcabfd6f3c3d224262506">control</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../d1/dcc/class_monte_karlo_app.html#a1fb87f40b8c4a5abe94426c32b78e6fa">   16</a></span>&#160;    std::vector&lt;Point&gt; <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#a1fb87f40b8c4a5abe94426c32b78e6fa">pointSet</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d1/dcc/class_monte_karlo_app.html#af2a52ad85bb21682ddfc2bf05dc7c65b">   17</a></span>&#160;    <a class="code" href="../../dd/db1/classgrn.html">grn</a>* <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#af2a52ad85bb21682ddfc2bf05dc7c65b">m_rundom</a>;   <span class="comment">// my _ random</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">//methods</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">// generations</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#a4654ca297776bb7ad69086a93e04bec6">generatePontsSet</a>();   <span class="comment">// genereate set of points for calculations</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#a690c868e69752ca3ca9ec1668aad536a">generateControlShape</a>();       <span class="comment">// generate the shape with known space for calculations</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">// calculations</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::vector&lt;int&gt; <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#af3df4f8fbe2eb2f0e6aee959b06ed4e7">calculateExtremumCoords</a>(<a class="code" href="../../d1/d25/class_polyangle.html">Polyangle</a> *shape);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#a94607ddc3ad958c3a844de30726bec08">calculateAmountPointsInShape</a>(<a class="code" href="../../d1/d25/class_polyangle.html">Polyangle</a> *polygon); <span class="comment">// in dependence an amount of the points in a shape,</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#a045b82a7f465562280eab76e7c454c8c">calculateSpase</a>();                               <span class="comment">// calculating the space of this shape    </span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// for derivative class</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d1/dcc/class_monte_karlo_app.html#a12dfcc68eae23c26681411e727ac7419">   30</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#a12dfcc68eae23c26681411e727ac7419">loadShape</a>() { <span class="keywordflow">return</span> <span class="keyword">true</span>; };  <span class="comment">// take a shape for      // from file or parameters</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d1/dcc/class_monte_karlo_app.html#a1fd354d5e3a8aea8dae6e9edb4b21b4b">   31</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#a1fd354d5e3a8aea8dae6e9edb4b21b4b">readFile</a>(std::string path) { <span class="keywordflow">return</span> <span class="keyword">true</span>; };</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d1/dcc/class_monte_karlo_app.html#a459b67c772f00e94a968b33d883ea479">   32</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#a459b67c772f00e94a968b33d883ea479">readParams</a>() { <span class="keywordflow">return</span> <span class="keyword">true</span>;  };</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:                                                         </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#af00172e1306fa544061f2f6e6d366cd8">MonteKarloApp</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#a79c49ab2ffc3c143db6b126dc8ff7cd0">~MonteKarloApp</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">//methods</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">// settings</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#a93f6360879f3893404ddcba7bbd18fae">setShape</a>(std::vector&lt;Point&gt; dots); <span class="comment">// calculate her spase</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#a93f6360879f3893404ddcba7bbd18fae">setShape</a>(<a class="code" href="../../d1/d25/class_polyangle.html">Polyangle</a> *shape);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#a93f6360879f3893404ddcba7bbd18fae">setShape</a>(<a class="code" href="../../d1/d25/class_polyangle.html">Polyangle</a> shape);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">// returning</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="../../d1/dcc/class_monte_karlo_app.html#aba82ee30daa9ffb1a31727bee1f7ab90">getSpace</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="ttc" id="class_monte_karlo_app_html_a94607ddc3ad958c3a844de30726bec08"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#a94607ddc3ad958c3a844de30726bec08">MonteKarloApp::calculateAmountPointsInShape</a></div><div class="ttdeci">int calculateAmountPointsInShape(Polyangle *polygon)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6b/_monte_karlo_app_8cpp_source.html#l00106">MonteKarloApp.cpp:106</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html_a459b67c772f00e94a968b33d883ea479"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#a459b67c772f00e94a968b33d883ea479">MonteKarloApp::readParams</a></div><div class="ttdeci">virtual bool readParams()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d86/_monte_karlo_app_8h_source.html#l00032">MonteKarloApp.h:32</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html_a1fd354d5e3a8aea8dae6e9edb4b21b4b"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#a1fd354d5e3a8aea8dae6e9edb4b21b4b">MonteKarloApp::readFile</a></div><div class="ttdeci">virtual bool readFile(std::string path)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d86/_monte_karlo_app_8h_source.html#l00031">MonteKarloApp.h:31</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html_a690c868e69752ca3ca9ec1668aad536a"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#a690c868e69752ca3ca9ec1668aad536a">MonteKarloApp::generateControlShape</a></div><div class="ttdeci">void generateControlShape()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6b/_monte_karlo_app_8cpp_source.html#l00055">MonteKarloApp.cpp:55</a></div></div>
+<div class="ttc" id="point_8h_html"><div class="ttname"><a href="../../d2/d91/point_8h.html">point.h</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html_af00172e1306fa544061f2f6e6d366cd8"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#af00172e1306fa544061f2f6e6d366cd8">MonteKarloApp::MonteKarloApp</a></div><div class="ttdeci">MonteKarloApp()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6b/_monte_karlo_app_8cpp_source.html#l00005">MonteKarloApp.cpp:5</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html_af2a52ad85bb21682ddfc2bf05dc7c65b"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#af2a52ad85bb21682ddfc2bf05dc7c65b">MonteKarloApp::m_rundom</a></div><div class="ttdeci">grn * m_rundom</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d86/_monte_karlo_app_8h_source.html#l00017">MonteKarloApp.h:17</a></div></div>
+<div class="ttc" id="polyangle_8h_html"><div class="ttname"><a href="../../d8/d6b/polyangle_8h.html">polyangle.h</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html_ad42ca1c856a5e9027161296d5fb01fd9"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#ad42ca1c856a5e9027161296d5fb01fd9">MonteKarloApp::Space</a></div><div class="ttdeci">int Space</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d86/_monte_karlo_app_8h_source.html#l00012">MonteKarloApp.h:12</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html">MonteKarloApp</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d86/_monte_karlo_app_8h_source.html#l00008">MonteKarloApp.h:8</a></div></div>
+<div class="ttc" id="class_polyangle_html"><div class="ttname"><a href="../../d1/d25/class_polyangle.html">Polyangle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d6b/polyangle_8h_source.html#l00004">polyangle.h:4</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html_a93f6360879f3893404ddcba7bbd18fae"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#a93f6360879f3893404ddcba7bbd18fae">MonteKarloApp::setShape</a></div><div class="ttdeci">void setShape(std::vector&lt; Point &gt; dots)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6b/_monte_karlo_app_8cpp_source.html#l00020">MonteKarloApp.cpp:20</a></div></div>
+<div class="ttc" id="classgrn_html"><div class="ttname"><a href="../../dd/db1/classgrn.html">grn</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc7/grn_8h_source.html#l00005">grn.h:5</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html_a4654ca297776bb7ad69086a93e04bec6"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#a4654ca297776bb7ad69086a93e04bec6">MonteKarloApp::generatePontsSet</a></div><div class="ttdeci">void generatePontsSet()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6b/_monte_karlo_app_8cpp_source.html#l00084">MonteKarloApp.cpp:84</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html_a8cf740621941db0bfa0057c9a876c099"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#a8cf740621941db0bfa0057c9a876c099">MonteKarloApp::controlSpace</a></div><div class="ttdeci">int controlSpace</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d86/_monte_karlo_app_8h_source.html#l00013">MonteKarloApp.h:13</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html_a1fb87f40b8c4a5abe94426c32b78e6fa"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#a1fb87f40b8c4a5abe94426c32b78e6fa">MonteKarloApp::pointSet</a></div><div class="ttdeci">std::vector&lt; Point &gt; pointSet</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d86/_monte_karlo_app_8h_source.html#l00016">MonteKarloApp.h:16</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html_ad94269d3fa2f7780e3cd86fa92193084"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#ad94269d3fa2f7780e3cd86fa92193084">MonteKarloApp::testing</a></div><div class="ttdeci">Polyangle * testing</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d86/_monte_karlo_app_8h_source.html#l00014">MonteKarloApp.h:14</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html_af3df4f8fbe2eb2f0e6aee959b06ed4e7"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#af3df4f8fbe2eb2f0e6aee959b06ed4e7">MonteKarloApp::calculateExtremumCoords</a></div><div class="ttdeci">std::vector&lt; int &gt; calculateExtremumCoords(Polyangle *shape)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6b/_monte_karlo_app_8cpp_source.html#l00042">MonteKarloApp.cpp:42</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html_a12dfcc68eae23c26681411e727ac7419"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#a12dfcc68eae23c26681411e727ac7419">MonteKarloApp::loadShape</a></div><div class="ttdeci">virtual bool loadShape()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d86/_monte_karlo_app_8h_source.html#l00030">MonteKarloApp.h:30</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html_a045b82a7f465562280eab76e7c454c8c"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#a045b82a7f465562280eab76e7c454c8c">MonteKarloApp::calculateSpase</a></div><div class="ttdeci">float calculateSpase()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6b/_monte_karlo_app_8cpp_source.html#l00126">MonteKarloApp.cpp:126</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html_aba82ee30daa9ffb1a31727bee1f7ab90"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#aba82ee30daa9ffb1a31727bee1f7ab90">MonteKarloApp::getSpace</a></div><div class="ttdeci">float getSpace()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6b/_monte_karlo_app_8cpp_source.html#l00035">MonteKarloApp.cpp:35</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html_a79c49ab2ffc3c143db6b126dc8ff7cd0"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#a79c49ab2ffc3c143db6b126dc8ff7cd0">MonteKarloApp::~MonteKarloApp</a></div><div class="ttdeci">~MonteKarloApp()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6b/_monte_karlo_app_8cpp_source.html#l00014">MonteKarloApp.cpp:14</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html_a0e0e1d60ea8bcabfd6f3c3d224262506"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html#a0e0e1d60ea8bcabfd6f3c3d224262506">MonteKarloApp::control</a></div><div class="ttdeci">Polyangle * control</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d86/_monte_karlo_app_8h_source.html#l00015">MonteKarloApp.h:15</a></div></div>
+<div class="ttc" id="grn_8h_html"><div class="ttname"><a href="../../dc/dc7/grn_8h.html">grn.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Monte_Karlo. Последние изменения: Чт 26 Мар 2015 23:09:33. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Monte_Karlo: Исходный файл E:/учеба/моделирование/курсовой/Monte_Karlo/Monte_Karlo/myApp.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Monte_Karlo
+   &#160;<span id="projectnumber">1.0b</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="../../annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>Файлы</span></a></li>
+      <li><a href="../../globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_885cc87fac2d91e269af0a5a959fa5f6.html">E:</a></li><li class="navelem"><a class="el" href="../../dir_92a0ef57f0bcda3442a4b47410825e63.html">учеба</a></li><li class="navelem"><a class="el" href="../../dir_977102925c4facb2fb1b7bf23d1961e1.html">моделирование</a></li><li class="navelem"><a class="el" href="../../dir_5155a16a380515b4f85e5a66b445c80e.html">курсовой</a></li><li class="navelem"><a class="el" href="../../dir_f2eabe021ae83ee45ad31ba2411de108.html">Monte_Karlo</a></li><li class="navelem"><a class="el" href="../../dir_2c833eca38ea3aeb28f95ba1026fae90.html">Monte_Karlo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">myApp.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/df3/my_app_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d6b/polyangle_8h.html">polyangle.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/dd3/pipformat_8h.html">pipformat.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d5f/_parameters_reader_8h.html">ParametersReader.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d86/_monte_karlo_app_8h.html">MonteKarloApp.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../de/db8/classmy_app.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../de/db8/classmy_app.html">myApp</a> : <a class="code" href="../../d1/dcc/class_monte_karlo_app.html">MonteKarloApp</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">// fields</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../de/db8/classmy_app.html#a8f02aaa38f003aab64a3e13fdc2470c9">   13</a></span>&#160;    <a class="code" href="../../d8/d5d/class_pi_p_format.html">PiPFormat</a>*  <a class="code" href="../../de/db8/classmy_app.html#a8f02aaa38f003aab64a3e13fdc2470c9">source</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../de/db8/classmy_app.html#a18b217bbcd72ab4541876555316470b1">   14</a></span>&#160;    <a class="code" href="../../d2/db6/class_parameters_reader.html">ParametersReader</a>* <a class="code" href="../../de/db8/classmy_app.html#a18b217bbcd72ab4541876555316470b1">argument</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../de/db8/classmy_app.html#a8398acf7b04bdc2604ef6c70ed04c4b3">   15</a></span>&#160;    std::string <a class="code" href="../../de/db8/classmy_app.html#a8398acf7b04bdc2604ef6c70ed04c4b3">pathOut</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../de/db8/classmy_app.html#a957818956b6a308d28deb9686e26e4b6">   16</a></span>&#160;    std::string <a class="code" href="../../de/db8/classmy_app.html#a957818956b6a308d28deb9686e26e4b6">pathIn</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../de/db8/classmy_app.html#a03a8ec51ec0b595b9c2b88e26faa9fc7">   17</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../de/db8/classmy_app.html#a03a8ec51ec0b595b9c2b88e26faa9fc7">readFlag</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../de/db8/classmy_app.html#aa8056acee75e78c325c91c936889e7d1">   18</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../de/db8/classmy_app.html#aa8056acee75e78c325c91c936889e7d1">writeFlag</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../de/db8/classmy_app.html#ada1a387e8f681d0ed8433b41455e959d">   19</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../de/db8/classmy_app.html#ada1a387e8f681d0ed8433b41455e959d">argc</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../de/db8/classmy_app.html#a4132bae504cdfda980025e4c45d532db">   20</a></span>&#160;    <span class="keywordtype">char</span>**  <a class="code" href="../../de/db8/classmy_app.html#a4132bae504cdfda980025e4c45d532db">argv</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">//method</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../de/db8/classmy_app.html#af9087a516203e46be6d06e0689db86ee">readFile</a>(std::string path) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../de/db8/classmy_app.html#ad123401f95e62cbaf57dd8e4fc5a26de">readParams</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../de/db8/classmy_app.html#a6afd0a7e409ba44ccea0efbc8408491f">loadShape</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../de/db8/classmy_app.html#a4aea3e796d0b7e0094e8ad216daaebc4">saveToFile</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../de/db8/classmy_app.html#aead81f5ddbf3a5875ca5f02220147a72">printToConsole</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="../../de/db8/classmy_app.html#a4bba333ab8100f20b85a925fbb5c71ea">myApp</a>(<span class="keywordtype">int</span> _argc, <span class="keywordtype">char</span>** _argv);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="../../de/db8/classmy_app.html#ac4832872f3d60b3fcd7ca12dd3848d49">~myApp</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// methods</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../de/db8/classmy_app.html#a4db9789a7c259bb6ec4902e54d52a069">init</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../de/db8/classmy_app.html#a5dd7018e31ae74ce8df8078e52a150b4">calculate</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../de/db8/classmy_app.html#a581afaaf9171f5ded6d8a10fcfedb175">returning</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+<div class="ttc" id="classmy_app_html_a8f02aaa38f003aab64a3e13fdc2470c9"><div class="ttname"><a href="../../de/db8/classmy_app.html#a8f02aaa38f003aab64a3e13fdc2470c9">myApp::source</a></div><div class="ttdeci">PiPFormat * source</div><div class="ttdef"><b>Definition:</b> <a href="../../da/df3/my_app_8h_source.html#l00013">myApp.h:13</a></div></div>
+<div class="ttc" id="class_parameters_reader_html"><div class="ttname"><a href="../../d2/db6/class_parameters_reader.html">ParametersReader</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d5f/_parameters_reader_8h_source.html#l00008">ParametersReader.h:8</a></div></div>
+<div class="ttc" id="classmy_app_html_a03a8ec51ec0b595b9c2b88e26faa9fc7"><div class="ttname"><a href="../../de/db8/classmy_app.html#a03a8ec51ec0b595b9c2b88e26faa9fc7">myApp::readFlag</a></div><div class="ttdeci">bool readFlag</div><div class="ttdef"><b>Definition:</b> <a href="../../da/df3/my_app_8h_source.html#l00017">myApp.h:17</a></div></div>
+<div class="ttc" id="classmy_app_html_a6afd0a7e409ba44ccea0efbc8408491f"><div class="ttname"><a href="../../de/db8/classmy_app.html#a6afd0a7e409ba44ccea0efbc8408491f">myApp::loadShape</a></div><div class="ttdeci">bool loadShape() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbd/my_app_8cpp_source.html#l00079">myApp.cpp:79</a></div></div>
+<div class="ttc" id="classmy_app_html_a8398acf7b04bdc2604ef6c70ed04c4b3"><div class="ttname"><a href="../../de/db8/classmy_app.html#a8398acf7b04bdc2604ef6c70ed04c4b3">myApp::pathOut</a></div><div class="ttdeci">std::string pathOut</div><div class="ttdef"><b>Definition:</b> <a href="../../da/df3/my_app_8h_source.html#l00015">myApp.h:15</a></div></div>
+<div class="ttc" id="classmy_app_html_a4aea3e796d0b7e0094e8ad216daaebc4"><div class="ttname"><a href="../../de/db8/classmy_app.html#a4aea3e796d0b7e0094e8ad216daaebc4">myApp::saveToFile</a></div><div class="ttdeci">void saveToFile()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbd/my_app_8cpp_source.html#l00059">myApp.cpp:59</a></div></div>
+<div class="ttc" id="pipformat_8h_html"><div class="ttname"><a href="../../d4/dd3/pipformat_8h.html">pipformat.h</a></div></div>
+<div class="ttc" id="classmy_app_html_aead81f5ddbf3a5875ca5f02220147a72"><div class="ttname"><a href="../../de/db8/classmy_app.html#aead81f5ddbf3a5875ca5f02220147a72">myApp::printToConsole</a></div><div class="ttdeci">void printToConsole()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbd/my_app_8cpp_source.html#l00071">myApp.cpp:71</a></div></div>
+<div class="ttc" id="polyangle_8h_html"><div class="ttname"><a href="../../d8/d6b/polyangle_8h.html">polyangle.h</a></div></div>
+<div class="ttc" id="classmy_app_html_ac4832872f3d60b3fcd7ca12dd3848d49"><div class="ttname"><a href="../../de/db8/classmy_app.html#ac4832872f3d60b3fcd7ca12dd3848d49">myApp::~myApp</a></div><div class="ttdeci">~myApp()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbd/my_app_8cpp_source.html#l00015">myApp.cpp:15</a></div></div>
+<div class="ttc" id="class_monte_karlo_app_html"><div class="ttname"><a href="../../d1/dcc/class_monte_karlo_app.html">MonteKarloApp</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d86/_monte_karlo_app_8h_source.html#l00008">MonteKarloApp.h:8</a></div></div>
+<div class="ttc" id="classmy_app_html_ad123401f95e62cbaf57dd8e4fc5a26de"><div class="ttname"><a href="../../de/db8/classmy_app.html#ad123401f95e62cbaf57dd8e4fc5a26de">myApp::readParams</a></div><div class="ttdeci">bool readParams() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbd/my_app_8cpp_source.html#l00111">myApp.cpp:111</a></div></div>
+<div class="ttc" id="classmy_app_html_a18b217bbcd72ab4541876555316470b1"><div class="ttname"><a href="../../de/db8/classmy_app.html#a18b217bbcd72ab4541876555316470b1">myApp::argument</a></div><div class="ttdeci">ParametersReader * argument</div><div class="ttdef"><b>Definition:</b> <a href="../../da/df3/my_app_8h_source.html#l00014">myApp.h:14</a></div></div>
+<div class="ttc" id="_monte_karlo_app_8h_html"><div class="ttname"><a href="../../da/d86/_monte_karlo_app_8h.html">MonteKarloApp.h</a></div></div>
+<div class="ttc" id="classmy_app_html_a4132bae504cdfda980025e4c45d532db"><div class="ttname"><a href="../../de/db8/classmy_app.html#a4132bae504cdfda980025e4c45d532db">myApp::argv</a></div><div class="ttdeci">char ** argv</div><div class="ttdef"><b>Definition:</b> <a href="../../da/df3/my_app_8h_source.html#l00020">myApp.h:20</a></div></div>
+<div class="ttc" id="classmy_app_html_a5dd7018e31ae74ce8df8078e52a150b4"><div class="ttname"><a href="../../de/db8/classmy_app.html#a5dd7018e31ae74ce8df8078e52a150b4">myApp::calculate</a></div><div class="ttdeci">bool calculate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbd/my_app_8cpp_source.html#l00035">myApp.cpp:35</a></div></div>
+<div class="ttc" id="classmy_app_html_a957818956b6a308d28deb9686e26e4b6"><div class="ttname"><a href="../../de/db8/classmy_app.html#a957818956b6a308d28deb9686e26e4b6">myApp::pathIn</a></div><div class="ttdeci">std::string pathIn</div><div class="ttdef"><b>Definition:</b> <a href="../../da/df3/my_app_8h_source.html#l00016">myApp.h:16</a></div></div>
+<div class="ttc" id="_parameters_reader_8h_html"><div class="ttname"><a href="../../d4/d5f/_parameters_reader_8h.html">ParametersReader.h</a></div></div>
+<div class="ttc" id="classmy_app_html_a4bba333ab8100f20b85a925fbb5c71ea"><div class="ttname"><a href="../../de/db8/classmy_app.html#a4bba333ab8100f20b85a925fbb5c71ea">myApp::myApp</a></div><div class="ttdeci">myApp(int _argc, char **_argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbd/my_app_8cpp_source.html#l00007">myApp.cpp:7</a></div></div>
+<div class="ttc" id="classmy_app_html_af9087a516203e46be6d06e0689db86ee"><div class="ttname"><a href="../../de/db8/classmy_app.html#af9087a516203e46be6d06e0689db86ee">myApp::readFile</a></div><div class="ttdeci">bool readFile(std::string path) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbd/my_app_8cpp_source.html#l00096">myApp.cpp:96</a></div></div>
+<div class="ttc" id="classmy_app_html_a581afaaf9171f5ded6d8a10fcfedb175"><div class="ttname"><a href="../../de/db8/classmy_app.html#a581afaaf9171f5ded6d8a10fcfedb175">myApp::returning</a></div><div class="ttdeci">void returning()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbd/my_app_8cpp_source.html#l00052">myApp.cpp:52</a></div></div>
+<div class="ttc" id="classmy_app_html_aa8056acee75e78c325c91c936889e7d1"><div class="ttname"><a href="../../de/db8/classmy_app.html#aa8056acee75e78c325c91c936889e7d1">myApp::writeFlag</a></div><div class="ttdeci">bool writeFlag</div><div class="ttdef"><b>Definition:</b> <a href="../../da/df3/my_app_8h_source.html#l00018">myApp.h:18</a></div></div>
+<div class="ttc" id="class_pi_p_format_html"><div class="ttname"><a href="../../d8/d5d/class_pi_p_format.html">PiPFormat</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd3/pipformat_8h_source.html#l00011">pipformat.h:11</a></div></div>
+<div class="ttc" id="classmy_app_html_a4db9789a7c259bb6ec4902e54d52a069"><div class="ttname"><a href="../../de/db8/classmy_app.html#a4db9789a7c259bb6ec4902e54d52a069">myApp::init</a></div><div class="ttdeci">bool init()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dbd/my_app_8cpp_source.html#l00021">myApp.cpp:21</a></div></div>
+<div class="ttc" id="classmy_app_html"><div class="ttname"><a href="../../de/db8/classmy_app.html">myApp</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/df3/my_app_8h_source.html#l00009">myApp.h:9</a></div></div>
+<div class="ttc" id="classmy_app_html_ada1a387e8f681d0ed8433b41455e959d"><div class="ttname"><a href="../../de/db8/classmy_app.html#ada1a387e8f681d0ed8433b41455e959d">myApp::argc</a></div><div class="ttdeci">int argc</div><div class="ttdef"><b>Definition:</b> <a href="../../da/df3/my_app_8h_source.html#l00019">myApp.h:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Monte_Karlo. Последние изменения: Чт 26 Мар 2015 23:09:33. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

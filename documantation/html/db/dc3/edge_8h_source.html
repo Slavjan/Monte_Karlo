@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Monte_Karlo: Исходный файл E:/учеба/моделирование/курсовой/Monte_Karlo/Monte_Karlo/edge.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Monte_Karlo
+   &#160;<span id="projectnumber">1.0b</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="../../annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>Файлы</span></a></li>
+      <li><a href="../../globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_885cc87fac2d91e269af0a5a959fa5f6.html">E:</a></li><li class="navelem"><a class="el" href="../../dir_92a0ef57f0bcda3442a4b47410825e63.html">учеба</a></li><li class="navelem"><a class="el" href="../../dir_977102925c4facb2fb1b7bf23d1961e1.html">моделирование</a></li><li class="navelem"><a class="el" href="../../dir_5155a16a380515b4f85e5a66b445c80e.html">курсовой</a></li><li class="navelem"><a class="el" href="../../dir_f2eabe021ae83ee45ad31ba2411de108.html">Monte_Karlo</a></li><li class="navelem"><a class="el" href="../../dir_2c833eca38ea3aeb28f95ba1026fae90.html">Monte_Karlo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">edge.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../db/dc3/edge_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                            </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d91/point_8h.html">point.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../d7/d77/class_edge.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d7/d77/class_edge.html">Edge</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="comment">//private fields</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d7/d77/class_edge.html#aa014aa10fbc940aa14deecfa12ed6ec3">    9</a></span>&#160;    <a class="code" href="../../d0/d69/class_point.html">Point</a>*  <a class="code" href="../../d7/d77/class_edge.html#aa014aa10fbc940aa14deecfa12ed6ec3">dot</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../d7/d77/class_edge.html#a10d0e5d635d018ae0cfe2780689d6039">   10</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d7/d77/class_edge.html#a10d0e5d635d018ae0cfe2780689d6039">k</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d7/d77/class_edge.html#ab1803682d77abfd121d10cdbb25e9234">   11</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d7/d77/class_edge.html#ab1803682d77abfd121d10cdbb25e9234">b</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d7/d77/class_edge.html#a0995c7a73973b7b063249ef52c66013e">   12</a></span>&#160;    <span class="keywordtype">bool</span>    <a class="code" href="../../d7/d77/class_edge.html#a0995c7a73973b7b063249ef52c66013e">horizontal</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d7/d77/class_edge.html#a1a7f201a089a56a20309ff04b73b2bae">   13</a></span>&#160;    <span class="keywordtype">bool</span>    <a class="code" href="../../d7/d77/class_edge.html#a1a7f201a089a56a20309ff04b73b2bae">vertical</a>;    </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">// public methods</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="../../d7/d77/class_edge.html#a3106b11d60125009dbf7a738ce540fdf">Edge</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../d7/d77/class_edge.html#a2f37b72f044427961d6730943daf10e0">~Edge</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// initing</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d7/d77/class_edge.html#a82797e131c2755e4bb8eed2210f5b97a">setPoints</a>(<a class="code" href="../../d0/d69/class_point.html">Point</a>, <a class="code" href="../../d0/d69/class_point.html">Point</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d7/d77/class_edge.html#a82797e131c2755e4bb8eed2210f5b97a">setPoints</a>(<a class="code" href="../../d0/d69/class_point.html">Point</a>*, <a class="code" href="../../d0/d69/class_point.html">Point</a>*);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d7/d77/class_edge.html#a82797e131c2755e4bb8eed2210f5b97a">setPoints</a>(<span class="keywordtype">int</span> x1, <span class="keywordtype">int</span> x2, <span class="keywordtype">int</span> y1, <span class="keywordtype">int</span> y2);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">//calculatins</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d7/d77/class_edge.html#a4cdfcdd3058523c6e6637909e9f452e1">calculateAngle</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d7/d77/class_edge.html#af4a92568575db2fe74366bd1c9a99c57">Edge::collision</a>(<a class="code" href="../../d0/d69/class_point.html">Point</a> p);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// getting fields</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="../../d0/d69/class_point.html">Point</a>   <a class="code" href="../../d7/d77/class_edge.html#a76cafd6fb12df344ebb539db3ce45b8a">getDot</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d7/d77/class_edge.html#aca34601a4bce147bb6f1d915fde6cca3">getDotX</a>(<span class="keywordtype">int</span>);   </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d7/d77/class_edge.html#a35b0d2269c20f469e3a7b9ac7e52beb3">getDotY</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d7/d77/class_edge.html#a28d2c4b12a3a7d6d32b521b458714b14">getK</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d7/d77/class_edge.html#a109a449219c198c01a5c9adc209cbcd8">getB</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">bool</span>    <a class="code" href="../../d7/d77/class_edge.html#a5d0d86ff103c26211747d2c3e939cd7f">getHorizont</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">bool</span>    <a class="code" href="../../d7/d77/class_edge.html#a6cb77d4cd58fa49ea9c88d5d79853a1b">getVertical</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="ttc" id="class_edge_html_a35b0d2269c20f469e3a7b9ac7e52beb3"><div class="ttname"><a href="../../d7/d77/class_edge.html#a35b0d2269c20f469e3a7b9ac7e52beb3">Edge::getDotY</a></div><div class="ttdeci">int getDotY(int)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df4/edge_8cpp_source.html#l00061">edge.cpp:61</a></div></div>
+<div class="ttc" id="class_edge_html_a4cdfcdd3058523c6e6637909e9f452e1"><div class="ttname"><a href="../../d7/d77/class_edge.html#a4cdfcdd3058523c6e6637909e9f452e1">Edge::calculateAngle</a></div><div class="ttdeci">void calculateAngle()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df4/edge_8cpp_source.html#l00087">edge.cpp:87</a></div></div>
+<div class="ttc" id="class_edge_html_a6cb77d4cd58fa49ea9c88d5d79853a1b"><div class="ttname"><a href="../../d7/d77/class_edge.html#a6cb77d4cd58fa49ea9c88d5d79853a1b">Edge::getVertical</a></div><div class="ttdeci">bool getVertical()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df4/edge_8cpp_source.html#l00080">edge.cpp:80</a></div></div>
+<div class="ttc" id="class_edge_html_a10d0e5d635d018ae0cfe2780689d6039"><div class="ttname"><a href="../../d7/d77/class_edge.html#a10d0e5d635d018ae0cfe2780689d6039">Edge::k</a></div><div class="ttdeci">int k</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc3/edge_8h_source.html#l00010">edge.h:10</a></div></div>
+<div class="ttc" id="point_8h_html"><div class="ttname"><a href="../../d2/d91/point_8h.html">point.h</a></div></div>
+<div class="ttc" id="class_edge_html_ab1803682d77abfd121d10cdbb25e9234"><div class="ttname"><a href="../../d7/d77/class_edge.html#ab1803682d77abfd121d10cdbb25e9234">Edge::b</a></div><div class="ttdeci">int b</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc3/edge_8h_source.html#l00011">edge.h:11</a></div></div>
+<div class="ttc" id="class_edge_html_aca34601a4bce147bb6f1d915fde6cca3"><div class="ttname"><a href="../../d7/d77/class_edge.html#aca34601a4bce147bb6f1d915fde6cca3">Edge::getDotX</a></div><div class="ttdeci">int getDotX(int)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df4/edge_8cpp_source.html#l00056">edge.cpp:56</a></div></div>
+<div class="ttc" id="class_edge_html_a82797e131c2755e4bb8eed2210f5b97a"><div class="ttname"><a href="../../d7/d77/class_edge.html#a82797e131c2755e4bb8eed2210f5b97a">Edge::setPoints</a></div><div class="ttdeci">void setPoints(Point, Point)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df4/edge_8cpp_source.html#l00024">edge.cpp:24</a></div></div>
+<div class="ttc" id="class_edge_html"><div class="ttname"><a href="../../d7/d77/class_edge.html">Edge</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc3/edge_8h_source.html#l00005">edge.h:5</a></div></div>
+<div class="ttc" id="class_edge_html_a28d2c4b12a3a7d6d32b521b458714b14"><div class="ttname"><a href="../../d7/d77/class_edge.html#a28d2c4b12a3a7d6d32b521b458714b14">Edge::getK</a></div><div class="ttdeci">int getK()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df4/edge_8cpp_source.html#l00066">edge.cpp:66</a></div></div>
+<div class="ttc" id="class_edge_html_a1a7f201a089a56a20309ff04b73b2bae"><div class="ttname"><a href="../../d7/d77/class_edge.html#a1a7f201a089a56a20309ff04b73b2bae">Edge::vertical</a></div><div class="ttdeci">bool vertical</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc3/edge_8h_source.html#l00013">edge.h:13</a></div></div>
+<div class="ttc" id="class_edge_html_a0995c7a73973b7b063249ef52c66013e"><div class="ttname"><a href="../../d7/d77/class_edge.html#a0995c7a73973b7b063249ef52c66013e">Edge::horizontal</a></div><div class="ttdeci">bool horizontal</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc3/edge_8h_source.html#l00012">edge.h:12</a></div></div>
+<div class="ttc" id="class_edge_html_a3106b11d60125009dbf7a738ce540fdf"><div class="ttname"><a href="../../d7/d77/class_edge.html#a3106b11d60125009dbf7a738ce540fdf">Edge::Edge</a></div><div class="ttdeci">Edge()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df4/edge_8cpp_source.html#l00005">edge.cpp:5</a></div></div>
+<div class="ttc" id="class_edge_html_aa014aa10fbc940aa14deecfa12ed6ec3"><div class="ttname"><a href="../../d7/d77/class_edge.html#aa014aa10fbc940aa14deecfa12ed6ec3">Edge::dot</a></div><div class="ttdeci">Point * dot</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc3/edge_8h_source.html#l00009">edge.h:9</a></div></div>
+<div class="ttc" id="class_edge_html_af4a92568575db2fe74366bd1c9a99c57"><div class="ttname"><a href="../../d7/d77/class_edge.html#af4a92568575db2fe74366bd1c9a99c57">Edge::collision</a></div><div class="ttdeci">bool collision(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df4/edge_8cpp_source.html#l00121">edge.cpp:121</a></div></div>
+<div class="ttc" id="class_edge_html_a76cafd6fb12df344ebb539db3ce45b8a"><div class="ttname"><a href="../../d7/d77/class_edge.html#a76cafd6fb12df344ebb539db3ce45b8a">Edge::getDot</a></div><div class="ttdeci">Point getDot(int)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df4/edge_8cpp_source.html#l00051">edge.cpp:51</a></div></div>
+<div class="ttc" id="class_edge_html_a2f37b72f044427961d6730943daf10e0"><div class="ttname"><a href="../../d7/d77/class_edge.html#a2f37b72f044427961d6730943daf10e0">Edge::~Edge</a></div><div class="ttdeci">~Edge()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df4/edge_8cpp_source.html#l00014">edge.cpp:14</a></div></div>
+<div class="ttc" id="class_edge_html_a5d0d86ff103c26211747d2c3e939cd7f"><div class="ttname"><a href="../../d7/d77/class_edge.html#a5d0d86ff103c26211747d2c3e939cd7f">Edge::getHorizont</a></div><div class="ttdeci">bool getHorizont()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df4/edge_8cpp_source.html#l00075">edge.cpp:75</a></div></div>
+<div class="ttc" id="class_point_html"><div class="ttname"><a href="../../d0/d69/class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d91/point_8h_source.html#l00011">point.h:11</a></div></div>
+<div class="ttc" id="class_edge_html_a109a449219c198c01a5c9adc209cbcd8"><div class="ttname"><a href="../../d7/d77/class_edge.html#a109a449219c198c01a5c9adc209cbcd8">Edge::getB</a></div><div class="ttdeci">int getB()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/df4/edge_8cpp_source.html#l00070">edge.cpp:70</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Monte_Karlo. Последние изменения: Чт 26 Мар 2015 23:09:33. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

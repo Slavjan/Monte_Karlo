@@ -1,0 +1,23 @@
+<map id="status" name="status">
+<area shape="rect" id="node2" href="$dd/db1/classgrn.html#a369eef95ea0ae9074373db34bb01a785" title="grn::generate" alt="" coords="633,287,732,313"/>
+<area shape="rect" id="node4" href="$d1/dcc/class_monte_karlo_app.html#a4654ca297776bb7ad69086a93e04bec6" title="MonteKarloApp::generatePontsSet" alt="" coords="1035,131,1257,157"/>
+<area shape="rect" id="node7" href="$de/db8/classmy_app.html#a5dd7018e31ae74ce8df8078e52a150b4" title="myApp::calculate" alt="" coords="1305,384,1428,411"/>
+<area shape="rect" id="node8" href="$dd/db1/classgrn.html#a486b4140be106c155b2840d8f4e520d3" title="grn::MMM" alt="" coords="403,287,485,313"/>
+<area shape="rect" id="node9" href="$dd/db1/classgrn.html#aa8468610fc52f30303668b9d840c9bf2" title="grn::MMS" alt="" coords="405,236,483,263"/>
+<area shape="rect" id="node10" href="$dd/db1/classgrn.html#ae394bcc17d038d4e2a621abb6926a671" title="grn::midExtract" alt="" coords="146,236,257,263"/>
+<area shape="rect" id="node11" href="$d1/dcc/class_monte_karlo_app.html#af3df4f8fbe2eb2f0e6aee959b06ed4e7" title="MonteKarloApp::calculate\lExtremumCoords" alt="" coords="116,69,287,110"/>
+<area shape="rect" id="node12" href="$d1/dcc/class_monte_karlo_app.html#a690c868e69752ca3ca9ec1668aad536a" title="MonteKarloApp::generateControl\lShape" alt="" coords="339,127,549,169"/>
+<area shape="rect" id="node13" href="$d1/dcc/class_monte_karlo_app.html#a045b82a7f465562280eab76e7c454c8c" title="MonteKarloApp::calculate\lSpase" alt="" coords="816,423,987,465"/>
+<area shape="rect" id="node15" href="$de/db8/classmy_app.html#ad123401f95e62cbaf57dd8e4fc5a26de" title="myApp::readParams" alt="" coords="373,388,515,415"/>
+<area shape="rect" id="node17" href="$d1/d25/class_polyangle.html#ab395d038b0cb114763a3ce0de7cf0613" title="Polyangle::Polyangle" alt="" coords="372,616,516,643"/>
+<area shape="rect" id="node18" href="$d1/d25/class_polyangle.html#ab784eafd80913dd5884b94c558e8bd4d" title="Polyangle::extremumCoord" alt="" coords="112,641,291,668"/>
+<area shape="rect" id="node19" href="$d1/d25/class_polyangle.html#a5649712d6cbeb2417e9d0ac17bc10427" title="Polyangle::collisions" alt="" coords="131,439,272,465"/>
+<area shape="rect" id="node22" href="$d1/d25/class_polyangle.html#a1514a58c7562a578315e962b90de5469" title="Polyangle::isntShape" alt="" coords="129,692,274,719"/>
+<area shape="rect" id="node3" href="$dd/db1/classgrn.html#a19733e94f629dbb1feca1512f4e752ff" title="grn::getInRange" alt="" coords="845,287,958,313"/>
+<area shape="rect" id="node5" href="$de/db8/classmy_app.html#a4db9789a7c259bb6ec4902e54d52a069" title="myApp::init" alt="" coords="1323,293,1411,320"/>
+<area shape="rect" id="node6" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1476,324,1527,351"/>
+<area shape="rect" id="node14" href="$d1/dcc/class_monte_karlo_app.html#aba82ee30daa9ffb1a31727bee1f7ab90" title="MonteKarloApp::getSpace" alt="" coords="1059,415,1233,441"/>
+<area shape="rect" id="node16" href="$de/db8/classmy_app.html#a6afd0a7e409ba44ccea0efbc8408491f" title="myApp::loadShape" alt="" coords="617,367,749,393"/>
+<area shape="rect" id="node20" href="$d1/d25/class_polyangle.html#a070f3699381f8cb5cf97ae4c63844551" title="Polyangle::inside" alt="" coords="383,439,505,465"/>
+<area shape="rect" id="node21" href="$d1/dcc/class_monte_karlo_app.html#a94607ddc3ad958c3a844de30726bec08" title="MonteKarloApp::calculate\lAmountPointsInShape" alt="" coords="597,423,768,465"/>
+</map>

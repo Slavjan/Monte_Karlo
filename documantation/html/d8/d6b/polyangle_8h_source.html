@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Monte_Karlo: Исходный файл E:/учеба/моделирование/курсовой/Monte_Karlo/Monte_Karlo/polyangle.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Monte_Karlo
+   &#160;<span id="projectnumber">1.0b</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="../../annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>Файлы</span></a></li>
+      <li><a href="../../globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_885cc87fac2d91e269af0a5a959fa5f6.html">E:</a></li><li class="navelem"><a class="el" href="../../dir_92a0ef57f0bcda3442a4b47410825e63.html">учеба</a></li><li class="navelem"><a class="el" href="../../dir_977102925c4facb2fb1b7bf23d1961e1.html">моделирование</a></li><li class="navelem"><a class="el" href="../../dir_5155a16a380515b4f85e5a66b445c80e.html">курсовой</a></li><li class="navelem"><a class="el" href="../../dir_f2eabe021ae83ee45ad31ba2411de108.html">Monte_Karlo</a></li><li class="navelem"><a class="el" href="../../dir_2c833eca38ea3aeb28f95ba1026fae90.html">Monte_Karlo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">polyangle.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d8/d6b/polyangle_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/dc3/edge_8h.html">edge.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="../../d1/d25/class_polyangle.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/d25/class_polyangle.html">Polyangle</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="comment">// private fields</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d1/d25/class_polyangle.html#a7e3a1cd28e446dabbd006ef8dd9604a0">    8</a></span>&#160;    <a class="code" href="../../d7/d77/class_edge.html">Edge</a>*   <a class="code" href="../../d1/d25/class_polyangle.html#a7e3a1cd28e446dabbd006ef8dd9604a0">edge</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d1/d25/class_polyangle.html#ad443272889d0ce687ac8ad7edcebad88">    9</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d1/d25/class_polyangle.html#ad443272889d0ce687ac8ad7edcebad88">verticesCount</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../d1/d25/class_polyangle.html#a03b74faf963f2611844d6eac23d6f108">   10</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d1/d25/class_polyangle.html#a03b74faf963f2611844d6eac23d6f108">maxX</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d1/d25/class_polyangle.html#aa30a709c2c446a98ef65576fbb6ec729">   11</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d1/d25/class_polyangle.html#aa30a709c2c446a98ef65576fbb6ec729">maxY</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d1/d25/class_polyangle.html#adb6f5f95046fcf1be1ee21a2ee4d10e7">   12</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d1/d25/class_polyangle.html#adb6f5f95046fcf1be1ee21a2ee4d10e7">minX</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d1/d25/class_polyangle.html#a1d443755a95f424f72e7b88a96d1a32b">   13</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d1/d25/class_polyangle.html#a1d443755a95f424f72e7b88a96d1a32b">minY</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// private mathods</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d1/d25/class_polyangle.html#ab784eafd80913dd5884b94c558e8bd4d">extremumCoord</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d1/d25/class_polyangle.html#a5649712d6cbeb2417e9d0ac17bc10427">collisions</a>(<a class="code" href="../../d0/d69/class_point.html">Point</a>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d1/d25/class_polyangle.html#a5649712d6cbeb2417e9d0ac17bc10427">collisions</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d1/d25/class_polyangle.html#a1514a58c7562a578315e962b90de5469">isntShape</a>();<span class="comment">// if the points belongs to line, she shalln`t goting area</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">// publuc methods</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="../../d1/d25/class_polyangle.html#ab395d038b0cb114763a3ce0de7cf0613">Polyangle</a>(<a class="code" href="../../d7/d77/class_edge.html">Edge</a>* a, <span class="keywordtype">int</span> count = 3);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../d1/d25/class_polyangle.html#ab395d038b0cb114763a3ce0de7cf0613">Polyangle</a>(<a class="code" href="../../d0/d69/class_point.html">Point</a>* points, <span class="keywordtype">int</span> count = 3);  </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="../../d1/d25/class_polyangle.html#a1af7015379bc49ead6756df12ccca5f8">~Polyangle</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">// calculations                         </span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">bool</span>    <a class="code" href="../../d1/d25/class_polyangle.html#a070f3699381f8cb5cf97ae4c63844551">inside</a>(<a class="code" href="../../d0/d69/class_point.html">Point</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span>    <a class="code" href="../../d1/d25/class_polyangle.html#a070f3699381f8cb5cf97ae4c63844551">inside</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">// returning</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../d7/d77/class_edge.html">Edge</a>*   <a class="code" href="../../d1/d25/class_polyangle.html#a2f29010c7377f53689e00c3aac78a73e">getEdges</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d1/d25/class_polyangle.html#a02c64dfaefe44d9d67801b98781f2da9">getVerticesCount</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d1/d25/class_polyangle.html#a24947e32e8cd281e948e885ac5372318">getMaxX</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d1/d25/class_polyangle.html#a60535fbf9e865ae39b27e3d98e143708">getMaxY</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d1/d25/class_polyangle.html#a78ccc184e0ec4f60d1efe2d21023ae89">getMinX</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d1/d25/class_polyangle.html#a91d18b12fdf282effa90caeba91a60ea">getMinY</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d25/class_polyangle.html#a262c4c106d5c81e0ab79cd775ce21f5c">print</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// exceptions</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d2/d6d/class_polyangle_1_1is_line.html">   44</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d2/d6d/class_polyangle_1_1is_line.html">isLine</a>{};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="ttc" id="class_polyangle_html_a60535fbf9e865ae39b27e3d98e143708"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#a60535fbf9e865ae39b27e3d98e143708">Polyangle::getMaxY</a></div><div class="ttdeci">int getMaxY()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d44/polyangle_8cpp_source.html#l00079">polyangle.cpp:79</a></div></div>
+<div class="ttc" id="class_polyangle_html_a262c4c106d5c81e0ab79cd775ce21f5c"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#a262c4c106d5c81e0ab79cd775ce21f5c">Polyangle::print</a></div><div class="ttdeci">void print()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d44/polyangle_8cpp_source.html#l00056">polyangle.cpp:56</a></div></div>
+<div class="ttc" id="class_polyangle_1_1is_line_html"><div class="ttname"><a href="../../d2/d6d/class_polyangle_1_1is_line.html">Polyangle::isLine</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d6b/polyangle_8h_source.html#l00044">polyangle.h:44</a></div></div>
+<div class="ttc" id="class_polyangle_html_adb6f5f95046fcf1be1ee21a2ee4d10e7"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#adb6f5f95046fcf1be1ee21a2ee4d10e7">Polyangle::minX</a></div><div class="ttdeci">int minX</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d6b/polyangle_8h_source.html#l00012">polyangle.h:12</a></div></div>
+<div class="ttc" id="class_polyangle_html_a070f3699381f8cb5cf97ae4c63844551"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#a070f3699381f8cb5cf97ae4c63844551">Polyangle::inside</a></div><div class="ttdeci">bool inside(Point)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d44/polyangle_8cpp_source.html#l00044">polyangle.cpp:44</a></div></div>
+<div class="ttc" id="class_polyangle_html_a2f29010c7377f53689e00c3aac78a73e"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#a2f29010c7377f53689e00c3aac78a73e">Polyangle::getEdges</a></div><div class="ttdeci">Edge * getEdges()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d44/polyangle_8cpp_source.html#l00065">polyangle.cpp:65</a></div></div>
+<div class="ttc" id="class_edge_html"><div class="ttname"><a href="../../d7/d77/class_edge.html">Edge</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc3/edge_8h_source.html#l00005">edge.h:5</a></div></div>
+<div class="ttc" id="class_polyangle_html_a03b74faf963f2611844d6eac23d6f108"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#a03b74faf963f2611844d6eac23d6f108">Polyangle::maxX</a></div><div class="ttdeci">int maxX</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d6b/polyangle_8h_source.html#l00010">polyangle.h:10</a></div></div>
+<div class="ttc" id="class_polyangle_html_a02c64dfaefe44d9d67801b98781f2da9"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#a02c64dfaefe44d9d67801b98781f2da9">Polyangle::getVerticesCount</a></div><div class="ttdeci">int getVerticesCount()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d44/polyangle_8cpp_source.html#l00070">polyangle.cpp:70</a></div></div>
+<div class="ttc" id="class_polyangle_html"><div class="ttname"><a href="../../d1/d25/class_polyangle.html">Polyangle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d6b/polyangle_8h_source.html#l00004">polyangle.h:4</a></div></div>
+<div class="ttc" id="class_polyangle_html_a91d18b12fdf282effa90caeba91a60ea"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#a91d18b12fdf282effa90caeba91a60ea">Polyangle::getMinY</a></div><div class="ttdeci">int getMinY()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d44/polyangle_8cpp_source.html#l00087">polyangle.cpp:87</a></div></div>
+<div class="ttc" id="class_polyangle_html_a24947e32e8cd281e948e885ac5372318"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#a24947e32e8cd281e948e885ac5372318">Polyangle::getMaxX</a></div><div class="ttdeci">int getMaxX()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d44/polyangle_8cpp_source.html#l00075">polyangle.cpp:75</a></div></div>
+<div class="ttc" id="class_polyangle_html_aa30a709c2c446a98ef65576fbb6ec729"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#aa30a709c2c446a98ef65576fbb6ec729">Polyangle::maxY</a></div><div class="ttdeci">int maxY</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d6b/polyangle_8h_source.html#l00011">polyangle.h:11</a></div></div>
+<div class="ttc" id="class_polyangle_html_a1af7015379bc49ead6756df12ccca5f8"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#a1af7015379bc49ead6756df12ccca5f8">Polyangle::~Polyangle</a></div><div class="ttdeci">~Polyangle()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d44/polyangle_8cpp_source.html#l00039">polyangle.cpp:39</a></div></div>
+<div class="ttc" id="class_polyangle_html_a1d443755a95f424f72e7b88a96d1a32b"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#a1d443755a95f424f72e7b88a96d1a32b">Polyangle::minY</a></div><div class="ttdeci">int minY</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d6b/polyangle_8h_source.html#l00013">polyangle.h:13</a></div></div>
+<div class="ttc" id="class_polyangle_html_ab784eafd80913dd5884b94c558e8bd4d"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#ab784eafd80913dd5884b94c558e8bd4d">Polyangle::extremumCoord</a></div><div class="ttdeci">void extremumCoord()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d44/polyangle_8cpp_source.html#l00095">polyangle.cpp:95</a></div></div>
+<div class="ttc" id="class_polyangle_html_a78ccc184e0ec4f60d1efe2d21023ae89"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#a78ccc184e0ec4f60d1efe2d21023ae89">Polyangle::getMinX</a></div><div class="ttdeci">int getMinX()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d44/polyangle_8cpp_source.html#l00083">polyangle.cpp:83</a></div></div>
+<div class="ttc" id="class_polyangle_html_a7e3a1cd28e446dabbd006ef8dd9604a0"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#a7e3a1cd28e446dabbd006ef8dd9604a0">Polyangle::edge</a></div><div class="ttdeci">Edge * edge</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d6b/polyangle_8h_source.html#l00008">polyangle.h:8</a></div></div>
+<div class="ttc" id="class_polyangle_html_a1514a58c7562a578315e962b90de5469"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#a1514a58c7562a578315e962b90de5469">Polyangle::isntShape</a></div><div class="ttdeci">void isntShape()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d44/polyangle_8cpp_source.html#l00150">polyangle.cpp:150</a></div></div>
+<div class="ttc" id="class_polyangle_html_a5649712d6cbeb2417e9d0ac17bc10427"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#a5649712d6cbeb2417e9d0ac17bc10427">Polyangle::collisions</a></div><div class="ttdeci">int collisions(Point)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d44/polyangle_8cpp_source.html#l00117">polyangle.cpp:117</a></div></div>
+<div class="ttc" id="class_polyangle_html_ad443272889d0ce687ac8ad7edcebad88"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#ad443272889d0ce687ac8ad7edcebad88">Polyangle::verticesCount</a></div><div class="ttdeci">int verticesCount</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d6b/polyangle_8h_source.html#l00009">polyangle.h:9</a></div></div>
+<div class="ttc" id="class_polyangle_html_ab395d038b0cb114763a3ce0de7cf0613"><div class="ttname"><a href="../../d1/d25/class_polyangle.html#ab395d038b0cb114763a3ce0de7cf0613">Polyangle::Polyangle</a></div><div class="ttdeci">Polyangle(Edge *a, int count=3)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d44/polyangle_8cpp_source.html#l00007">polyangle.cpp:7</a></div></div>
+<div class="ttc" id="class_point_html"><div class="ttname"><a href="../../d0/d69/class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d91/point_8h_source.html#l00011">point.h:11</a></div></div>
+<div class="ttc" id="edge_8h_html"><div class="ttname"><a href="../../db/dc3/edge_8h.html">edge.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Monte_Karlo. Последние изменения: Чт 26 Мар 2015 23:09:33. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

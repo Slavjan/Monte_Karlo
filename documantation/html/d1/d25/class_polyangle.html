@@ -1,0 +1,809 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Monte_Karlo: Класс Polyangle</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Monte_Karlo
+   &#160;<span id="projectnumber">1.0b</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Титульная&#160;страница</span></a></li>
+      <li class="current"><a href="../../annotated.html"><span>Классы</span></a></li>
+      <li><a href="../../files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../annotated.html"><span>Классы</span></a></li>
+      <li><a href="../../classes.html"><span>Алфавитный&#160;указатель&#160;классов</span></a></li>
+      <li><a href="../../inherits.html"><span>Иерархия&#160;классов</span></a></li>
+      <li><a href="../../functions.html"><span>Члены&#160;классов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="../../d0/d4d/class_polyangle-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Polyangle</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d8/d6b/polyangle_8h_source.html">polyangle.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф связей класса Polyangle:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d88/class_polyangle__coll__graph.png" border="0" usemap="#_polyangle_coll__map" alt="Collaboration graph"/></div>
+<map name="_polyangle_coll__map" id="_polyangle_coll__map">
+<area shape="rect" id="node2" href="../../d7/d77/class_edge.html" title="{Edge\n|&#45; k\l&#45; b\l&#45; horizontal\l&#45; vertical\l|+ Edge()\l+ ~Edge()\l+ setPoints()\l+ setPoints()\l+ setPoints()\l+ calculateAngle()\l+ collision()\l+ getDot()\l+ getDotX()\l+ getDotY()\l+ getK()\l+ getB()\l+ getHorizont()\l+ getVertical()\l}" alt="" coords="13,189,140,501"/><area shape="rect" id="node3" href="../../d0/d69/class_point.html" title="{Point\n|+ x\l+ y\l|+ Point()\l+ ~Point()\l+ print()\l}" alt="" coords="37,5,117,127"/></map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6d/class_polyangle_1_1is_line.html">isLine</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ab395d038b0cb114763a3ce0de7cf0613"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#ab395d038b0cb114763a3ce0de7cf0613">Polyangle</a> (<a class="el" href="../../d7/d77/class_edge.html">Edge</a> *a, int count=3)</td></tr>
+<tr class="separator:ab395d038b0cb114763a3ce0de7cf0613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab360580eed074f6737838e9dfd1b8cd2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#ab360580eed074f6737838e9dfd1b8cd2">Polyangle</a> (<a class="el" href="../../d0/d69/class_point.html">Point</a> *points, int count=3)</td></tr>
+<tr class="separator:ab360580eed074f6737838e9dfd1b8cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1af7015379bc49ead6756df12ccca5f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#a1af7015379bc49ead6756df12ccca5f8">~Polyangle</a> ()</td></tr>
+<tr class="separator:a1af7015379bc49ead6756df12ccca5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a070f3699381f8cb5cf97ae4c63844551"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#a070f3699381f8cb5cf97ae4c63844551">inside</a> (<a class="el" href="../../d0/d69/class_point.html">Point</a>)</td></tr>
+<tr class="separator:a070f3699381f8cb5cf97ae4c63844551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0dcfb8bac6fada04648da28a45b7ba0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#ab0dcfb8bac6fada04648da28a45b7ba0">inside</a> (int, int)</td></tr>
+<tr class="separator:ab0dcfb8bac6fada04648da28a45b7ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f29010c7377f53689e00c3aac78a73e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d77/class_edge.html">Edge</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#a2f29010c7377f53689e00c3aac78a73e">getEdges</a> ()</td></tr>
+<tr class="separator:a2f29010c7377f53689e00c3aac78a73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02c64dfaefe44d9d67801b98781f2da9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#a02c64dfaefe44d9d67801b98781f2da9">getVerticesCount</a> ()</td></tr>
+<tr class="separator:a02c64dfaefe44d9d67801b98781f2da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24947e32e8cd281e948e885ac5372318"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#a24947e32e8cd281e948e885ac5372318">getMaxX</a> ()</td></tr>
+<tr class="separator:a24947e32e8cd281e948e885ac5372318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60535fbf9e865ae39b27e3d98e143708"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#a60535fbf9e865ae39b27e3d98e143708">getMaxY</a> ()</td></tr>
+<tr class="separator:a60535fbf9e865ae39b27e3d98e143708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ccc184e0ec4f60d1efe2d21023ae89"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#a78ccc184e0ec4f60d1efe2d21023ae89">getMinX</a> ()</td></tr>
+<tr class="separator:a78ccc184e0ec4f60d1efe2d21023ae89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91d18b12fdf282effa90caeba91a60ea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#a91d18b12fdf282effa90caeba91a60ea">getMinY</a> ()</td></tr>
+<tr class="separator:a91d18b12fdf282effa90caeba91a60ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a262c4c106d5c81e0ab79cd775ce21f5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#a262c4c106d5c81e0ab79cd775ce21f5c">print</a> ()</td></tr>
+<tr class="separator:a262c4c106d5c81e0ab79cd775ce21f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:ab784eafd80913dd5884b94c558e8bd4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#ab784eafd80913dd5884b94c558e8bd4d">extremumCoord</a> ()</td></tr>
+<tr class="separator:ab784eafd80913dd5884b94c558e8bd4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5649712d6cbeb2417e9d0ac17bc10427"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#a5649712d6cbeb2417e9d0ac17bc10427">collisions</a> (<a class="el" href="../../d0/d69/class_point.html">Point</a>)</td></tr>
+<tr class="separator:a5649712d6cbeb2417e9d0ac17bc10427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91e2055026c248dae4cb84fb2af3eb55"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#a91e2055026c248dae4cb84fb2af3eb55">collisions</a> (int, int)</td></tr>
+<tr class="separator:a91e2055026c248dae4cb84fb2af3eb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1514a58c7562a578315e962b90de5469"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#a1514a58c7562a578315e962b90de5469">isntShape</a> ()</td></tr>
+<tr class="separator:a1514a58c7562a578315e962b90de5469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a7e3a1cd28e446dabbd006ef8dd9604a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d77/class_edge.html">Edge</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#a7e3a1cd28e446dabbd006ef8dd9604a0">edge</a></td></tr>
+<tr class="separator:a7e3a1cd28e446dabbd006ef8dd9604a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad443272889d0ce687ac8ad7edcebad88"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#ad443272889d0ce687ac8ad7edcebad88">verticesCount</a></td></tr>
+<tr class="separator:ad443272889d0ce687ac8ad7edcebad88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b74faf963f2611844d6eac23d6f108"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#a03b74faf963f2611844d6eac23d6f108">maxX</a></td></tr>
+<tr class="separator:a03b74faf963f2611844d6eac23d6f108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa30a709c2c446a98ef65576fbb6ec729"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#aa30a709c2c446a98ef65576fbb6ec729">maxY</a></td></tr>
+<tr class="separator:aa30a709c2c446a98ef65576fbb6ec729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb6f5f95046fcf1be1ee21a2ee4d10e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#adb6f5f95046fcf1be1ee21a2ee4d10e7">minX</a></td></tr>
+<tr class="separator:adb6f5f95046fcf1be1ee21a2ee4d10e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d443755a95f424f72e7b88a96d1a32b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d25/class_polyangle.html#a1d443755a95f424f72e7b88a96d1a32b">minY</a></td></tr>
+<tr class="separator:a1d443755a95f424f72e7b88a96d1a32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p>См. определение в файле <a class="el" href="../../d8/d6b/polyangle_8h_source.html">polyangle.h</a> строка <a class="el" href="../../d8/d6b/polyangle_8h_source.html#l00004">4</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a class="anchor" id="ab395d038b0cb114763a3ce0de7cf0613"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Polyangle::Polyangle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/d77/class_edge.html">Edge</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em> = <code>3</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d9/d44/polyangle_8cpp_source.html">polyangle.cpp</a> строка <a class="el" href="../../d9/d44/polyangle_8cpp_source.html#l00007">7</a></p>
+
+<p><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d25/class_polyangle_ab395d038b0cb114763a3ce0de7cf0613_cgraph.png" border="0" usemap="#d1/d25/class_polyangle_ab395d038b0cb114763a3ce0de7cf0613_cgraph" alt=""/></div>
+<map name="d1/d25/class_polyangle_ab395d038b0cb114763a3ce0de7cf0613_cgraph" id="d1/d25/class_polyangle_ab395d038b0cb114763a3ce0de7cf0613_cgraph">
+<area shape="rect" id="node2" href="../../d1/d13/status_8h.html#a7d6c7d1a8381c3b9b2d81e339945f424" title="status" alt="" coords="441,14,499,41"/><area shape="rect" id="node3" href="../../d7/d77/class_edge.html#a82797e131c2755e4bb8eed2210f5b97a" title="Edge::setPoints" alt="" coords="229,26,344,53"/><area shape="rect" id="node4" href="../../d7/d77/class_edge.html#a4cdfcdd3058523c6e6637909e9f452e1" title="Edge::calculateAngle" alt="" coords="214,77,359,103"/><area shape="rect" id="node5" href="../../d1/d25/class_polyangle.html#ab784eafd80913dd5884b94c558e8bd4d" title="Polyangle::extremumCoord" alt="" coords="197,127,376,154"/><area shape="rect" id="node6" href="../../db/d06/stdafx_8h.html#a2d61b741b80edf98487d277cf798b3f7" title="maxNumber" alt="" coords="424,102,516,129"/><area shape="rect" id="node7" href="../../db/d06/stdafx_8h.html#a30e2a715b2c7fbfe998092f54b7e6575" title="minNumber" alt="" coords="426,153,514,179"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab360580eed074f6737838e9dfd1b8cd2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Polyangle::Polyangle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d69/class_point.html">Point</a> *&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em> = <code>3</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d9/d44/polyangle_8cpp_source.html">polyangle.cpp</a> строка <a class="el" href="../../d9/d44/polyangle_8cpp_source.html#l00023">23</a></p>
+
+<p><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d25/class_polyangle_ab360580eed074f6737838e9dfd1b8cd2_cgraph.png" border="0" usemap="#d1/d25/class_polyangle_ab360580eed074f6737838e9dfd1b8cd2_cgraph" alt=""/></div>
+<map name="d1/d25/class_polyangle_ab360580eed074f6737838e9dfd1b8cd2_cgraph" id="d1/d25/class_polyangle_ab360580eed074f6737838e9dfd1b8cd2_cgraph">
+<area shape="rect" id="node2" href="../../d1/d13/status_8h.html#a7d6c7d1a8381c3b9b2d81e339945f424" title="status" alt="" coords="441,14,499,41"/><area shape="rect" id="node3" href="../../d7/d77/class_edge.html#a82797e131c2755e4bb8eed2210f5b97a" title="Edge::setPoints" alt="" coords="229,26,344,53"/><area shape="rect" id="node4" href="../../d7/d77/class_edge.html#a4cdfcdd3058523c6e6637909e9f452e1" title="Edge::calculateAngle" alt="" coords="214,77,359,103"/><area shape="rect" id="node5" href="../../d1/d25/class_polyangle.html#ab784eafd80913dd5884b94c558e8bd4d" title="Polyangle::extremumCoord" alt="" coords="197,127,376,154"/><area shape="rect" id="node6" href="../../db/d06/stdafx_8h.html#a2d61b741b80edf98487d277cf798b3f7" title="maxNumber" alt="" coords="424,102,516,129"/><area shape="rect" id="node7" href="../../db/d06/stdafx_8h.html#a30e2a715b2c7fbfe998092f54b7e6575" title="minNumber" alt="" coords="426,153,514,179"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1af7015379bc49ead6756df12ccca5f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Polyangle::~Polyangle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d9/d44/polyangle_8cpp_source.html">polyangle.cpp</a> строка <a class="el" href="../../d9/d44/polyangle_8cpp_source.html#l00039">39</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a class="anchor" id="a5649712d6cbeb2417e9d0ac17bc10427"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Polyangle::collisions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d69/class_point.html">Point</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d9/d44/polyangle_8cpp_source.html">polyangle.cpp</a> строка <a class="el" href="../../d9/d44/polyangle_8cpp_source.html#l00117">117</a></p>
+
+<p><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d25/class_polyangle_a5649712d6cbeb2417e9d0ac17bc10427_cgraph.png" border="0" usemap="#d1/d25/class_polyangle_a5649712d6cbeb2417e9d0ac17bc10427_cgraph" alt=""/></div>
+<map name="d1/d25/class_polyangle_a5649712d6cbeb2417e9d0ac17bc10427_cgraph" id="d1/d25/class_polyangle_a5649712d6cbeb2417e9d0ac17bc10427_cgraph">
+<area shape="rect" id="node2" href="../../d1/d13/status_8h.html#a7d6c7d1a8381c3b9b2d81e339945f424" title="status" alt="" coords="195,5,253,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d25/class_polyangle_a5649712d6cbeb2417e9d0ac17bc10427_icgraph.png" border="0" usemap="#d1/d25/class_polyangle_a5649712d6cbeb2417e9d0ac17bc10427_icgraph" alt=""/></div>
+<map name="d1/d25/class_polyangle_a5649712d6cbeb2417e9d0ac17bc10427_icgraph" id="d1/d25/class_polyangle_a5649712d6cbeb2417e9d0ac17bc10427_icgraph">
+<area shape="rect" id="node2" href="../../d1/d25/class_polyangle.html#a070f3699381f8cb5cf97ae4c63844551" title="Polyangle::inside" alt="" coords="195,13,316,39"/><area shape="rect" id="node3" href="../../d1/dcc/class_monte_karlo_app.html#a94607ddc3ad958c3a844de30726bec08" title="MonteKarloApp::calculate\lAmountPointsInShape" alt="" coords="364,5,535,47"/><area shape="rect" id="node4" href="../../d1/dcc/class_monte_karlo_app.html#a045b82a7f465562280eab76e7c454c8c" title="MonteKarloApp::calculate\lSpase" alt="" coords="583,5,753,47"/><area shape="rect" id="node5" href="../../d1/dcc/class_monte_karlo_app.html#aba82ee30daa9ffb1a31727bee1f7ab90" title="MonteKarloApp::getSpace" alt="" coords="801,13,976,39"/><area shape="rect" id="node6" href="../../de/db8/classmy_app.html#a5dd7018e31ae74ce8df8078e52a150b4" title="myApp::calculate" alt="" coords="1024,13,1147,39"/><area shape="rect" id="node7" href="../../df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1195,13,1245,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a91e2055026c248dae4cb84fb2af3eb55"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Polyangle::collisions </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d9/d44/polyangle_8cpp_source.html">polyangle.cpp</a> строка <a class="el" href="../../d9/d44/polyangle_8cpp_source.html#l00133">133</a></p>
+
+<p><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d25/class_polyangle_a91e2055026c248dae4cb84fb2af3eb55_cgraph.png" border="0" usemap="#d1/d25/class_polyangle_a91e2055026c248dae4cb84fb2af3eb55_cgraph" alt=""/></div>
+<map name="d1/d25/class_polyangle_a91e2055026c248dae4cb84fb2af3eb55_cgraph" id="d1/d25/class_polyangle_a91e2055026c248dae4cb84fb2af3eb55_cgraph">
+<area shape="rect" id="node2" href="../../d1/d13/status_8h.html#a7d6c7d1a8381c3b9b2d81e339945f424" title="status" alt="" coords="195,5,253,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab784eafd80913dd5884b94c558e8bd4d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Polyangle::extremumCoord </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d9/d44/polyangle_8cpp_source.html">polyangle.cpp</a> строка <a class="el" href="../../d9/d44/polyangle_8cpp_source.html#l00095">95</a></p>
+
+<p><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d25/class_polyangle_ab784eafd80913dd5884b94c558e8bd4d_cgraph.png" border="0" usemap="#d1/d25/class_polyangle_ab784eafd80913dd5884b94c558e8bd4d_cgraph" alt=""/></div>
+<map name="d1/d25/class_polyangle_ab784eafd80913dd5884b94c558e8bd4d_cgraph" id="d1/d25/class_polyangle_ab784eafd80913dd5884b94c558e8bd4d_cgraph">
+<area shape="rect" id="node2" href="../../db/d06/stdafx_8h.html#a2d61b741b80edf98487d277cf798b3f7" title="maxNumber" alt="" coords="232,5,324,32"/><area shape="rect" id="node3" href="../../db/d06/stdafx_8h.html#a30e2a715b2c7fbfe998092f54b7e6575" title="minNumber" alt="" coords="234,56,322,83"/><area shape="rect" id="node4" href="../../d1/d13/status_8h.html#a7d6c7d1a8381c3b9b2d81e339945f424" title="status" alt="" coords="249,107,307,133"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d25/class_polyangle_ab784eafd80913dd5884b94c558e8bd4d_icgraph.png" border="0" usemap="#d1/d25/class_polyangle_ab784eafd80913dd5884b94c558e8bd4d_icgraph" alt=""/></div>
+<map name="d1/d25/class_polyangle_ab784eafd80913dd5884b94c558e8bd4d_icgraph" id="d1/d25/class_polyangle_ab784eafd80913dd5884b94c558e8bd4d_icgraph">
+<area shape="rect" id="node2" href="../../d1/d25/class_polyangle.html#ab395d038b0cb114763a3ce0de7cf0613" title="Polyangle::Polyangle" alt="" coords="232,5,376,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f29010c7377f53689e00c3aac78a73e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d77/class_edge.html">Edge</a> * Polyangle::getEdges </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d9/d44/polyangle_8cpp_source.html">polyangle.cpp</a> строка <a class="el" href="../../d9/d44/polyangle_8cpp_source.html#l00065">65</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a24947e32e8cd281e948e885ac5372318"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Polyangle::getMaxX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d9/d44/polyangle_8cpp_source.html">polyangle.cpp</a> строка <a class="el" href="../../d9/d44/polyangle_8cpp_source.html#l00075">75</a></p>
+
+<p><div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d25/class_polyangle_a24947e32e8cd281e948e885ac5372318_icgraph.png" border="0" usemap="#d1/d25/class_polyangle_a24947e32e8cd281e948e885ac5372318_icgraph" alt=""/></div>
+<map name="d1/d25/class_polyangle_a24947e32e8cd281e948e885ac5372318_icgraph" id="d1/d25/class_polyangle_a24947e32e8cd281e948e885ac5372318_icgraph">
+<area shape="rect" id="node2" href="../../d1/dcc/class_monte_karlo_app.html#af3df4f8fbe2eb2f0e6aee959b06ed4e7" title="MonteKarloApp::calculate\lExtremumCoords" alt="" coords="191,35,361,76"/><area shape="rect" id="node3" href="../../d1/dcc/class_monte_karlo_app.html#a690c868e69752ca3ca9ec1668aad536a" title="MonteKarloApp::generateControl\lShape" alt="" coords="415,5,626,47"/><area shape="rect" id="node6" href="../../d1/dcc/class_monte_karlo_app.html#a4654ca297776bb7ad69086a93e04bec6" title="MonteKarloApp::generatePontsSet" alt="" coords="409,71,632,98"/><area shape="rect" id="node4" href="../../de/db8/classmy_app.html#a4db9789a7c259bb6ec4902e54d52a069" title="myApp::init" alt="" coords="680,42,768,69"/><area shape="rect" id="node5" href="../../df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="816,42,867,69"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a60535fbf9e865ae39b27e3d98e143708"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Polyangle::getMaxY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d9/d44/polyangle_8cpp_source.html">polyangle.cpp</a> строка <a class="el" href="../../d9/d44/polyangle_8cpp_source.html#l00079">79</a></p>
+
+<p><div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d25/class_polyangle_a60535fbf9e865ae39b27e3d98e143708_icgraph.png" border="0" usemap="#d1/d25/class_polyangle_a60535fbf9e865ae39b27e3d98e143708_icgraph" alt=""/></div>
+<map name="d1/d25/class_polyangle_a60535fbf9e865ae39b27e3d98e143708_icgraph" id="d1/d25/class_polyangle_a60535fbf9e865ae39b27e3d98e143708_icgraph">
+<area shape="rect" id="node2" href="../../d1/dcc/class_monte_karlo_app.html#af3df4f8fbe2eb2f0e6aee959b06ed4e7" title="MonteKarloApp::calculate\lExtremumCoords" alt="" coords="192,35,363,76"/><area shape="rect" id="node3" href="../../d1/dcc/class_monte_karlo_app.html#a690c868e69752ca3ca9ec1668aad536a" title="MonteKarloApp::generateControl\lShape" alt="" coords="417,5,627,47"/><area shape="rect" id="node6" href="../../d1/dcc/class_monte_karlo_app.html#a4654ca297776bb7ad69086a93e04bec6" title="MonteKarloApp::generatePontsSet" alt="" coords="411,71,633,98"/><area shape="rect" id="node4" href="../../de/db8/classmy_app.html#a4db9789a7c259bb6ec4902e54d52a069" title="myApp::init" alt="" coords="681,42,769,69"/><area shape="rect" id="node5" href="../../df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="817,42,868,69"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a78ccc184e0ec4f60d1efe2d21023ae89"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Polyangle::getMinX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d9/d44/polyangle_8cpp_source.html">polyangle.cpp</a> строка <a class="el" href="../../d9/d44/polyangle_8cpp_source.html#l00083">83</a></p>
+
+<p><div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d25/class_polyangle_a78ccc184e0ec4f60d1efe2d21023ae89_icgraph.png" border="0" usemap="#d1/d25/class_polyangle_a78ccc184e0ec4f60d1efe2d21023ae89_icgraph" alt=""/></div>
+<map name="d1/d25/class_polyangle_a78ccc184e0ec4f60d1efe2d21023ae89_icgraph" id="d1/d25/class_polyangle_a78ccc184e0ec4f60d1efe2d21023ae89_icgraph">
+<area shape="rect" id="node2" href="../../d1/dcc/class_monte_karlo_app.html#af3df4f8fbe2eb2f0e6aee959b06ed4e7" title="MonteKarloApp::calculate\lExtremumCoords" alt="" coords="187,35,357,76"/><area shape="rect" id="node3" href="../../d1/dcc/class_monte_karlo_app.html#a690c868e69752ca3ca9ec1668aad536a" title="MonteKarloApp::generateControl\lShape" alt="" coords="411,5,622,47"/><area shape="rect" id="node6" href="../../d1/dcc/class_monte_karlo_app.html#a4654ca297776bb7ad69086a93e04bec6" title="MonteKarloApp::generatePontsSet" alt="" coords="405,71,628,98"/><area shape="rect" id="node4" href="../../de/db8/classmy_app.html#a4db9789a7c259bb6ec4902e54d52a069" title="myApp::init" alt="" coords="676,42,764,69"/><area shape="rect" id="node5" href="../../df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="812,42,863,69"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a91d18b12fdf282effa90caeba91a60ea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Polyangle::getMinY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d9/d44/polyangle_8cpp_source.html">polyangle.cpp</a> строка <a class="el" href="../../d9/d44/polyangle_8cpp_source.html#l00087">87</a></p>
+
+<p><div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d25/class_polyangle_a91d18b12fdf282effa90caeba91a60ea_icgraph.png" border="0" usemap="#d1/d25/class_polyangle_a91d18b12fdf282effa90caeba91a60ea_icgraph" alt=""/></div>
+<map name="d1/d25/class_polyangle_a91d18b12fdf282effa90caeba91a60ea_icgraph" id="d1/d25/class_polyangle_a91d18b12fdf282effa90caeba91a60ea_icgraph">
+<area shape="rect" id="node2" href="../../d1/dcc/class_monte_karlo_app.html#af3df4f8fbe2eb2f0e6aee959b06ed4e7" title="MonteKarloApp::calculate\lExtremumCoords" alt="" coords="188,35,359,76"/><area shape="rect" id="node3" href="../../d1/dcc/class_monte_karlo_app.html#a690c868e69752ca3ca9ec1668aad536a" title="MonteKarloApp::generateControl\lShape" alt="" coords="413,5,623,47"/><area shape="rect" id="node6" href="../../d1/dcc/class_monte_karlo_app.html#a4654ca297776bb7ad69086a93e04bec6" title="MonteKarloApp::generatePontsSet" alt="" coords="407,71,629,98"/><area shape="rect" id="node4" href="../../de/db8/classmy_app.html#a4db9789a7c259bb6ec4902e54d52a069" title="myApp::init" alt="" coords="677,42,765,69"/><area shape="rect" id="node5" href="../../df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="813,42,864,69"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a02c64dfaefe44d9d67801b98781f2da9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Polyangle::getVerticesCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d9/d44/polyangle_8cpp_source.html">polyangle.cpp</a> строка <a class="el" href="../../d9/d44/polyangle_8cpp_source.html#l00070">70</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a070f3699381f8cb5cf97ae4c63844551"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Polyangle::inside </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d69/class_point.html">Point</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d9/d44/polyangle_8cpp_source.html">polyangle.cpp</a> строка <a class="el" href="../../d9/d44/polyangle_8cpp_source.html#l00044">44</a></p>
+
+<p><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d25/class_polyangle_a070f3699381f8cb5cf97ae4c63844551_cgraph.png" border="0" usemap="#d1/d25/class_polyangle_a070f3699381f8cb5cf97ae4c63844551_cgraph" alt=""/></div>
+<map name="d1/d25/class_polyangle_a070f3699381f8cb5cf97ae4c63844551_cgraph" id="d1/d25/class_polyangle_a070f3699381f8cb5cf97ae4c63844551_cgraph">
+<area shape="rect" id="node2" href="../../d1/d25/class_polyangle.html#a5649712d6cbeb2417e9d0ac17bc10427" title="Polyangle::collisions" alt="" coords="175,5,316,32"/><area shape="rect" id="node3" href="../../d1/d13/status_8h.html#a7d6c7d1a8381c3b9b2d81e339945f424" title="status" alt="" coords="364,5,423,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d25/class_polyangle_a070f3699381f8cb5cf97ae4c63844551_icgraph.png" border="0" usemap="#d1/d25/class_polyangle_a070f3699381f8cb5cf97ae4c63844551_icgraph" alt=""/></div>
+<map name="d1/d25/class_polyangle_a070f3699381f8cb5cf97ae4c63844551_icgraph" id="d1/d25/class_polyangle_a070f3699381f8cb5cf97ae4c63844551_icgraph">
+<area shape="rect" id="node2" href="../../d1/dcc/class_monte_karlo_app.html#a94607ddc3ad958c3a844de30726bec08" title="MonteKarloApp::calculate\lAmountPointsInShape" alt="" coords="175,5,345,47"/><area shape="rect" id="node3" href="../../d1/dcc/class_monte_karlo_app.html#a045b82a7f465562280eab76e7c454c8c" title="MonteKarloApp::calculate\lSpase" alt="" coords="393,5,564,47"/><area shape="rect" id="node4" href="../../d1/dcc/class_monte_karlo_app.html#aba82ee30daa9ffb1a31727bee1f7ab90" title="MonteKarloApp::getSpace" alt="" coords="612,13,787,39"/><area shape="rect" id="node5" href="../../de/db8/classmy_app.html#a5dd7018e31ae74ce8df8078e52a150b4" title="myApp::calculate" alt="" coords="835,13,957,39"/><area shape="rect" id="node6" href="../../df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1005,13,1056,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0dcfb8bac6fada04648da28a45b7ba0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Polyangle::inside </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d9/d44/polyangle_8cpp_source.html">polyangle.cpp</a> строка <a class="el" href="../../d9/d44/polyangle_8cpp_source.html#l00050">50</a></p>
+
+<p><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d25/class_polyangle_ab0dcfb8bac6fada04648da28a45b7ba0_cgraph.png" border="0" usemap="#d1/d25/class_polyangle_ab0dcfb8bac6fada04648da28a45b7ba0_cgraph" alt=""/></div>
+<map name="d1/d25/class_polyangle_ab0dcfb8bac6fada04648da28a45b7ba0_cgraph" id="d1/d25/class_polyangle_ab0dcfb8bac6fada04648da28a45b7ba0_cgraph">
+<area shape="rect" id="node2" href="../../d1/d25/class_polyangle.html#a5649712d6cbeb2417e9d0ac17bc10427" title="Polyangle::collisions" alt="" coords="175,5,316,32"/><area shape="rect" id="node3" href="../../d1/d13/status_8h.html#a7d6c7d1a8381c3b9b2d81e339945f424" title="status" alt="" coords="364,5,423,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1514a58c7562a578315e962b90de5469"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Polyangle::isntShape </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d9/d44/polyangle_8cpp_source.html">polyangle.cpp</a> строка <a class="el" href="../../d9/d44/polyangle_8cpp_source.html#l00150">150</a></p>
+
+<p><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d25/class_polyangle_a1514a58c7562a578315e962b90de5469_cgraph.png" border="0" usemap="#d1/d25/class_polyangle_a1514a58c7562a578315e962b90de5469_cgraph" alt=""/></div>
+<map name="d1/d25/class_polyangle_a1514a58c7562a578315e962b90de5469_cgraph" id="d1/d25/class_polyangle_a1514a58c7562a578315e962b90de5469_cgraph">
+<area shape="rect" id="node2" href="../../d7/d77/class_edge.html#aca34601a4bce147bb6f1d915fde6cca3" title="Edge::getDotX" alt="" coords="199,5,305,32"/><area shape="rect" id="node3" href="../../d7/d77/class_edge.html#a35b0d2269c20f469e3a7b9ac7e52beb3" title="Edge::getDotY" alt="" coords="199,56,305,83"/><area shape="rect" id="node4" href="../../d1/d13/status_8h.html#a7d6c7d1a8381c3b9b2d81e339945f424" title="status" alt="" coords="223,107,281,133"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a262c4c106d5c81e0ab79cd775ce21f5c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Polyangle::print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d9/d44/polyangle_8cpp_source.html">polyangle.cpp</a> строка <a class="el" href="../../d9/d44/polyangle_8cpp_source.html#l00056">56</a></p>
+
+<p><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d25/class_polyangle_a262c4c106d5c81e0ab79cd775ce21f5c_cgraph.png" border="0" usemap="#d1/d25/class_polyangle_a262c4c106d5c81e0ab79cd775ce21f5c_cgraph" alt=""/></div>
+<map name="d1/d25/class_polyangle_a262c4c106d5c81e0ab79cd775ce21f5c_cgraph" id="d1/d25/class_polyangle_a262c4c106d5c81e0ab79cd775ce21f5c_cgraph">
+<area shape="rect" id="node2" href="../../d7/d77/class_edge.html#a109a449219c198c01a5c9adc209cbcd8" title="Edge::getB" alt="" coords="165,5,252,32"/><area shape="rect" id="node3" href="../../d7/d77/class_edge.html#a28d2c4b12a3a7d6d32b521b458714b14" title="Edge::getK" alt="" coords="165,56,252,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a class="anchor" id="a7e3a1cd28e446dabbd006ef8dd9604a0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d77/class_edge.html">Edge</a>* Polyangle::edge</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d8/d6b/polyangle_8h_source.html">polyangle.h</a> строка <a class="el" href="../../d8/d6b/polyangle_8h_source.html#l00008">8</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a03b74faf963f2611844d6eac23d6f108"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Polyangle::maxX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d8/d6b/polyangle_8h_source.html">polyangle.h</a> строка <a class="el" href="../../d8/d6b/polyangle_8h_source.html#l00010">10</a></p>
+
+</div>
+</div>
+<a class="anchor" id="aa30a709c2c446a98ef65576fbb6ec729"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Polyangle::maxY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d8/d6b/polyangle_8h_source.html">polyangle.h</a> строка <a class="el" href="../../d8/d6b/polyangle_8h_source.html#l00011">11</a></p>
+
+</div>
+</div>
+<a class="anchor" id="adb6f5f95046fcf1be1ee21a2ee4d10e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Polyangle::minX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d8/d6b/polyangle_8h_source.html">polyangle.h</a> строка <a class="el" href="../../d8/d6b/polyangle_8h_source.html#l00012">12</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a1d443755a95f424f72e7b88a96d1a32b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Polyangle::minY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d8/d6b/polyangle_8h_source.html">polyangle.h</a> строка <a class="el" href="../../d8/d6b/polyangle_8h_source.html#l00013">13</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ad443272889d0ce687ac8ad7edcebad88"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Polyangle::verticesCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>См. определение в файле <a class="el" href="../../d8/d6b/polyangle_8h_source.html">polyangle.h</a> строка <a class="el" href="../../d8/d6b/polyangle_8h_source.html#l00009">9</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>E:/учеба/моделирование/курсовой/Monte_Karlo/Monte_Karlo/<a class="el" href="../../d8/d6b/polyangle_8h_source.html">polyangle.h</a></li>
+<li>E:/учеба/моделирование/курсовой/Monte_Karlo/Monte_Karlo/<a class="el" href="../../d9/d44/polyangle_8cpp_source.html">polyangle.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по Monte_Karlo. Последние изменения: Чт 26 Мар 2015 23:09:33. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>
