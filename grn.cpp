@@ -77,7 +77,7 @@ int grn::MMS(int n) // set dddd, sqr(dddd) = ddmmmmdd, mmmm is middle of square
 		midSquare = 0; //mid of square
 
 	fNumber = n == 0 ? setNumber() : n;	//dddd
-	int end;
+	int end = 0;
 		end = clockInThisSecond();
 	for (int i = 0; i < end; i++)
 	{

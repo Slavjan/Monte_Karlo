@@ -43,13 +43,13 @@ Polyangle::~Polyangle()
 
 bool Polyangle::inside(Point p)
 {					  
-	isntShape();
+	// isntShape();
 	return collisions(p) % 2 == 0 ? false : true;
 }
 
 bool Polyangle::inside(int x, int y)
 {
-	isntShape();
+	// isntShape();
 	return collisions(x, y) % 2 == 0 ? false : true;
 }
 
@@ -161,7 +161,7 @@ void Polyangle::isntShape()
 		y1, y2, y3;
 	float dx, dy;
 
-	for (int i = 0; i < verticesCount; i++)
+	for (int i = 0; i < verticesCount-1; i++)
 	{
 		x1 = edge[i].getDotX(0);
 		x2 = edge[i].getDotX(1);
@@ -171,8 +171,24 @@ void Polyangle::isntShape()
 		y2 = edge[i].getDotY(1);
 		y3 = edge[i+1].getDotY(0);
 
-		dx = (x1 - x3) / (x2 - x3);
-		dy = (y1 - y3) / (y2 - y3);
+
+		int raznostX1X3 = x1 - x3,
+			raznostX2X3 = x2 - x3,
+			raznostY1Y3 = y1 - y3,
+			raznostY2Y3 = y2 - y3;
+
+		if (raznostX2X3 == 0 || raznostY2Y3 == 0)
+		{
+			dx = 0;
+			dy = 1;
+		}
+		else
+		{
+			dx = raznostX1X3 / raznostX2X3;
+			dy = raznostY1Y3 / raznostY2Y3;
+		}
+
+		
 		if (dx == dy)
 			zeros++;
 
@@ -181,7 +197,6 @@ void Polyangle::isntShape()
 	if (zeros == verticesCount)
 	{
 		throw isLine();
-		return;
 	}
 }
 

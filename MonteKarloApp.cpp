@@ -90,7 +90,7 @@ void MonteKarloApp::generatePontsSet()
 	int minX = tExtremum.at(2),
 		minY = tExtremum.at(3);
 
-	int end = controlSpace * 2 / 3;
+	int end = controlSpace * 1 / 4;
 	
 	for (int i = 0; i < (end < 0 ? -end : end); i++)
 	{

@@ -20,13 +20,8 @@ N minNumber(N a, N b)
 #define MY_TIME
 int clockInThisSecond()
 {
-	int c = clock(), _c = c;
-	if (c > 100)
-	{
-		_c /= 100;
-		_c *= 100;
-		c -= _c;
-	}
+	int c = clock() % 10;
+	
 	return c;
 }
 #endif
