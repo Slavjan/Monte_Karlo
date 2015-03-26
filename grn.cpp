@@ -20,9 +20,10 @@ float grn::generate()
 	int end;
 		end = clockInThisSecond();
 	for (int i = 0; i < end ; i++)
-	{
+	{  		
 		midSquare = MMS(midMultipl);
 		midMultipl = MMM(midSquare);
+		status(i, end, "drn::generate");
 	}
 
 	rNumber = midMultipl;
@@ -54,8 +55,9 @@ int grn::MMM(int n) // set dddd, dddd*cccc = ddmmmmdd, mmmm is middle of multipl
 	sNumber = random();			//cccc
 	int end;
 		end = clockInThisSecond();
-	for (int i = 0; i < 20; i++)// for mutcher range
+	for (int i = 0; i < end; i++)// for mutcher range
 	{
+		
 		midMultipl = midExtract(fNumber * sNumber);
 		fNumber = midMultipl;
 		if (midMultipl == 0)
@@ -63,7 +65,7 @@ int grn::MMM(int n) // set dddd, dddd*cccc = ddmmmmdd, mmmm is middle of multipl
 			fNumber = setNumber();
 			i--;
 		}
-
+		status(i, end, "drn::MMM");
 	}
 
 	return midMultipl;
@@ -75,12 +77,13 @@ int grn::MMS(int n) // set dddd, sqr(dddd) = ddmmmmdd, mmmm is middle of square
 		midSquare = 0; //mid of square
 
 	fNumber = n == 0 ? setNumber() : n;	//dddd
-	int end;
+	int end = 0;
 		end = clockInThisSecond();
 	for (int i = 0; i < end; i++)
 	{
 		midSquare = midExtract(fNumber*fNumber);
-		fNumber = midSquare == 0 ? midExtract(random()) : midSquare; 
+		fNumber = midSquare == 0 ? midExtract(random()) : midSquare;
+		status(i, end, "drn::MMS");
 	}
 
 	return midSquare;
@@ -99,24 +102,26 @@ int grn::midExtract(unsigned long int n)
 					  divider = 10;
 	int	middle = 0,
 		count = 0;
-
+	status(1, 5, "drn::midExtract");
 	do
 	{
 		c /= 10;
 		count++;
 	} while (c > 0);
-
+	status(2, 5, "drn::midExtract");
 
 	if ((((count - 4) / 2) - 1) < 0)
 		count = (((count - 4) / 2) - 1) * -1;
 	else
 		count = ((count - 4) / 2) - 1;
-
+	status(3, 5, "drn::midExtract");
 	for (int i = 0; i < count; i++)
 	{
 		divider *= 10;
 	}
+	status(4, 5, "drn::midExtract");
 	middle = (n / divider) % 10000;
+	status(5, 5, "drn::midExtract");
 
 	return middle;
 }

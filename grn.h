@@ -1,5 +1,6 @@
 #pragma once
-//#include "stdafx.h"
+
+#include "status.h"
 
 class grn	//generator of random numbers
 {

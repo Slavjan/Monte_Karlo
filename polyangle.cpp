@@ -1,6 +1,8 @@
 #pragma once
 #include "polyangle.h"
 #include "stdafx.h"
+#include "status.h"
+
 // pablic
 Polyangle::Polyangle(Edge* a, int count)
 {
@@ -9,11 +11,13 @@ Polyangle::Polyangle(Edge* a, int count)
 	int j = 0;
 	for (int i = 0; i < count; i++)
 	{
+		status(i, count, "polyangle::Polyangle()");
 		edge[i].setPoints(a[i].getDot(0), a[i].getDot(1));
 		edge[i].calculateAngle();
 	}
-
+	
 	verticesCount = count * 2;
+	extremumCoord();
 } 
 
 Polyangle::Polyangle(Point* points, int count)
@@ -23,11 +27,13 @@ Polyangle::Polyangle(Point* points, int count)
 	int j = 0;
 	for (int i = 0; i < count; i++)
 	{
+		status(i, count, "polyangle::Polyangle()");
 		edge[i].setPoints(points[i], points[i + 1]);
 		edge[i].calculateAngle();
 	}
 
-	verticesCount = count * 2;
+	verticesCount = count;
+	extremumCoord();
 }
 
 Polyangle::~Polyangle()
@@ -37,13 +43,13 @@ Polyangle::~Polyangle()
 
 bool Polyangle::inside(Point p)
 {					  
-	isntShape();
+	// isntShape();
 	return collisions(p) % 2 == 0 ? false : true;
 }
 
 bool Polyangle::inside(int x, int y)
 {
-	isntShape();
+	// isntShape();
 	return collisions(x, y) % 2 == 0 ? false : true;
 }
 
@@ -65,20 +71,45 @@ int Polyangle::getVerticesCount()
 {
 	return verticesCount;
 }
+
+int Polyangle::getMaxX()
+{
+	return maxX;
+}
+int Polyangle::getMaxY()
+{
+	return maxY;
+}
+int Polyangle::getMinX()
+{
+	return minX;
+}
+int Polyangle::getMinY()
+{
+	return minY;
+}
+
 // /public
 
 // private 
-void Polyangle::maxCoord()
+void Polyangle::extremumCoord()
 {
 	maxX = 0;
 	maxY = 0;
+	minX = 0;
+	minY = 0;
 
-	for (int i = 0; i < verticesCount; i++)
+	for (int i = 0; i < verticesCount/2; i++)
 	{
 		for (int j = 0; j < 2; j++)
 		{
+			
 			maxX = maxNumber(edge[i].getDotX(j), maxX);
 			maxY = maxNumber(edge[i].getDotY(j), maxY);
+
+			minX = minNumber(edge[i].getDotX(j), minX);
+			minY = minNumber(edge[i].getDotY(j), minY);
+			status(i + 1 * j, verticesCount, "polyangle::Polyangle()");
 		}
 	}
 }
@@ -93,6 +124,7 @@ int Polyangle::collisions(Point p)
 		{
 			collisions_count++;
 		}
+		status(i, verticesCount/2, "polyangle::collisions");
 	}
 
 	return collisions_count;
@@ -109,6 +141,7 @@ int Polyangle::collisions(int x, int y)
 		{
 			collisions_count++;
 		}
+		status(i, verticesCount / 2, "polyangle::collisions");
 	}
 
 	return collisions_count;
@@ -128,7 +161,7 @@ void Polyangle::isntShape()
 		y1, y2, y3;
 	float dx, dy;
 
-	for (int i = 0; i < verticesCount; i++)
+	for (int i = 0; i < verticesCount-1; i++)
 	{
 		x1 = edge[i].getDotX(0);
 		x2 = edge[i].getDotX(1);
@@ -138,15 +171,32 @@ void Polyangle::isntShape()
 		y2 = edge[i].getDotY(1);
 		y3 = edge[i+1].getDotY(0);
 
-		dx = (x1 - x3) / (x2 - x3);
-		dy = (y1 - y3) / (y2 - y3);
+
+		int raznostX1X3 = x1 - x3,
+			raznostX2X3 = x2 - x3,
+			raznostY1Y3 = y1 - y3,
+			raznostY2Y3 = y2 - y3;
+
+		if (raznostX2X3 == 0 || raznostY2Y3 == 0)
+		{
+			dx = 0;
+			dy = 1;
+		}
+		else
+		{
+			dx = raznostX1X3 / raznostX2X3;
+			dy = raznostY1Y3 / raznostY2Y3;
+		}
+
+		
 		if (dx == dy)
 			zeros++;
+
+		status(i, verticesCount, "polyangle::isntShape");
 	}
 	if (zeros == verticesCount)
 	{
 		throw isLine();
-		return;
 	}
 }
 

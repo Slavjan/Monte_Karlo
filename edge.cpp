@@ -33,8 +33,8 @@ void Edge::setPoints(Point* A, Point* B)
 {
 	dot = new Point[2];
 	
-	dot[0].x = A[0].x; dot[0].y = A[0].y;
-	dot[1].x = B[0].x; dot[1].y = B[0].y;
+	dot[0].x = A->x; dot[0].y = A->y;
+	dot[1].x = B->x; dot[1].y = B->y;
 }
 
 void Edge::setPoints(int x1, int x2, int y1, int y2)
