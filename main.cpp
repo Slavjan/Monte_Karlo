@@ -11,7 +11,7 @@ int main(int argc, char** argv)
 	int _argc = 10;
 	char* _argv[] = { "Monte_Karlo.exe", "-p", "0", "0", "0", "10", "10", "10", "10", "0"};
 
-	myApp App = myApp(_argc, _argv);
+	myApp App = myApp(argc, argv);
 	bool ex;
 	
 	ex = App.init();
