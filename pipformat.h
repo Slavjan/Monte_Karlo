@@ -20,9 +20,9 @@ public:
     void	loadFromFile(std::string fileName);
     void	saveToFile(std::string fileName, std::string format);
 
-	int			getVerticesCount();
-	std::vector<Point>	getVector();
-	Point 		getCrossPoint();
+    int			getVerticesCount() const;
+    std::vector<Point>	getVector() const;
+    Point 		getCrossPoint() const;
 
     void print();
 

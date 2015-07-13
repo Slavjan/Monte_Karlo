@@ -18,7 +18,6 @@ void PiPFormat::loadFromFile(std::string fileName)
     std::ifstream stream( fileName.data() );
     if( ! stream.is_open() ){
 		throw notFound();
-        return;
     }
 
     //stream >> _count;
@@ -38,7 +37,6 @@ void PiPFormat::saveToFile(std::string fileName, std::string format)
     std::ofstream stream( fileName.data() );
     if( ! stream.is_open() ){
 		throw wasntSave();
-        return;
     } 
     stream << format.data() << std::endl;
     stream.close();
@@ -60,17 +58,17 @@ void PiPFormat::print()
 
 
 //getting data
-int PiPFormat::getVerticesCount()
+int PiPFormat::getVerticesCount() const
 {				  
 	return _count;
 }
 
-std::vector<Point> PiPFormat::getVector()
+std::vector<Point> PiPFormat::getVector() const
 {
 	return _vertex;
 }
 
-Point PiPFormat::getCrossPoint()
+Point PiPFormat::getCrossPoint() const
 {
 	return _cross;
 }
